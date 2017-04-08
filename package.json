@@ -13,8 +13,8 @@
   },
   "scripts": {
     "build-css": "node-sass src/ -o src/",
-    "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
-    "start": "npm-run-all -p watch-css start-js",
+    "watch-css": "npm run build-css && node-sass src/assets/sass/app.scss src/style.css",
+    "start": "react-scripts start",
     "start-js": "react-scripts start",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",

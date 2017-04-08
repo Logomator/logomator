@@ -1,0 +1,77 @@
+.logomator-base.logo-information {
+  padding-bottom: 0;
+
+  .selection.container-fluid {
+    .row {
+      .logomator-form {
+        width: 400px;
+        margin: auto;
+        
+        .logomator-form-field {
+          text-align: left;
+          padding-bottom: 20px;
+          position: relative;
+          
+          .select-triangle {
+            position: absolute;
+            top: 40px;
+            right: 20px;
+
+            &:after {
+              content: '';
+              width: 0;
+              height: 0;
+              display: inline-block;
+              border-color: $black transparent;
+              border-style: solid;
+              margin: 0 8px;
+              border-width: 6px 6px 0;
+              transition: transform 0.25s ease;
+              vertical-align: middle;
+            }
+          }
+
+          label {
+            display: block;
+            color: $black;
+            font-size: 16px;
+            font-family: "Proxima Nova Semi Bold", sans-serif;
+            margin-bottom: 10px;
+          }
+          
+          select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 0;
+          }
+
+          select, input {
+            height: 40px;
+          }
+          
+          select, input, textarea {
+            background: white;
+            width: 100%;
+            display: block;
+            border: 1px solid $input-border;
+            font-family: "Proxima Nova", sans-serif;
+            font-size: 16px;
+            padding-left: 20px;
+          }
+
+          &.no-padding {
+            padding-bottom: 0;
+          }
+        }
+
+        .logomator-button {
+          @include logomator-button($logomator-orange);
+          height: 54px;
+          width: 398px;
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+}

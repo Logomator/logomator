@@ -1,0 +1,35 @@
+body {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Proxima Nova Light";
+  }
+  nav {
+    height: 62px;
+    width: 100%;
+    border-bottom: 1px solid $border;
+    padding: 0 55px;
+
+
+    img.logo {
+      height: auto;
+      width: 162px;
+      margin: 15px 0;
+    }
+
+    .right {
+      display: inline-block;
+      float: right;
+      margin: 10px 0;
+
+      button.login {
+        height: 40px;
+        width: 86px;
+        background: transparent;
+        border: 1px solid $border;
+        font-size: 15px;
+        font-family: "Proxima Nova Semi Bold";
+        color: $black;
+        border-radius: 2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+div.logomator-base {
+  padding-bottom: 80px;
+
+  h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+    color: $black;
+  }
+
+  h2 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: $grey;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+    div.selection {
+      height: 100%;
+      width: 100%;
+      background: $light-grey;
+      padding: 0 180px;
+      margin-top: 40px;
+
+      div.row {
+        max-width: 960px;
+        margin: auto;
+
+        &:first-child {
+          padding-top: 40px;
+        }
+
+        padding: 10px 0;
+
+        div.selection-tile {
+          height: 226px;
+          width: 300px;
+          background: $dark-grey;
+          margin: auto;
+        }
+
+        &.no-padding {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+div.selection-progress {
+  height: 80px;
+  width: 100%;
+  box-shadow: $logo-selection-box-shadow;
+  position: fixed;
+  bottom: 0;
+  background: white;
+
+  div.container-fluid {
+    padding: 0 55px;
+
+    div.left {
+      margin-top: 35px;
+      display: inline-block;
+
+      div.progress-bar {
+        position: relative;
+        display: inline-block;
+        height: 10px;
+        width: 300px;
+        background: $progress-bar-bg;
+        border-radius: 10px;
+        
+        .progress-bar-fill {
+          position: absolute;
+          height: 10px;
+          background: $orange;
+          border-radius: 10px;
+        }
+      }
+
+      p.progress-percentage {
+        display: inline-block;
+        margin: 0 0 0 30px;
+        font-family: "Proxima Nova", sans-serif;
+      }
+    }
+
+    div.right {
+      display: inline-block;
+      float: right;
+      margin-top: 15px;
+
+      button.logomator-next-step {
+       @include logomator-button($orange);
+
+        &.disabled {
+          opacity: .2;
+        }
+      }
+    }
+  }
+}
