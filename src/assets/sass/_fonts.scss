@@ -1,35 +1,96 @@
+// Arimo
+@font-face {
+  font-family: 'Arimo';
+  src: url('../fonts/arimo/arimo-regular-webfont.woff');
+  src: url('../fonts/arimo/arimo-regular-webfont.woff2'),
+  url('../fonts/arimo/arimo-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Catamaran
+@font-face {
+  font-family: 'Catamaran';
+  src: url('../fonts/catamaran/catamaran-regular-webfont.woff');
+  src: url('../fonts/catamaran/catamaran-regular-webfont.woff2'),
+  url('../fonts/catamaran/catamaran-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Nunito
+@font-face {
+  font-family: 'Nunito';
+  src: url('../fonts/nunito/nunito-regular-webfont.woff');
+  src: url('../fonts/nunito/nunito-regular-webfont.woff2'),
+  url('../fonts/nunito/nunito-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Palanquin
+@font-face {
+  font-family: 'Palanquin';
+  src: url('../fonts/palanquin/palanquin-regular-webfont.woff');
+  src: url('../fonts/palanquin/palanquin-regular-webfont.woff2'),
+  url('../fonts/palanquin/palanquin-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Raleway
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/raleway/raleway-regular-webfont.woff');
+  src: url('../fonts/raleway/raleway-regular-webfont.woff2'),
+  url('../fonts/raleway/raleway-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Roboto
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/roboto/roboto-regular-webfont.woff');
+  src: url('../fonts/roboto/roboto-regular-webfont.woff2'),
+  url('../fonts/roboto/roboto-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Proxima Nova
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/proximanova-regular-webfont.woff');
-  src: url('../fonts/proximanova-regular-webfont.woff2'),
-  url('../fonts/proximanova-regular-webfont.woff') format('woff');
+  src: url('../fonts/proxima-nova/proximanova-regular-webfont.woff');
+  src: url('../fonts/proxima-nova/proximanova-regular-webfont.woff2'),
+  url('../fonts/proxima-nova/proximanova-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Proxima Nova Light';
-  src: url('../fonts/proxima-nova-light-webfont.woff');
-  src: url('../fonts/proxima-nova-light-webfont.woff2'),
-  url('../fonts/proxima-nova-light-webfont.woff') format('woff');
+  src: url('../fonts/proxima-nova/proxima-nova-light-webfont.woff');
+  src: url('../fonts/proxima-nova/proxima-nova-light-webfont.woff2'),
+  url('../fonts/proxima-nova/proxima-nova-light-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Proxima Nova Bold';
-  src: url('../fonts/proxima-nova-bold-webfont.woff');
-  src: url('../fonts/proxima-nova-bold-webfont.woff2'),
-  url('../fonts/proxima-nova-bold-webfont.woff') format('woff');
+  src: url('../fonts/proxima-nova/proxima-nova-bold-webfont.woff');
+  src: url('../fonts/proxima-nova/proxima-nova-bold-webfont.woff2'),
+  url('../fonts/proxima-nova/proxima-nova-bold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Proxima Nova Semi Bold';
-  src: url('../fonts/proxima-nova-semibold-webfont.woff');
-  src: url('../fonts/proxima-nova-semibold-webfont.woff2'),
-  url('../fonts/proxima-nova-semibold-webfont.woff') format('woff');
+  src: url('../fonts/proxima-nova/proxima-nova-semibold-webfont.woff');
+  src: url('../fonts/proxima-nova/proxima-nova-semibold-webfont.woff2'),
+  url('../fonts/proxima-nova/proxima-nova-semibold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
