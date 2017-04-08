@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import logo from '../assets/images/logomator-logo.png';
-import '../Apps.css';
 
 class Navbar extends Component {
 
     render() {
         return (
             <nav className="logomator-navbar">
-                <img src={logo} class="logo" alt="Logomator"/>
-                <div className="right">
-                    <button className="loging">Log in</button>
+                <div className="container">
+                    <img src={logo} className="logo" alt="Logomator"/>
+                    <div className="right">
+                        <button className="login">Log in</button>
+                    </div>
                 </div>
             </nav>
         );

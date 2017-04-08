@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build-css": "node-sass src/ -o src/",
-    "watch-css": "npm run build-css && node-sass src/assets/sass/app.scss src/style.css",
+    "watch-css": "npm run build-css && node-sass src/assets/sass/app.scss public/css/bundle.css",
     "start": "react-scripts start",
     "start-js": "react-scripts start",
     "build": "npm run build-css && react-scripts build",
