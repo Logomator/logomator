@@ -5,7 +5,9 @@
   "dependencies": {
     "express": "^4.15.2",
     "react": "^15.5.3",
-    "react-dom": "^15.5.3"
+    "react-dom": "^15.5.3",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0"
   },
   "devDependencies": {
     "node-sass": "^4.5.2",
