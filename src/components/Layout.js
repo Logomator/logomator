@@ -1,9 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
-import LogoList from '../logo/components/LogoList';
 import SetLogoText from '../logo/containers/SetLogoText';
 import GenerateLogos from '../logo/containers/GenerateLogos';
-import ListText from '../logo/containers/ListText';
 
 class Layout extends React.Component {
 

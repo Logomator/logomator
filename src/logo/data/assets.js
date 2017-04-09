@@ -13,7 +13,7 @@ export const getAssets = () => {
             textLineOne: "Google",
             textLineTwo: "We hate puppies",
             backgroundColor: "red",
-            color: "white",
+            color: "blue",
             fontFamily: "Proxima Nova",
             icon: "/path/to/icon.png"
         },
@@ -21,7 +21,7 @@ export const getAssets = () => {
             textLineOne: "Amazon",
             textLineTwo: "We murder puppies",
             backgroundColor: "orange",
-            color: "red",
+            color: "black",
             fontFamily: "Proxima Nova",
             icon: "/path/to/icon.png"
         }

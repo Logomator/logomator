@@ -2,12 +2,10 @@ import * as actionTypes from './actionTypes';
 
 const defaultState = {
     companyName: null,
-    tagLine: null,
-    logos: [],
-    text: null
+    tagLine: null
 };
+
 export function setLogoText (state, action) {
-    console.log(action);
     switch (action.type) {
         case actionTypes.SET_LOGO_TEXT:
             return Object.assign({}, state, {

@@ -12,7 +12,7 @@ let SetLogoText = ({ dispatch }) => {
             e.preventDefault();
 
             if (!companyNameInput.value.trim()) {
-                return
+                return;
             }
 
             dispatch(setLogoText([companyNameInput.value, tagLineInput.value]));
@@ -21,12 +21,12 @@ let SetLogoText = ({ dispatch }) => {
             tagLineInput.value = '';
 
             }}>
-                <input placeholder="Logo Text Line 1" ref={node => {
-                    companyNameInput = node
+                <input placeholder="Logo Text Line 1" ref={text => {
+                    companyNameInput = text
                 }} />
 
-                <input placeholder="Logo Text Line 2" ref={node => {
-                    tagLineInput = node
+                <input placeholder="Logo Text Line 2" ref={text => {
+                    tagLineInput = text
                 }} />
 
 
