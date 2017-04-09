@@ -1,6 +1,10 @@
-var express = require('express');
-var app = express();
+let express = require('express');
+let app = express();
 const config = require('./config.js');
+const mockLogoAssets = require('./mock/logoAssets_mock.json');
+
+const NOUN_PROJECT_API_KEY = config.NOUN_PROJECT_API_KEY;
+const NOUN_PROJECT_API_SECRET = config.NOUN_PROJECT_API_SECRET;
 
 // TODO Noun project setup
 //const NOUN_PROJECT_API_KEY = "8a955263224e474dbc3f46d85a6fdf1c";
@@ -18,10 +22,10 @@ const config = require('./config.js');
 //     }
 // });
 
-app.get('/', function (req, res) {
-    return res.render('index.html');
+app.get('/api/', (req, res) => {
+    return res.send{ mockLogoAssets }
 });
 
-app.listen(8000, function () {
+app.listen(8000,  () => {
     console.log('Example app listening on port 3000!')
 });

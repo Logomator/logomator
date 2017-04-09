@@ -20,23 +20,14 @@ div.logomator-base {
       height: 100%;
       width: 100%;
       background: $light-grey;
-      padding: 0 180px;
-      margin-top: 40px;
 
       div.row {
         max-width: 960px;
         margin: auto;
 
-        &:first-child {
-          padding-top: 40px;
-        }
-
-        padding: 10px 0;
-
-        div.selection-tile {
+        div.logo {
           height: 226px;
           width: 300px;
-          background: $dark-grey;
           margin: auto;
         }
 

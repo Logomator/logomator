@@ -1,0 +1,27 @@
+[
+    {
+        "textLineOne": "Puppy Day Care",
+        "textLineTwo": "We love puppies",
+        "backgroundColor": "#000",
+        "color": "blue",
+        "fontFamily": "Proxima Nova",
+        "icon": "/path/to/icon.png"
+    },
+
+    {
+        "textLineOne": "Google",
+        "textLineTwo": "We hate puppies",
+        "backgroundColor": "red",
+        "color": "white",
+        "fontFamily": "Proxima Nova",
+        "icon": "/path/to/icon.png"
+    },
+    {
+        "textLineOne": "Amazon",
+        "textLineTwo": "We murder puppies",
+        "backgroundColor": "orange",
+        "color": "red",
+        "fontFamily": "Proxima Nova",
+        "icon": "/path/to/icon.png"
+    }
+];
