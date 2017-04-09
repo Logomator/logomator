@@ -3,16 +3,20 @@ import { getAssets } from '../common/assets';
 import { Logo } from "./Logo";
 const assets = getAssets();
 
-const LogoTable = () => {
+export const LogoList = ({ logoText }) => {
 
-    const logos = [];
+    let logos = [];
     assets.forEach((asset) => {
         logos.push(<div className="col-lg-4 col-md-4 col-sm-4">
             <Logo
-            textLineOne={asset.textLineOne}
-            textLineTwo={asset.textLineTwo}
+            companyName="HI THERE"
+
+            tagLine="TAGLINE"
+
             backgroundColor={asset.backgroundColor}
+
             color={asset.color}
+            
             fontFamily={asset.fontFamily}
         /></div>);
     });
@@ -26,4 +30,4 @@ const LogoTable = () => {
     );
 };
 
-export default LogoTable;
+export default LogoList;

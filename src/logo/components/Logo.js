@@ -1,17 +1,14 @@
 import React from "react";
 
-export class Logo extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+export const Logo = ({ companyName, tagLine, backgroundColor, color, fontFamily }) => {
+    return (
+        <div
+            className="logo"
+            style={{backgroundColor: backgroundColor}}>
+            <h1 style={{fontFamily: fontFamily, color: color}}>{companyName}</h1>
+            <h2 style={{fontFamily: fontFamily, color: color}}>{tagLine}</h2>
+        </div>
+    );
+};
 
-    render() {
-        return (
-            <div className="logo"
-                style={{backgroundColor: this.props.backgroundColor}}>
-                <h1 style={{fontFamily: this.props.fontFamily, color: this.props.color}}>{this.props.textLineOne}</h1>
-                <h2 style={{fontFamily: this.props.fontFamily, color: this.props.color}}>{this.props.textLineTwo}</h2>
-            </div>
-        );
-    }
-}
+export default Logo;
