@@ -6,9 +6,6 @@ import 'babel-polyfill';
 
 export const LogoList = ({ companyName, tagLine, icons}) => {
     let logos = [];
-    icons.forEach((icon) => {
-       console.log(icon);
-    });
         assets.forEach((asset) => {
             icons.forEach((icon) => {
                 logos.push(<div className="col-lg-4 col-md-4 col-sm-4">
