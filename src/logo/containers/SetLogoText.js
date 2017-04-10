@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setLogoText } from '../actions';
+import { fetchIcons } from '../actions';
 
 let SetLogoText = ({ dispatch }) => {
     let companyNameInput;
@@ -16,6 +17,7 @@ let SetLogoText = ({ dispatch }) => {
             }
 
             dispatch(setLogoText([companyNameInput.value, tagLineInput.value]));
+            dispatch(fetchIcons(companyNameInput.value));
 
             companyNameInput.value = '';
             tagLineInput.value = '';

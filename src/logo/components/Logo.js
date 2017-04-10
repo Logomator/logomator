@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Logo = ({ companyName, tagLine, backgroundColor, color, fontFamily }) => {
+export const Logo = ({ companyName, tagLine, icon, backgroundColor, color, fontFamily }) => {
     return (
         <div
             className="logo"
