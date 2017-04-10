@@ -21,7 +21,7 @@ app.get('/api/icons/:term', function (req, res) {
         return res.send({error: "You need to specify a term"});
     }
 
-    nounProject.getIconsByTerm(req.params.term, {limit: 3}, function (err, data) {
+    nounProject.getIconsByTerm(req.params.term, {limit: 9}, function (err, data) {
         if (!err) {
             return res.send(data.icons);
         }

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-polyfill": "^6.23.0",
     "cors": "^2.8.3",
     "express": "^4.15.2",
     "isomorphic-fetch": "^2.2.1",

@@ -3,8 +3,8 @@ export const getAssets = () => {
         {
             textLineOne: "Puppy Day Care",
             textLineTwo: "We love puppies",
-            backgroundColor: "#000",
-            color: "blue",
+            backgroundColor: "blue",
+            color: "white",
             fontFamily: "Proxima Nova",
             icon: "/path/to/icon.png"
         },

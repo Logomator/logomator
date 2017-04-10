@@ -15,13 +15,12 @@ export const receiveIcons = (icons)  => {
     return { type: RECEIVE_ICONS, icons }
 };
 
-export const fetchIcons = (term) => {
-    return (dispatch) => {
+export function fetchIcons (term) {
+    return dispatch => {
 
         dispatch(requestIconsByTerm(term));
 
         return fetch(`http://localhost:8000/api/icons/${term}`)
             .then(response => response.json())
-            .then(icons => dispatch(receiveIcons(icons)))
     }
-};
+}

@@ -14,4 +14,4 @@ export const REQUEST_ICONS = 'REQUEST_ICONS';
  * Receive icons action.
  * @type {string}
  */
-export const RECEIVE_ICONS = 'REQUEST_ICONS';
+export const RECEIVE_ICONS = 'RECEIVE_ICONS';
