@@ -1,8 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Navbar from './components/Navbar';
+import Layout from './components/Layout';
+import thunkMiddleware from 'redux-thunk'
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import { logoReducer } from './logo/reducer';
+
+let store = createStore(
+    logoReducer,
+    applyMiddleware(
+        thunkMiddleware
+    )
+);
 
 ReactDOM.render(
-    <Navbar />,
+    <Provider store={store}>
+        <Layout />
+    </Provider>,
     document.getElementById('root')
 );

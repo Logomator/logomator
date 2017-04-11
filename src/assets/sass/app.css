@@ -1,28 +1,70 @@
 @font-face {
+  font-family: 'Arimo';
+  src: url("../fonts/arimo/arimo-regular-webfont.woff");
+  src: url("../fonts/arimo/arimo-regular-webfont.woff2"), url("../fonts/arimo/arimo-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Catamaran';
+  src: url("../fonts/catamaran/catamaran-regular-webfont.woff");
+  src: url("../fonts/catamaran/catamaran-regular-webfont.woff2"), url("../fonts/catamaran/catamaran-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Nunito';
+  src: url("../fonts/nunito/nunito-regular-webfont.woff");
+  src: url("../fonts/nunito/nunito-regular-webfont.woff2"), url("../fonts/nunito/nunito-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Palanquin';
+  src: url("../fonts/palanquin/palanquin-regular-webfont.woff");
+  src: url("../fonts/palanquin/palanquin-regular-webfont.woff2"), url("../fonts/palanquin/palanquin-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/raleway/raleway-regular-webfont.woff");
+  src: url("../fonts/raleway/raleway-regular-webfont.woff2"), url("../fonts/raleway/raleway-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/roboto/roboto-regular-webfont.woff");
+  src: url("../fonts/roboto/roboto-regular-webfont.woff2"), url("../fonts/roboto/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
   font-family: 'Proxima Nova';
-  src: url("../fonts/proximanova-regular-webfont.woff");
-  src: url("../fonts/proximanova-regular-webfont.woff2"), url("../fonts/proximanova-regular-webfont.woff") format("woff");
+  src: url("../fonts/proxima-nova/proximanova-regular-webfont.woff");
+  src: url("../fonts/proxima-nova/proximanova-regular-webfont.woff2"), url("../fonts/proxima-nova/proximanova-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Proxima Nova Light';
-  src: url("../fonts/proxima-nova-light-webfont.woff");
-  src: url("../fonts/proxima-nova-light-webfont.woff2"), url("../fonts/proxima-nova-light-webfont.woff") format("woff");
+  src: url("../fonts/proxima-nova/proxima-nova-light-webfont.woff");
+  src: url("../fonts/proxima-nova/proxima-nova-light-webfont.woff2"), url("../fonts/proxima-nova/proxima-nova-light-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Proxima Nova Bold';
-  src: url("../fonts/proxima-nova-bold-webfont.woff");
-  src: url("../fonts/proxima-nova-bold-webfont.woff2"), url("../fonts/proxima-nova-bold-webfont.woff") format("woff");
+  src: url("../fonts/proxima-nova/proxima-nova-bold-webfont.woff");
+  src: url("../fonts/proxima-nova/proxima-nova-bold-webfont.woff2"), url("../fonts/proxima-nova/proxima-nova-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Proxima Nova Semi Bold';
-  src: url("../fonts/proxima-nova-semibold-webfont.woff");
-  src: url("../fonts/proxima-nova-semibold-webfont.woff2"), url("../fonts/proxima-nova-semibold-webfont.woff") format("woff");
+  src: url("../fonts/proxima-nova/proxima-nova-semibold-webfont.woff");
+  src: url("../fonts/proxima-nova/proxima-nova-semibold-webfont.woff2"), url("../fonts/proxima-nova/proxima-nova-semibold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -68,20 +110,21 @@ div.logomator-base {
   div.logomator-base div.selection {
     height: 100%;
     width: 100%;
-    background: #FBFBFC;
-    padding: 0 180px;
-    margin-top: 40px; }
+    background: #FBFBFC; }
     div.logomator-base div.selection div.row {
       max-width: 960px;
-      margin: auto;
-      padding: 10px 0; }
-      div.logomator-base div.selection div.row:first-child {
-        padding-top: 40px; }
-      div.logomator-base div.selection div.row div.selection-tile {
+      margin: auto; }
+      div.logomator-base div.selection div.row div.logo {
+        position: relative;
         height: 226px;
         width: 300px;
-        background: #CBD1D6;
         margin: auto; }
+        div.logomator-base div.selection div.row div.logo img {
+          position: absolute;
+          top: 100px;
+          right: 0;
+          left: 0;
+          margin: auto; }
       div.logomator-base div.selection div.row.no-padding {
         padding-bottom: 0; }
 
