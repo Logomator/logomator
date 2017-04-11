@@ -6,20 +6,18 @@ import 'babel-polyfill';
 
 export const LogoList = ({ companyName, tagLine, icons}) => {
     let logos = [];
-        assets.forEach((asset) => {
-            icons.forEach((icon) => {
-                logos.push(<div className="col-lg-4 col-md-4 col-sm-4">
-                    <Logo
 
-                        companyName={companyName}
-                        tagLine={tagLine}
-                        icon={icon.preview_url_84}
-                        backgroundColor={asset.backgroundColor}
-                        color={asset.color}
-                        fontFamily={asset.fontFamily}
-                    /></div>);
+        assets.forEach((asset, index) => {
+            logos.push(<div className="col-lg-4 col-md-4 col-sm-4">
+                <Logo
+                    companyName={companyName}
+                    tagLine={tagLine}
+                    icon={icons.length > 0 ? icons[index].preview_url_84: ""}
+                    backgroundColor={asset.backgroundColor}
+                    color={asset.color}
+                    fontFamily={asset.fontFamily}
+                /></div>);
             });
-        });
 
     return (
         <div className="selection">

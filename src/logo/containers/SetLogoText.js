@@ -18,11 +18,16 @@ let SetLogoText = ({ dispatch }) => {
                 return;
             }
 
+            // Dispatch set logo text action
             dispatch(setLogoText([companyNameInput.value, tagLineInput.value]));
-            dispatch(fetchIcons(companyNameInput.value)).then((icons) => {
+
+            // Dispatch fetch icons action.
+            dispatch(fetchIcons(companyNameInput.value))
+            .then((icons) => {
+
+                // Dispatch receive icons action
                 dispatch(receiveIcons(icons));
-                console.log(icons);
-            });
+            }); // TODO add catch error
 
             companyNameInput.value = '';
             tagLineInput.value = '';
