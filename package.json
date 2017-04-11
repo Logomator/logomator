@@ -3,11 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "cors": "^2.8.3",
     "express": "^4.15.2",
+    "isomorphic-fetch": "^2.2.1",
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
     "react-redux": "^5.0.3",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
+    "the-noun-project": "^2.0.1"
   },
   "devDependencies": {
     "node-sass": "^4.5.2",

@@ -26,9 +26,18 @@ div.logomator-base {
         margin: auto;
 
         div.logo {
+          position: relative;
           height: 226px;
           width: 300px;
           margin: auto;
+          
+          img {
+            position: absolute;
+            top: 100px;
+            right: 0;
+            left: 0;
+            margin: auto;
+          }
         }
 
         &.no-padding {

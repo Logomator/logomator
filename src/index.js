@@ -1,11 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Layout from './components/Layout';
+import thunkMiddleware from 'redux-thunk'
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import { setLogoText } from './logo/reducer';
+import { createStore, applyMiddleware } from 'redux';
+import { logoReducer } from './logo/reducer';
 
-let store = createStore(setLogoText);
+let store = createStore(
+    logoReducer,
+    applyMiddleware(
+        thunkMiddleware
+    )
+);
 
 ReactDOM.render(
     <Provider store={store}>
