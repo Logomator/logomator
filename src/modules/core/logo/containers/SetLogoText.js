@@ -1,8 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setLogoText } from '../actions';
-import { fetchIcons } from '../actions';
-import { receiveIcons } from '../actions';
+import { setLogoText, fetchIcons, receiveIcons } from '../actions';
 
 
 let SetLogoText = ({ dispatch }) => {
@@ -10,7 +8,8 @@ let SetLogoText = ({ dispatch }) => {
     let tagLineInput;
 
     return (
-        <div>
+        <div className="container">
+            <h1>Hello! I’m Ada, your personal logo design assistant.</h1>
             <form onSubmit={e => {
             e.preventDefault();
 
@@ -18,16 +17,16 @@ let SetLogoText = ({ dispatch }) => {
                 return;
             }
 
-            // Dispatch set logo text action
+            // Dispatch set logo text action.
             dispatch(setLogoText([companyNameInput.value, tagLineInput.value]));
 
             // Dispatch fetch icons action.
             dispatch(fetchIcons(companyNameInput.value))
             .then((icons) => {
 
-                // Dispatch receive icons action
+                // Dispatch receive icons action.
                 dispatch(receiveIcons(icons));
-            }); // TODO add catch error
+            }); // TODO add catch error.
 
             companyNameInput.value = '';
             tagLineInput.value = '';

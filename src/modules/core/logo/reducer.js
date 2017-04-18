@@ -11,7 +11,6 @@ export function logoReducer (state, action) {
     switch (action.type) {
 
         case actionTypes.SET_LOGO_TEXT:
-
             return Object.assign({}, state, {
                 companyName: action.logoText[0],
                 tagLine: action.logoText[1]

@@ -72,45 +72,37 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: "Proxima Nova Light"; }
 
 body nav {
-  height: 62px;
+  height: 70px;
   width: 100%;
-  border-bottom: 1px solid #E3E4E4;
-  padding: 0 55px; }
+  padding: 15px 40px 15px 40px;
+  border: 1px solid #EBEFF0;
+  box-shadow: 0 4px 0 0 #F9F9FA; }
   body nav img.logo {
     height: auto;
-    width: 162px;
-    margin: 15px 0; }
+    width: 40px; }
   body nav .right {
     display: inline-block;
-    float: right;
-    margin: 10px 0; }
-    body nav .right button.login {
+    float: right; }
+    body nav .right button.start-over {
       height: 40px;
-      width: 86px;
-      background: transparent;
+      width: 137px;
+      padding-left: 29px;
+      background: transparent url("../images/icons/start-over.png") no-repeat;
+      background-size: 13px 14px;
+      background-position: 20px 11px;
       border: 1px solid #E3E4E4;
-      font-size: 15px;
+      font-size: 16px;
       font-family: "Proxima Nova Semi Bold";
       color: #2E2E2E;
       border-radius: 2px; }
 
 div.logomator-base {
-  padding-bottom: 80px; }
-  div.logomator-base h1 {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 30px;
-    color: #2E2E2E; }
-  div.logomator-base h2 {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #80858E;
-    text-align: center;
-    margin-bottom: 0; }
+  padding-bottom: 80px;
+  background: #FDFDFD; }
   div.logomator-base div.selection {
     height: 100%;
     width: 100%;
-    background: #FBFBFC; }
+    background: #FDFDFD; }
     div.logomator-base div.selection div.row {
       max-width: 960px;
       margin: auto; }
@@ -172,240 +164,75 @@ div.selection-progress {
         div.selection-progress div.container-fluid div.right button.logomator-next-step.disabled {
           opacity: .2; }
 
-.logomator-base.selection .color-palette {
-  padding-bottom: 72px;
-  background: #FBFBFC; }
-  .logomator-base.selection .color-palette .color-palette-tile {
-    height: 226px;
-    width: 300px; }
-    .logomator-base.selection .color-palette .color-palette-tile .color {
-      height: 75px; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.blue:nth-child(1) {
-        background: #B1D9F9; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.blue:nth-child(2) {
-        background: #A0D0F8; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.blue:nth-child(3) {
-        background: #84C4F5; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.blue:nth-child(4) {
-        background: #6DB7F2; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.blue:nth-child(5) {
-        background: #1C87E1; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.blue:nth-child(6) {
-        background: #146FB8; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.blue:nth-child(7) {
-        background: #0D5DA0; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.blue:nth-child(8) {
-        background: #0A5693; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.blue:nth-child(9) {
-        background: #073E75; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.aqua:nth-child(1) {
-        background: #BDE5EC; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.aqua:nth-child(2) {
-        background: #B0E2E8; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.aqua:nth-child(3) {
-        background: #9AD9E1; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.aqua:nth-child(4) {
-        background: #86D0DA; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.aqua:nth-child(5) {
-        background: #4BB8C3; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.aqua:nth-child(6) {
-        background: #3A8D9C; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.aqua:nth-child(7) {
-        background: #337683; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.aqua:nth-child(8) {
-        background: #2B6A79; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.aqua:nth-child(9) {
-        background: #1D5463; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.green:nth-child(1) {
-        background: #B8D0B9; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.green:nth-child(2) {
-        background: #A1C2A2; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.green:nth-child(3) {
-        background: #8AB28B; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.green:nth-child(4) {
-        background: #71A373; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.green:nth-child(5) {
-        background: #5A935C; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.green:nth-child(6) {
-        background: #438444; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.green:nth-child(7) {
-        background: #2B742C; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.green:nth-child(8) {
-        background: #126513; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.green:nth-child(9) {
-        background: #005502; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.purple:nth-child(1) {
-        background: #E3D0EC; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.purple:nth-child(2) {
-        background: #D5B9E3; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.purple:nth-child(3) {
-        background: #C7A2D9; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.purple:nth-child(4) {
-        background: #B98BD0; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.purple:nth-child(5) {
-        background: #9D5CBE; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.purple:nth-child(6) {
-        background: #8F45B4; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.purple:nth-child(7) {
-        background: #812EAB; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.purple:nth-child(8) {
-        background: #7317A2; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.purple:nth-child(9) {
-        background: #660099; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.pink:nth-child(1) {
-        background: #F1C3DF; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.pink:nth-child(2) {
-        background: #ECAFD6; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.pink:nth-child(3) {
-        background: #E79BCB; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.pink:nth-child(4) {
-        background: #E487C1; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.pink:nth-child(5) {
-        background: #DF73B6; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.pink:nth-child(6) {
-        background: #DA5EAC; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.pink:nth-child(7) {
-        background: #D54AA1; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.pink:nth-child(8) {
-        background: #D03597; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.pink:nth-child(9) {
-        background: #CC1F8D; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.red:nth-child(1) {
-        background: #F2B9B8; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.red:nth-child(2) {
-        background: #EEA2A1; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.red:nth-child(3) {
-        background: #E98A89; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.red:nth-child(4) {
-        background: #E57271; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.red:nth-child(5) {
-        background: #E05B59; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.red:nth-child(6) {
-        background: #DB4440; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.red:nth-child(7) {
-        background: #D72C26; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.red:nth-child(8) {
-        background: #D21204; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.red:nth-child(9) {
-        background: #CE0000; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.orange:nth-child(1) {
-        background: #FFD5B7; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.orange:nth-child(2) {
-        background: #FFC79F; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.orange:nth-child(3) {
-        background: #FFB987; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.orange:nth-child(4) {
-        background: #FFAB6E; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.orange:nth-child(5) {
-        background: #FF9D54; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.orange:nth-child(6) {
-        background: #FF8F3A; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.orange:nth-child(7) {
-        background: #FF811A; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.orange:nth-child(8) {
-        background: #FF7300; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.orange:nth-child(9) {
-        background: #FF6600; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.yellow:nth-child(1) {
-        background: #FFF2B6; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.yellow:nth-child(2) {
-        background: #FFED9E; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.yellow:nth-child(3) {
-        background: #FFE885; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.yellow:nth-child(4) {
-        background: #FFE46A; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.yellow:nth-child(5) {
-        background: #FFDF4F; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.yellow:nth-child(6) {
-        background: #FFDA30; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.yellow:nth-child(7) {
-        background: #FFD600; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.yellow:nth-child(8) {
-        background: #FFD100; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.yellow:nth-child(9) {
-        background: #FFCD00; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.brown:nth-child(1) {
-        background: #B7B1AB; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.brown:nth-child(2) {
-        background: #A59D96; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.brown:nth-child(3) {
-        background: #938A80; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.brown:nth-child(4) {
-        background: #81766B; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.brown:nth-child(5) {
-        background: #6F6356; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.brown:nth-child(6) {
-        background: #5D4F41; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.brown:nth-child(7) {
-        background: #4B3C2C; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.brown:nth-child(8) {
-        background: #3A2917; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.brown:nth-child(9) {
-        background: #352615; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.light-neutral:nth-child(1) {
-        background: #F9F9F9; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.light-neutral:nth-child(2) {
-        background: #F3F3F4; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.light-neutral:nth-child(3) {
-        background: #E4E6E7; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.light-neutral:nth-child(4) {
-        background: #D3D5D9; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.light-neutral:nth-child(5) {
-        background: #C4C6CC; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.light-neutral:nth-child(6) {
-        background: #B4B7BE; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.light-neutral:nth-child(7) {
-        background: #A3A7AE; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.light-neutral:nth-child(8) {
-        background: #93969F; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.light-neutral:nth-child(9) {
-        background: #818691; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.dark-neutral:nth-child(1) {
-        background: #93969F; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.dark-neutral:nth-child(2) {
-        background: #818691; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.dark-neutral:nth-child(3) {
-        background: #737883; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.dark-neutral:nth-child(4) {
-        background: #646973; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.dark-neutral:nth-child(5) {
-        background: #565964; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.dark-neutral:nth-child(6) {
-        background: #484C53; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.dark-neutral:nth-child(7) {
-        background: #404247; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.dark-neutral:nth-child(8) {
-        background: #292B2F; }
-      .logomator-base.selection .color-palette .color-palette-tile .color.dark-neutral:nth-child(9) {
-        background: #1A191C; }
-  .logomator-base.selection .color-palette span.color-name {
+.color-palette-container {
+  padding-top: 80px;
+  max-width: 960px;
+  margin: auto; }
+  .color-palette-container .orange-line {
     display: block;
-    margin-top: 11px;
-    font-family: "Proxima Nova Semi Bold";
-    color: #2E2E2E;
-    font-size: 18px; }
-
-.logomator-base.selection .selection-progress .container-fluid .left {
-  margin-top: 15px; }
-  .logomator-base.selection .selection-progress .container-fluid .left button {
+    background: #F5530C;
+    height: 4px;
+    width: 50px; }
+  .color-palette-container h1 {
+    margin: 0;
+    margin-top: 20px;
+    font-size: 22px; }
+  .color-palette-container h2 {
+    margin: 0;
+    margin-top: 10px;
+    color: #67676F;
+    font-size: 16px; }
+  .color-palette-container .color-palette.col-5 {
+    padding-top: 60px;
+    width: 20%;
+    float: left; }
+    .color-palette-container .color-palette.col-5 .palette {
+      height: 180px;
+      width: 160px;
+      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+      border-radius: 2px;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer; }
+      .color-palette-container .color-palette.col-5 .palette:hover {
+        transform: translateY(-15px); }
+      .color-palette-container .color-palette.col-5 .palette.selected {
+        outline: 1px solid #F5530C; }
+      .color-palette-container .color-palette.col-5 .palette .color {
+        height: 140px;
+        width: 40px;
+        display: inline-block; }
+        .color-palette-container .color-palette.col-5 .palette .color.blue:nth-child(1) {
+          background: #84C4F5; }
+        .color-palette-container .color-palette.col-5 .palette .color.blue:nth-child(2) {
+          background: #1C87E1; }
+        .color-palette-container .color-palette.col-5 .palette .color.blue:nth-child(3) {
+          background: #0D5DA0; }
+        .color-palette-container .color-palette.col-5 .palette .color.blue:nth-child(4) {
+          background: #073E75; }
+      .color-palette-container .color-palette.col-5 .palette p.color-label {
+        margin: 3px 10px 10px;
+        font-size: 16px;
+        font-family: 'Proxima Nova Semi Bold'; }
+  .color-palette-container .selection-progress .container-fluid .left {
+    margin-top: 15px; }
+    .color-palette-container .selection-progress .container-fluid .left button {
+      height: 50px;
+      width: 179px;
+      color: white;
+      background: #81868F;
+      border: 0;
+      border-radius: 2px;
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 18px; }
+  .color-palette-container .selection-progress .container-fluid .right button {
     height: 50px;
     width: 179px;
     color: white;
-    background: #81868F;
+    background: #F5530C;
     border: 0;
     border-radius: 2px;
     font-family: "Proxima Nova", sans-serif;
     font-size: 18px; }
-
-.logomator-base.selection .selection-progress .container-fluid .right button {
-  height: 50px;
-  width: 179px;
-  color: white;
-  background: #F5530C;
-  border: 0;
-  border-radius: 2px;
-  font-family: "Proxima Nova", sans-serif;
-  font-size: 18px; }
 
 .logomator-base.logo-information {
   padding-bottom: 0; }

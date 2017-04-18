@@ -1,7 +1,5 @@
 import fetch from 'isomorphic-fetch';
-import { SET_LOGO_TEXT } from './actionTypes';
-import { REQUEST_ICONS } from './actionTypes';
-import { RECEIVE_ICONS } from './actionTypes';
+import { SET_LOGO_TEXT, REQUEST_ICONS, RECEIVE_ICONS } from './actionTypes';
 
 export const setLogoText = (logoText) => {
     return { type: SET_LOGO_TEXT, logoText }

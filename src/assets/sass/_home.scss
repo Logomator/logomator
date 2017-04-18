@@ -1,25 +1,11 @@
 div.logomator-base {
   padding-bottom: 80px;
-
-  h1 {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 30px;
-    color: $black;
-  }
-
-  h2 {
-    margin-top: 10px;
-    font-size: 18px;
-    color: $grey;
-    text-align: center;
-    margin-bottom: 0;
-  }
+  background: $lightGrey;
 
     div.selection {
       height: 100%;
       width: 100%;
-      background: $light-grey;
+      background: $lightGrey;
 
       div.row {
         max-width: 960px;
