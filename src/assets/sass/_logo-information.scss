@@ -66,8 +66,8 @@
         }
 
         .logomator-button {
-          @include logomator-button($logomator-orange);
-          height: 54px;
+          @include logomator-button($logomatorOrange);
+          height: 54px;//
           width: 398px;
           margin-top: 40px;
         }
