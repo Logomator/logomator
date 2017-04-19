@@ -10,43 +10,43 @@ let SetLogoText = ({ dispatch }) => {
     let tagLineInput;
 
     return (
-        <div>
-            <form onSubmit={e => {
-            e.preventDefault();
 
-            if (!companyNameInput.value.trim()) {
-                return;
-            }
+        <div className="container">
+            <h1><strong>Hi, I’m Ada.</strong> Your personal logo design assistant.</h1>
+            <h2>Let’s start designing you the perfect logo - it only takes a few minutes.</h2>
 
-            // Dispatch set logo text action
-            dispatch(setLogoText([companyNameInput.value, tagLineInput.value]));
+            <div className="logomator-form">
 
-            // Dispatch fetch icons action.
-            dispatch(fetchIcons(companyNameInput.value))
-            .then((icons) => {
+                <span className="orange-bar"></span>
 
-                // Dispatch receive icons action
-                dispatch(receiveIcons(icons));
-            }); // TODO add catch error
+                <form name="company_name" onSubmit={e => {
+                e.preventDefault();
 
-            companyNameInput.value = '';
-            tagLineInput.value = '';
+                // Dispatch set logo text action
+                dispatch(setLogoText([companyNameInput.value, tagLineInput.value]));
 
-            }}>
-                <input placeholder="Logo Text Line 1" ref={text => {
-                    companyNameInput = text
-                }} />
+                // Dispatch fetch icons action.
+                dispatch(fetchIcons(companyNameInput.value))
+                .then((icons) => {
 
-                <input placeholder="Logo Text Line 2" ref={text => {
-                    tagLineInput = text
-                }} />
+                    // Dispatch receive icons action
+                    dispatch(receiveIcons(icons));
+                }); // TODO add catch error
 
+                companyNameInput.value = '';
+                tagLineInput.value = '';
 
-                <button type="submit">
-                    Generate Logos
-                </button>
+                }}>
 
-            </form>
+                    <label htmlFor="company_name">First, what is the name of your business or organization?</label>
+                    <input ref={text => {
+                        companyNameInput = text
+                    }} />
+
+                    <button type="submit" className="logomator-btn btn-disabled">Continue</button>
+
+                </form>
+            </div>
         </div>
     )
 };

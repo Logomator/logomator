@@ -1,6 +1,33 @@
 body {
-  h1, h2, h3, h4, h5, h6 {
-    font-family: "Proxima Nova Light";
+
+  // Globals
+  h1, h2, h3, h4, h5, h6, p, span, label {
+    font-family: "Proxima Nova";
+    font-weight: 300;
+  }
+
+  .logomator-btn {
+    height: 40px;
+    width: 106px;
+    background: $logomatorOrange;
+    border: 1px solid $logomatorOrange;
+    box-shadow: $logomatorBtnShadow;
+    border-radius: 2px;
+    font-family: ProximaNova-Semibold, sans-serif;
+    font-size: 16px;
+    color: white;
+
+    &.btn-disabled {
+      opacity: .3;
+    }
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 18px;
   }
   nav {
     height: 70px;

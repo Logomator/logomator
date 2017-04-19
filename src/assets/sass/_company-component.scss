@@ -1,0 +1,56 @@
+.container {
+  max-width: 960px;
+  padding-top: 80px;
+
+  h1, h2 {
+    margin: 0;
+  }
+
+  h1 {
+    color: $black;
+    padding-bottom: 11px;
+  }
+
+  h2 {
+    color: $darkGrey;
+  }
+
+  .logomator-form {
+    padding-top: 60px;
+
+    .orange-bar {
+      display: block;
+      background: $logomatorOrange;
+      height: 4px;
+      width: 50px;
+    }
+
+    form {
+      padding-top: 20px;
+      max-width: 600px;
+      width: 100%;
+
+      label {
+        color: $darkBlack;
+        font-size: 22px;
+        margin-bottom: 28px;
+      }
+      
+      input {
+        display: block;
+        border: none;
+        border-bottom: 1px solid $logomatorOrange;
+        width: 100%;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      button.logomator-btn {
+        margin-top: 40px;
+        float: right;
+      }
+    }
+  }
+}
