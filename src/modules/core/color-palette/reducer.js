@@ -53,13 +53,26 @@ const defaultState = {
             "hexcodes": ["#C4C6CC", "#818691", "#484C53", "#1A191C"],
             "isSelected": false
         }
-    ]
+    ],
+    selectedPalettes: []
+};
+
+const palettesSelected = (state) => {
+    var count = 0;
+    state.palettes.forEach(palette => {
+       if (palette.isSelected) {
+           count++;
+       }
+    });
+
+    return count;
 };
 
 const palette = (state, action) => {
     switch (action.type) {
         case actionTypes.SELECT_COLOR_PALETTE:
-            console.log(state.name);
+
+            // Check palette selected matches the palette name.
             if (state.name !== action.name) {
                 return state;
             }
@@ -75,14 +88,22 @@ const palette = (state, action) => {
 };
 
 export function colorPaletteReducer (state, action) {
-    console.log("CLICKED", action.name);
     switch (action.type) {
 
         case actionTypes.SELECT_COLOR_PALETTE:
+
+            if (palettesSelected(state) === 3) {
+                var item = state.palettes.find(p => {
+                   return p.isSelected;
+                });
+
+                item.isSelected = false;
+            }
+
             return {
                 ...state,
                 palettes: state.palettes.map(p =>
-                    palette(p, action)
+                    palette(p, action, state.selectedPalettes)
                 )
             };
 

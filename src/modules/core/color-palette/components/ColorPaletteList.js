@@ -7,7 +7,6 @@ export const ColorPaletteList = ({ palettes, onColorPaletteClick }) => {
     palettes = palettes || [];
 
     palettes.forEach((palette) => {
-        console.log(palette.isSelected);
         colorPalettes.push(
             <ColorPalette
               isSelected={palette.isSelected}

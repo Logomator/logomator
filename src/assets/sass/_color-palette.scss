@@ -33,15 +33,11 @@
       width: 160px;
       box-shadow: $colorPaletteShadow;
       border-radius: 2px;
-      transition: all 0.2s ease-in-out;
+      transition: transform 0.2s;
       cursor: pointer;
 
       &:hover {
         transform: translateY(-15px);
-      }
-
-      &.selected {
-        outline: 1px solid $logomatorOrange;
       }
 
       .color {
