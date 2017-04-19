@@ -43,6 +43,8 @@ let SetLogoText = ({ dispatch }) => {
                         companyNameInput = text
                     }} />
 
+                    <span className="bottom-label">I’ll use this as your main logo text.</span>
+
                     <button type="submit" className="logomator-btn btn-disabled">Continue</button>
 
                 </form>

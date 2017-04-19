@@ -1,11 +1,20 @@
 body {
 
-  // Globals
-  h1, h2, h3, h4, h5, h6, p, span, label {
+  // Globals fonts
+  h1, h2, h3, h4, h5, h6, p, span, input, label {
     font-family: "Proxima Nova";
     font-weight: 300;
   }
 
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  // Buttons
   .logomator-btn {
     height: 40px;
     width: 106px;
@@ -22,13 +31,14 @@ body {
     }
   }
 
-  h1 {
-    font-size: 28px;
+  // Inputs
+  input {
+    font-size: 18px;
+    color: $black;
+    padding-bottom: 9px;
   }
 
-  h2 {
-    font-size: 18px;
-  }
+
   nav {
     height: 70px;
     width: 100%;

@@ -68,9 +68,15 @@
   font-weight: normal;
   font-style: normal; }
 
-body h1, body h2, body h3, body h4, body h5, body h6, body p, body span, body label {
+body h1, body h2, body h3, body h4, body h5, body h6, body p, body span, body input, body label {
   font-family: "Proxima Nova";
   font-weight: 300; }
+
+body h1 {
+  font-size: 28px; }
+
+body h2 {
+  font-size: 18px; }
 
 body .logomator-btn {
   height: 40px;
@@ -85,11 +91,10 @@ body .logomator-btn {
   body .logomator-btn.btn-disabled {
     opacity: .3; }
 
-body h1 {
-  font-size: 28px; }
-
-body h2 {
-  font-size: 18px; }
+body input {
+  font-size: 18px;
+  color: #2E2E2E;
+  padding-bottom: 9px; }
 
 body nav {
   height: 70px;
@@ -252,6 +257,7 @@ div.selection-progress {
     color: #2E2E2E;
     padding-bottom: 11px; }
   .container h2 {
+    font-family: 'Proxima Nova Light', sans-serif;
     color: #67676F; }
   .container .logomator-form {
     padding-top: 60px; }
@@ -265,9 +271,10 @@ div.selection-progress {
       max-width: 600px;
       width: 100%; }
       .container .logomator-form form label {
+        display: block;
         color: #19191A;
         font-size: 22px;
-        margin-bottom: 28px; }
+        margin-bottom: 19px; }
       .container .logomator-form form input {
         display: block;
         border: none;
@@ -275,6 +282,13 @@ div.selection-progress {
         width: 100%; }
         .container .logomator-form form input:focus {
           outline: none; }
+      .container .logomator-form form span.bottom-label {
+        display: block;
+        font-family: 'Proxima Nova Light', sans-serif;
+        font-size: 16px;
+        color: #67676F;
+        text-align: left;
+        margin-top: 10px; }
       .container .logomator-form form button.logomator-btn {
-        margin-top: 40px;
+        margin-top: 30px;
         float: right; }

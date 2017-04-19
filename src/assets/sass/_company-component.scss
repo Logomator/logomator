@@ -12,6 +12,7 @@
   }
 
   h2 {
+    font-family: 'Proxima Nova Light', sans-serif;
     color: $darkGrey;
   }
 
@@ -31,9 +32,10 @@
       width: 100%;
 
       label {
+        display: block;
         color: $darkBlack;
         font-size: 22px;
-        margin-bottom: 28px;
+        margin-bottom: 19px;
       }
       
       input {
@@ -47,8 +49,17 @@
         }
       }
 
+      span.bottom-label {
+        display: block;
+        font-family: 'Proxima Nova Light', sans-serif;
+        font-size: 16px;
+        color: $darkGrey;
+        text-align: left;
+        margin-top: 10px;
+      }
+
       button.logomator-btn {
-        margin-top: 40px;
+        margin-top: 30px;
         float: right;
       }
     }
