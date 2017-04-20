@@ -68,8 +68,33 @@
   font-weight: normal;
   font-style: normal; }
 
-body h1, body h2, body h3, body h4, body h5, body h6 {
-  font-family: "Proxima Nova Light"; }
+body h1, body h2, body h3, body h4, body h5, body h6, body p, body span, body input, body label {
+  font-family: "Proxima Nova";
+  font-weight: 300; }
+
+body h1 {
+  font-size: 28px; }
+
+body h2 {
+  font-size: 18px; }
+
+body .logomator-btn {
+  height: 40px;
+  width: 106px;
+  background: #F5530C;
+  border: 1px solid #F5530C;
+  box-shadow: 0 1px 3px 0 rgba(181, 181, 181, 0.15);
+  border-radius: 2px;
+  font-family: ProximaNova-Semibold, sans-serif;
+  font-size: 16px;
+  color: white; }
+  body .logomator-btn.btn-disabled {
+    opacity: .3; }
+
+body input {
+  font-size: 18px;
+  color: #2E2E2E;
+  padding-bottom: 9px; }
 
 body nav {
   height: 70px;
@@ -98,17 +123,6 @@ body nav {
 
 div.logomator-base {
   padding-bottom: 80px; }
-  div.logomator-base h1 {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 30px;
-    color: #2E2E2E; }
-  div.logomator-base h2 {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #80858E;
-    text-align: center;
-    margin-bottom: 0; }
   div.logomator-base div.selection {
     height: 100%;
     width: 100%;
@@ -233,3 +247,48 @@ div.selection-progress {
       height: 54px;
       width: 398px;
       margin-top: 40px; }
+
+.container {
+  max-width: 960px;
+  padding-top: 80px; }
+  .container h1, .container h2 {
+    margin: 0; }
+  .container h1 {
+    color: #2E2E2E;
+    padding-bottom: 11px; }
+  .container h2 {
+    font-family: 'Proxima Nova Light', sans-serif;
+    color: #67676F; }
+  .container .logomator-form {
+    padding-top: 60px; }
+    .container .logomator-form .orange-bar {
+      display: block;
+      background: #F5530C;
+      height: 4px;
+      width: 50px; }
+    .container .logomator-form form {
+      padding-top: 20px;
+      max-width: 600px;
+      width: 100%; }
+      .container .logomator-form form label {
+        display: block;
+        color: #19191A;
+        font-size: 22px;
+        margin-bottom: 19px; }
+      .container .logomator-form form input {
+        display: block;
+        border: none;
+        border-bottom: 1px solid #F5530C;
+        width: 100%; }
+        .container .logomator-form form input:focus {
+          outline: none; }
+      .container .logomator-form form span.bottom-label {
+        display: block;
+        font-family: 'Proxima Nova Light', sans-serif;
+        font-size: 16px;
+        color: #67676F;
+        text-align: left;
+        margin-top: 10px; }
+      .container .logomator-form form button.logomator-btn {
+        margin-top: 30px;
+        float: right; }

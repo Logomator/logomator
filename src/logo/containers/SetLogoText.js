@@ -1,16 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setLogoText } from '../actions';
+import { setCompanyName } from '../actions';
 import { fetchIcons } from '../actions';
 import { receiveIcons } from '../actions';
 
 
-let SetLogoText = ({ dispatch }) => {
-    let companyNameInput;
-    let tagLineInput;
+let SetLogoText = ({ dispatch, companyName }) => {
+    companyName = companyName || '';
+    console.log("COMPANY_NAME", companyName);
+
+    function handleChange(event) {
+        console.log(event.target.value);
+        dispatch(setCompanyName(event.target.value));
+    }
 
     return (
-
         <div className="container">
             <h1><strong>Hi, I’m Ada.</strong> Your personal logo design assistant.</h1>
             <h2>Let’s start designing you the perfect logo - it only takes a few minutes.</h2>
@@ -23,29 +27,20 @@ let SetLogoText = ({ dispatch }) => {
                 e.preventDefault();
 
                 // Dispatch set logo text action
-                dispatch(setLogoText([companyNameInput.value, tagLineInput.value]));
+                dispatch(setCompanyName(companyName.value));
 
-                // Dispatch fetch icons action.
-                dispatch(fetchIcons(companyNameInput.value))
-                .then((icons) => {
-
-                    // Dispatch receive icons action
-                    dispatch(receiveIcons(icons));
-                }); // TODO add catch error
-
-                companyNameInput.value = '';
-                tagLineInput.value = '';
+                companyName.value = '';
 
                 }}>
 
                     <label htmlFor="company_name">First, what is the name of your business or organization?</label>
-                    <input ref={text => {
-                        companyNameInput = text
+                    <input onChange={handleChange} ref={text => {
+                        companyName = text
                     }} />
 
                     <span className="bottom-label">I’ll use this as your main logo text.</span>
 
-                    <button type="submit" className="logomator-btn btn-disabled">Continue</button>
+                    <button type="submit" className={companyName.length > 0 ? 'logomator-btn btn' : 'logomator-btn btn-disabled'}>{companyName}</button>
 
                 </form>
             </div>
@@ -53,5 +48,5 @@ let SetLogoText = ({ dispatch }) => {
     )
 };
 
-SetLogoText = connect()(SetLogoText);
+
 export default SetLogoText;

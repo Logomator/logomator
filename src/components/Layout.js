@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import SetLogoText from '../logo/containers/SetLogoText';
 import GenerateLogos from '../logo/containers/GenerateLogos';
+import HomeComponent from '../logo/components/HomeComponent';
 
 class Layout extends React.Component {
 
