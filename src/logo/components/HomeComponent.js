@@ -17,9 +17,10 @@ const mapDispatchToProps = (dispatch) => {
         }
     }
 };
+
 const HomeComponent = connect(
     null,
     mapDispatchToProps
 )(ShowCompanyNameForm);
 
-export default HomeComponent;//
+export default HomeComponent;

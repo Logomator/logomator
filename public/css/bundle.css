@@ -252,17 +252,30 @@ div.selection-progress {
 
 .container {
   max-width: 960px;
-  padding-top: 80px; }
+  padding-top: 40px; }
   .container h1, .container h2 {
-    margin: 0; }
-  .container h1 {
+    margin: 0;
     color: #2E2E2E;
-    padding-bottom: 11px; }
-  .container h2 {
-    font-family: 'Proxima Nova Light', sans-serif;
-    color: #67676F; }
+    font-size: 16px; }
+  .container .chat-container {
+    vertical-align: top; }
+    .container .chat-container .chat-bubble-pic {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: top; }
+      .container .chat-container .chat-bubble-pic img {
+        height: 50px;
+        width: 50px; }
+    .container .chat-container .chat-bubble-message {
+      display: inline-block;
+      border-radius: 10px;
+      height: 80px;
+      max-width: 525px;
+      width: 100%;
+      padding: 17px;
+      background: #F3F3F3; }
   .container .logomator-form {
-    padding-top: 60px; }
+    padding-top: 40px; }
     .container .logomator-form .orange-bar {
       display: block;
       background: #F5530C;
@@ -275,7 +288,7 @@ div.selection-progress {
       .container .logomator-form form label {
         display: block;
         color: #19191A;
-        font-size: 22px;
+        font-size: 21px;
         margin-bottom: 19px; }
       .container .logomator-form form input {
         display: block;
@@ -292,5 +305,5 @@ div.selection-progress {
         text-align: left;
         margin-top: 10px; }
       .container .logomator-form form button.logomator-btn {
-        margin-top: 30px;
+        margin-top: 10px;
         float: right; }

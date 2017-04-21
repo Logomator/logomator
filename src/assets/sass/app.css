@@ -89,7 +89,9 @@ body .logomator-btn {
   font-size: 16px;
   color: white; }
   body .logomator-btn.btn-disabled {
-    opacity: .3; }
+    opacity: .3;
+    pointer-events: none;
+    cursor: default; }
 
 body input {
   font-size: 18px;

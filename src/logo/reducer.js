@@ -11,7 +11,6 @@ export function logoReducer (state, action) {
     switch (action.type) {
 
         case actionTypes.SET_COMPANY_NAME:
-
             return Object.assign({}, state, {
                 companyName: action.name
             });

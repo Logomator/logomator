@@ -1,23 +1,41 @@
 .container {
   max-width: 960px;
-  padding-top: 80px;
+  padding-top: 40px;
 
   h1, h2 {
     margin: 0;
-  }
-
-  h1 {
     color: $black;
-    padding-bottom: 11px;
+    font-size: 16px;
   }
 
-  h2 {
-    font-family: 'Proxima Nova Light', sans-serif;
-    color: $darkGrey;
+  .chat-container {
+    vertical-align: top;
+
+    .chat-bubble-pic {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: top;
+
+      img {
+        height: 50px;
+        width: 50px;
+      }
+    }
+
+    .chat-bubble-message {
+      display: inline-block;
+      border-radius: 10px;
+      height: 80px;
+      max-width: 525px;
+      width: 100%;
+      padding: 17px;
+      background: $veryLightGrey;
+    }
   }
+
 
   .logomator-form {
-    padding-top: 60px;
+    padding-top: 40px;
 
     .orange-bar {
       display: block;
@@ -34,7 +52,7 @@
       label {
         display: block;
         color: $darkBlack;
-        font-size: 22px;
+        font-size: 21px;
         margin-bottom: 19px;
       }
       
@@ -59,7 +77,7 @@
       }
 
       button.logomator-btn {
-        margin-top: 30px;
+        margin-top: 10px;
         float: right;
       }
     }
