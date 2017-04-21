@@ -1,16 +1,18 @@
 // Colors
 $black: #2E2E2E;
+$darkBlack: #19191A;
 $grey: #80858E;
-$dark-grey: #CBD1D6;
+$darkGrey: #67676F;
 $very-dark-grey: #81868F;
-$light-grey: #FBFBFC;
+$lightGrey: #FDFDFD;
+$veryLightGrey: #F3F3F3;
 
 
 // Progress bar
 $progress-bar-bg: #E3E4E4;
 
 // Brands
-$logomator-orange: #F5530C;
+$logomatorOrange: #F5530C;
 $brand-primary: #3097D1;
 $brand-info: #8eb4cb;
 $brand-success: #2ab27b;
@@ -23,6 +25,9 @@ $input-border: #B3B3B3;
 
 // Shadows
 $logo-selection-box-shadow: 0px -1px 5px 0px rgba(120, 137, 149, 0.25);
+$navBoxShadow: 0 4px 0 0 #F9F9FA;
+$colorPaletteShadow: 0 4px 20px 0 rgba(0,0,0,0.15);
+$logomatorBtnShadow: 0 1px 3px 0 rgba(181,181,181,0.15);
 
 // Typography
 $font-promixa-nova-reg: 'Promixa Nova';
@@ -35,15 +40,15 @@ $font-promixa-nova-light: 'Promixa Light';
 // Blues
 $lightest-blue: #B1D9F9;
 $very-light-blue: #A0D0F8;
-$light-blue: #84C4F5;
+$lightBlue: #84C4F5;
 
 $light-dark-blue: #6DB7F2;
 $blue: #1C87E1;
 $darker-blue: #146FB8;
 
-$dark-blue: #0D5DA0;
+$darkBlue: #0D5DA0;
 $very-dark-blue: #0A5693;
-$darkest-blue: #073E75;
+$darkestBlue: #073E75;
 
 // Aquas
 $lightest-aqua: #BDE5EC;

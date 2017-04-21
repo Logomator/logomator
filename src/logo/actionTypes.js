@@ -2,7 +2,7 @@
  * Set logo text action.
  * @type {string}
  */
-export const SET_LOGO_TEXT = 'SET_LOGO_TEXT';
+export const SET_COMPANY_NAME = 'SET_COMPANY_NAME';
 
 /**
  * Request icons action.

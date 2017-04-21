@@ -1,0 +1,85 @@
+.container {
+  max-width: 960px;
+  padding-top: 40px;
+
+  h1, h2 {
+    margin: 0;
+    color: $black;
+    font-size: 16px;
+  }
+
+  .chat-container {
+    vertical-align: top;
+
+    .chat-bubble-pic {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: top;
+
+      img {
+        height: 50px;
+        width: 50px;
+      }
+    }
+
+    .chat-bubble-message {
+      display: inline-block;
+      border-radius: 10px;
+      height: 80px;
+      max-width: 525px;
+      width: 100%;
+      padding: 17px;
+      background: $veryLightGrey;
+    }
+  }
+
+
+  .logomator-form {
+    padding-top: 40px;
+
+    .orange-bar {
+      display: block;
+      background: $logomatorOrange;
+      height: 4px;
+      width: 50px;
+    }
+
+    form {
+      padding-top: 20px;
+      max-width: 600px;
+      width: 100%;
+
+      label {
+        display: block;
+        color: $darkBlack;
+        font-size: 21px;
+        margin-bottom: 19px;
+      }
+      
+      input {
+        display: block;
+        border: none;
+        border-bottom: 1px solid $logomatorOrange;
+        width: 100%;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      span.bottom-label {
+        display: block;
+        font-family: 'Proxima Nova Light', sans-serif;
+        font-size: 16px;
+        color: $darkGrey;
+        text-align: left;
+        margin-top: 10px;
+      }
+
+      button.logomator-btn {
+        margin-top: 10px;
+        float: right;
+      }
+    }
+  }
+}

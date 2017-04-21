@@ -1,55 +1,52 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setLogoText } from '../actions';
+import { setCompanyName } from '../actions';
 import { fetchIcons } from '../actions';
 import { receiveIcons } from '../actions';
 
 
-let SetLogoText = ({ dispatch }) => {
-    let companyNameInput;
-    let tagLineInput;
+let SetLogoText = ({ dispatch, companyName }) => {
+    companyName = companyName || '';
+    console.log("COMPANY_NAME", companyName);
+
+    function handleChange(event) {
+        console.log(event.target.value);
+        dispatch(setCompanyName(event.target.value));
+    }
 
     return (
-        <div>
-            <form onSubmit={e => {
-            e.preventDefault();
+        <div className="container">
+            <h1><strong>Hi, I’m Ada.</strong> Your personal logo design assistant.</h1>
+            <h2>Let’s start designing you the perfect logo - it only takes a few minutes.</h2>
 
-            if (!companyNameInput.value.trim()) {
-                return;
-            }
+            <div className="logomator-form">
 
-            // Dispatch set logo text action
-            dispatch(setLogoText([companyNameInput.value, tagLineInput.value]));
+                <span className="orange-bar"></span>
 
-            // Dispatch fetch icons action.
-            dispatch(fetchIcons(companyNameInput.value))
-            .then((icons) => {
+                <form name="company_name" onSubmit={e => {
+                e.preventDefault();
 
-                // Dispatch receive icons action
-                dispatch(receiveIcons(icons));
-            }); // TODO add catch error
+                // Dispatch set logo text action
+                dispatch(setCompanyName(companyName.value));
 
-            companyNameInput.value = '';
-            tagLineInput.value = '';
+                companyName.value = '';
 
-            }}>
-                <input placeholder="Logo Text Line 1" ref={text => {
-                    companyNameInput = text
-                }} />
+                }}>
 
-                <input placeholder="Logo Text Line 2" ref={text => {
-                    tagLineInput = text
-                }} />
+                    <label htmlFor="company_name">First, what is the name of your business or organization?</label>
+                    <input onChange={handleChange} ref={text => {
+                        companyName = text
+                    }} />
 
+                    <span className="bottom-label">I’ll use this as your main logo text.</span>
 
-                <button type="submit">
-                    Generate Logos
-                </button>
+                    <button type="submit" className={companyName.length > 0 ? 'logomator-btn btn' : 'logomator-btn btn-disabled'}>{companyName}</button>
 
-            </form>
+                </form>
+            </div>
         </div>
     )
 };
 
-SetLogoText = connect()(SetLogoText);
+
 export default SetLogoText;

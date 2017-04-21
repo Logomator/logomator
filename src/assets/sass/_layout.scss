@@ -1,31 +1,73 @@
 body {
-  h1, h2, h3, h4, h5, h6 {
-    font-family: "Proxima Nova Light";
+
+  // Globals fonts
+  h1, h2, h3, h4, h5, h6, p, span, input, label {
+    font-family: "Proxima Nova";
+    font-weight: 300;
   }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  // Buttons
+  .logomator-btn {
+    height: 40px;
+    width: 106px;
+    background: $logomatorOrange;
+    border: 1px solid $logomatorOrange;
+    box-shadow: $logomatorBtnShadow;
+    border-radius: 2px;
+    font-family: ProximaNova-Semibold, sans-serif;
+    font-size: 16px;
+    color: white;
+
+    &.btn-disabled {
+      opacity: .3;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+
+  // Inputs
+  input {
+    font-size: 18px;
+    color: $black;
+    padding-bottom: 9px;
+  }
+
+
   nav {
-    height: 62px;
+    height: 70px;
     width: 100%;
-    border-bottom: 1px solid $border;
-    padding: 0 55px;
+    //border-bottom: 1px solid $border;
+    padding: 15px 40px 15px 40px;
+    border: 1px solid #EBEFF0;
+    box-shadow: $navBoxShadow; //
 
 
     img.logo {
       height: auto;
-      width: 162px;
-      margin: 15px 0;
+      width: 40px;
     }
 
     .right {
       display: inline-block;
       float: right;
-      margin: 10px 0;
 
-      button.login {
+      button.start-over {
         height: 40px;
-        width: 86px;
-        background: transparent;
+        width: 137px;
+        padding-left: 29px;
+        background: transparent url('../images/icons/start-over.png') no-repeat;
+        background-size: 13px 14px;
+        background-position: 20px 11px;
         border: 1px solid $border;
-        font-size: 15px;
+        font-size: 16px;
         font-family: "Proxima Nova Semi Bold";
         color: $black;
         border-radius: 2px;
