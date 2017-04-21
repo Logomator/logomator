@@ -5,7 +5,7 @@ class CompanyNameForm extends React.Component {
         super(props);
 
         this.state = {companyName: ''};
-        this.handleInputChange = this.handleChange.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
     }
 
     handleInputChange(event) {
@@ -31,7 +31,11 @@ class CompanyNameForm extends React.Component {
 
                         <span className="bottom-label">I’ll use this as your main logo text.</span>
 
-                        <button onClick={() => this.props.onClick(this.state.companyName)}
+                        <button onClick={e =>{
+                           console.log("CLICKED");
+                           e.preventDefault();
+                            this.props.onClick(this.state.companyName.value)}
+                            }
                                 className={this.state.companyName.length > 0 ? 'logomator-btn' : 'logomator-btn btn-disabled'}>
                             Continue
                         </button>

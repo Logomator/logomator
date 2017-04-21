@@ -13,6 +13,8 @@ let store = createStore(
     )
 );
 
+window.store = store;
+
 ReactDOM.render(
     <Provider store={store}>
         <Layout />

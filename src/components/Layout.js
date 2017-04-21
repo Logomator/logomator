@@ -12,7 +12,7 @@ class Layout extends React.Component {
                 <Navbar />
 
                 <div className="logomator-base">
-                    <SetLogoText />
+                    <HomeComponent />
 
                     <div className="selection container-fluid">
                         <div className="row">

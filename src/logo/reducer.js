@@ -13,7 +13,7 @@ export function logoReducer (state, action) {
         case actionTypes.SET_COMPANY_NAME:
 
             return Object.assign({}, state, {
-                companyName: action.companyName
+                companyName: action.name
             });
 
         case actionTypes.REQUEST_ICONS:

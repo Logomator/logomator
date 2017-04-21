@@ -10,17 +10,16 @@ const ShowCompanyNameForm = ({ onClick }) => {
     )
 };
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-    debugger;
+const mapDispatchToProps = (dispatch) => {
     return {
-        onClick: () => {
-            dispatch(setCompanyName(ownProps.companyName))
+        onClick: (companyName) => {
+            dispatch(setCompanyName(companyName))
         }
     }
 };
-
-const HomeComponent = connect (
+const HomeComponent = connect(
+    null,
     mapDispatchToProps
 )(ShowCompanyNameForm);
 
-export default HomeComponent;
+export default HomeComponent;//
