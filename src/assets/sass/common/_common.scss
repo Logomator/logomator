@@ -33,6 +33,20 @@ body {
     }
   }
 
+  .back-btn {
+    height: 40px;
+    width: 100px;
+    background: transparent url('../images/icons/back.png') no-repeat;
+    background-size: 14px 12px;
+    background-position: 20px 12px;
+    padding-left: 29px;
+    border: 1px solid $border;
+    border-radius: 2px;
+    font-family: ProximaNova-Semibold;
+    font-size: 16px;
+    color: $darkBlack;
+  }
+
   // Inputs
   input {
     font-size: 18px;
@@ -44,10 +58,9 @@ body {
   nav {
     height: 70px;
     width: 100%;
-    //border-bottom: 1px solid $border;
     padding: 15px 40px 15px 40px;
     border: 1px solid #EBEFF0;
-    box-shadow: $navBoxShadow; //
+    box-shadow: $navBoxShadow;
 
 
     img.logo {

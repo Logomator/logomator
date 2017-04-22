@@ -2,7 +2,7 @@ import * as actionTypes from './actionTypes';
 
 const defaultState = {
     companyName: '',
-    tagLine: null,
+    tagline: '',
     isFetching: false,
     icons: []
 };
@@ -13,6 +13,11 @@ export function logoReducer (state, action) {
         case actionTypes.SET_COMPANY_NAME:
             return Object.assign({}, state, {
                 companyName: action.name
+            });
+
+        case actionTypes.SET_TAGLINE_TEXT:
+            return Object.assign({}, state, {
+                tagline: action.tagline
             });
 
         case actionTypes.REQUEST_ICONS:

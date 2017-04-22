@@ -1,0 +1,49 @@
+.tagline-component.container {
+
+    .logomator-radio-btn {
+      height: 80px;
+      width: 290px;
+      border: 1px solid $border;
+      border-radius: 2px;
+      padding: 0 20px 0 20px;
+      display: inline-block;
+
+      &.selected {
+        border: 1px solid $logomatorOrange;
+      }
+
+      .radio-btn-labels {
+        display: inline-block;
+        padding-top: 17px;
+        margin-left: 20px;
+
+        strong {
+          color: $darkBlack;
+          font-size: 18px;
+          font-weight: 500;
+        }
+
+        p {
+          margin: 0;
+          color: $darkGrey;
+          font-size: 16px;
+        }
+      }
+
+      input[type="radio"] {
+        vertical-align: top;
+        margin-top: 20px;
+        height: 16px;
+        width: 16px;
+        display: inline-block;
+
+        &:checked {
+
+        }
+      }
+    }
+  
+  .no-show {
+    display: none;
+  }
+}
