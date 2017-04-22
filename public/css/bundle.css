@@ -93,6 +93,19 @@ body .logomator-btn {
     pointer-events: none;
     cursor: default; }
 
+body .back-btn {
+  height: 40px;
+  width: 100px;
+  background: transparent url("../images/icons/back.png") no-repeat;
+  background-size: 14px 12px;
+  background-position: 20px 12px;
+  padding-left: 29px;
+  border: 1px solid #DFE3E6;
+  border-radius: 2px;
+  font-family: ProximaNova-Semibold;
+  font-size: 16px;
+  color: #19191A; }
+
 body input {
   font-size: 18px;
   color: #2E2E2E;
@@ -117,7 +130,7 @@ body nav {
       background: transparent url("../images/icons/start-over.png") no-repeat;
       background-size: 13px 14px;
       background-position: 20px 11px;
-      border: 1px solid #E3E4E4;
+      border: 1px solid #DFE3E6;
       font-size: 16px;
       font-family: "Proxima Nova Semi Bold";
       color: #2E2E2E;
@@ -307,3 +320,34 @@ div.selection-progress {
       .container .logomator-form form button.logomator-btn {
         margin-top: 10px;
         float: right; }
+
+.tagline-component.container .logomator-radio-btn {
+  height: 80px;
+  width: 290px;
+  border: 1px solid #DFE3E6;
+  border-radius: 2px;
+  padding: 0 20px 0 20px;
+  display: inline-block; }
+  .tagline-component.container .logomator-radio-btn.selected {
+    border: 1px solid #F5530C; }
+  .tagline-component.container .logomator-radio-btn .radio-btn-labels {
+    display: inline-block;
+    padding-top: 17px;
+    margin-left: 20px; }
+    .tagline-component.container .logomator-radio-btn .radio-btn-labels strong {
+      color: #19191A;
+      font-size: 18px;
+      font-weight: 500; }
+    .tagline-component.container .logomator-radio-btn .radio-btn-labels p {
+      margin: 0;
+      color: #67676F;
+      font-size: 16px; }
+  .tagline-component.container .logomator-radio-btn input[type="radio"] {
+    vertical-align: top;
+    margin-top: 20px;
+    height: 16px;
+    width: 16px;
+    display: inline-block; }
+
+.tagline-component.container .no-show {
+  display: none; }
