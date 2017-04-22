@@ -3,7 +3,7 @@ import LogoList from '../components/LogoList';
 
 const mapStateToProps = (state) => ({
     companyName: state.companyName,
-    tagLine: state.tagLine,
+    tagline: state.tagline,
     icons: state.icons
 });
 

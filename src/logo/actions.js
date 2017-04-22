@@ -1,10 +1,16 @@
 import fetch from 'isomorphic-fetch';
 import { SET_COMPANY_NAME } from './actionTypes';
+import { SET_TAGLINE_TEXT } from './actionTypes';
 import { REQUEST_ICONS } from './actionTypes';
 import { RECEIVE_ICONS } from './actionTypes';
 
 export const setCompanyName = (name) => {
     return { type: SET_COMPANY_NAME, name }
+};
+
+export const setTaglineText = (tagline) => {
+    console.log(tagline);
+    return { type: SET_TAGLINE_TEXT, tagline }
 };
 
 export const requestIconsByTerm = (term) => {

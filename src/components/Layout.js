@@ -4,6 +4,7 @@ import SetLogoText from '../logo/containers/SetLogoText';
 import GenerateLogos from '../logo/containers/GenerateLogos';
 import HomeComponent from '../logo/components/HomeComponent';
 import TaglineComponent from '../logo/components/TaglineComponent';
+import ShowTagLineComponent from '../logo/components/SetTaglineComponent';
 
 class Layout extends React.Component {
 
@@ -13,7 +14,7 @@ class Layout extends React.Component {
                 <Navbar />
 
                 <div className="logomator-base">
-                    <TaglineComponent />
+                    <ShowTagLineComponent />
 
                     <div className="selection container-fluid">
                         <div className="row">

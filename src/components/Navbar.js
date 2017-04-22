@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from '../../../assets/images/logomator-logo.png';
 
-class Navbar extends Component {
+class Navbar extends React.Component {
 
     render() {
         return (
