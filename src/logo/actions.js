@@ -9,7 +9,6 @@ export const setCompanyName = (name) => {
 };
 
 export const setTaglineText = (tagline) => {
-    console.log(tagline);
     return { type: SET_TAGLINE_TEXT, tagline }
 };
 
