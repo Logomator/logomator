@@ -2,17 +2,18 @@ import React from 'react';
 import TaglineComponent from './TaglineComponent';
 import Navbar from '../../components/Navbar';
 
+import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { setTaglineText } from "../actions";
 
-const SetTaglineComponent = ({ companyName, onClick }) => {
+const SetTaglineComponent = withRouter(({ companyName, onClick, history }) => {
     return (
         <div>
             <Navbar />
-            <TaglineComponent companyName={companyName} onClick={onClick} />
+            <TaglineComponent companyName={companyName} onClick={onClick} history={history} />
         </div>
     )
-};
+});
 
 const mapStateToProps = (state) => ({
     companyName: state.companyName

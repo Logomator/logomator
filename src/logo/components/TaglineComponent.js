@@ -105,7 +105,11 @@ class TaglineComponent extends React.Component {
                             >Continue
                         </button>
 
-                        <button className="back-btn" style={{marginTop: '40px'}}>
+                        <button className="back-btn" style={{marginTop: '40px'}} onClick={ e =>{
+                               e.preventDefault();
+                                this.props.history.push('/');
+                                }
+                              }>
                             Back
                         </button>
 
