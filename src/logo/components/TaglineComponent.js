@@ -83,7 +83,7 @@ class TaglineComponent extends React.Component {
                         <div className={ this.state.hasTagline ? 'show' : 'no-show' } style={{marginTop: '40px'}}>
 
                             <label htmlFor="tagline">What is your tagline or slogan?</label>
-                            <input focus onChange={ this.handleInputChange } ref={text => {
+                            <input onChange={ this.handleInputChange } ref={text => {
                             this.state.tagline = text
                             }}/>
 

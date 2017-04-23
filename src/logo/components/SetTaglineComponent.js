@@ -1,12 +1,16 @@
 import React from 'react';
 import TaglineComponent from './TaglineComponent';
+import Navbar from '../../components/Navbar';
 
 import { connect } from 'react-redux';
 import { setTaglineText } from "../actions";
 
 const SetTaglineComponent = ({ companyName, onClick }) => {
     return (
-        <TaglineComponent companyName={companyName} onClick={onClick} />
+        <div>
+            <Navbar />
+            <TaglineComponent companyName={companyName} onClick={onClick} />
+        </div>
     )
 };
 
