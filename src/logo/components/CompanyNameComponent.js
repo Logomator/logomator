@@ -1,7 +1,7 @@
 import React from 'react';
 import adaChatBubblePic from '../../assets/images/ada-profile-bubble.png';
 
-class CompanyNameFormComponent extends React.Component {
+class CompanyNameComponent extends React.Component {
     constructor(props) {
         super(props);
 
@@ -39,14 +39,18 @@ class CompanyNameFormComponent extends React.Component {
 
                         <span className="bottom-label">This will be used as your main logo text.</span>
 
-                        <button onClick={ e =>{
-                           e.preventDefault();
-                            this.props.onClick(this.state.companyName.value)}
-                          }
-                                className={ this.state.companyName.length > 0 ? 'logomator-btn' : 'logomator-btn btn-disabled' }>
-                            Continue
-                        </button>
+                        <a href="/tagline">
+                            <button onClick={ e =>{
+                               e.preventDefault();
+                                this.props.onClick(this.state.companyName.value)
+                                this.props.history.push('/tagline');
+                                }
 
+                              }
+                                    className={ this.state.companyName.length > 0 ? 'logomator-btn' : 'logomator-btn btn-disabled' }>
+                                Continue
+                            </button>
+                        </a>
                     </form>
                 </div>
             </div>
@@ -54,4 +58,4 @@ class CompanyNameFormComponent extends React.Component {
     }
 }
 
-export default CompanyNameFormComponent;
+export default CompanyNameComponent;
