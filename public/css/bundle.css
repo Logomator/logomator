@@ -111,6 +111,23 @@ body input {
   color: #2E2E2E;
   padding-bottom: 9px; }
 
+body .logomator-textarea {
+  height: 120px;
+  width: 600px;
+  background: white;
+  border: 1px solid #B0B5B8;
+  border-radius: 2px;
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 18px;
+  color: #19191A;
+  padding: 20px 20px 34px 20px; }
+
+body .show {
+  display: block; }
+
+body .no-show {
+  display: none; }
+
 body nav {
   height: 70px;
   width: 100%;
@@ -370,6 +387,7 @@ div.selection-progress {
       transition: transform 0.25s ease;
       vertical-align: middle; }
   .industry-name-component.container .logomator-form form select {
+    display: block;
     -webkit-appearance: none;
     appearance: none;
     height: 50px;

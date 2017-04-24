@@ -42,7 +42,7 @@ class CompanyNameComponent extends React.Component {
                         <a href="/tagline">
                             <button onClick={ e =>{
                                e.preventDefault();
-                                this.props.onClick(this.state.companyName.value)
+                                this.props.onClick(this.state.companyName.value);
                                 this.props.history.push('/tagline');
                                 }
 

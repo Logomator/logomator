@@ -17,6 +17,12 @@ export const SET_TAGLINE_TEXT = 'SET_TAGLINE_TEXT';
 export const SET_INDUSTRY_NAME = 'SET_INDUSTRY_NAME';
 
 /**
+ * Set company description action.
+ * @type {string}
+ */
+export const SET_COMPANY_DESCRIPTION = 'SET_COMPANY_DESCRIPTION';
+
+/**
  * Request icons action.
  * @type {string}
  */

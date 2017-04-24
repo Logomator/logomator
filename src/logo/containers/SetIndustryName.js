@@ -4,14 +4,14 @@ import Navbar from '../../components/Navbar';
 
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
-import { setIndustryName } from '../actions';
+import { setIndustryName, setCompanyDescription } from '../actions';
 
-const IndustryName = withRouter(({ companyName, onClick, history }) => {
+const IndustryName = withRouter(({ companyName, onSelect, onClick, history }) => {
     return (
         <div>
             <Navbar />
             <div className="logomator-base">
-                <IndustryNameComponent companyName={companyName} onClick={onClick} history={history}/>
+                <IndustryNameComponent companyName={companyName} onSelect={onSelect} onClick={onClick} history={history}/>
             </div>
         </div>
     )
@@ -24,8 +24,11 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onClick: (industry) => {
+        onSelect: (industry) => {
             dispatch(setIndustryName(industry))
+        },
+        onClick: (description) => {
+            dispatch(setCompanyDescription(description));
         }
     }
 };
