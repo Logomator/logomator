@@ -1,5 +1,5 @@
 /**
- * Set logo text action.
+ * Set company name action.
  * @type {string}
  */
 export const SET_COMPANY_NAME = 'SET_COMPANY_NAME';
@@ -9,6 +9,12 @@ export const SET_COMPANY_NAME = 'SET_COMPANY_NAME';
  * @type {string}
  */
 export const SET_TAGLINE_TEXT = 'SET_TAGLINE_TEXT';
+
+/**
+ * Set industry name action.
+ * @type {string}
+ */
+export const SET_INDUSTRY_NAME = 'SET_INDUSTRY_NAME';
 
 /**
  * Request icons action.

@@ -94,7 +94,17 @@ body .logomator-btn {
     cursor: default; }
 
 body .back-btn {
-  height: 40px; }
+  height: 40px;
+  width: 100px;
+  background: transparent url("../images/icons/back.png") no-repeat;
+  background-size: 14px 12px;
+  background-position: 20px 12px;
+  padding-left: 29px;
+  border: 1px solid #DFE3E6;
+  border-radius: 2px;
+  font-family: ProximaNova-Semibold;
+  font-size: 16px;
+  color: #19191A; }
 
 body input {
   font-size: 18px;
@@ -120,7 +130,7 @@ body nav {
       background: transparent url("../images/icons/start-over.png") no-repeat;
       background-size: 13px 14px;
       background-position: 20px 11px;
-      border: 1px solid #E3E4E4;
+      border: 1px solid #DFE3E6;
       font-size: 16px;
       font-family: "Proxima Nova Semi Bold";
       color: #2E2E2E;
@@ -340,4 +350,7 @@ div.selection-progress {
     display: inline-block; }
 
 .tagline-component.container .no-show {
+  display: none; }
+
+.industry-name-component.container {
   display: none; }

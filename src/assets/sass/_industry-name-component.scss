@@ -1,0 +1,40 @@
+.industry-name-component.container {
+  .logomator-form {
+    form {
+      position: relative;
+
+      .select-triangle {
+        position: absolute;
+        top: 82px;
+        right: 272px;
+
+        &:after {
+          content: '';
+          width: 0;
+          height: 0;
+          display: inline-block;
+          border-color: $black transparent;
+          border-style: solid;
+          margin: 0 8px;
+          border-width: 6px 6px 0;
+          transition: transform 0.25s ease;
+          vertical-align: middle;
+        }
+      }
+
+      select {
+        -webkit-appearance: none;
+        appearance: none;
+        height: 50px;
+        width: 340px;
+        border: 1px solid $selectBorder;
+        border-radius: 2px;
+        padding: 11px 0 14px 20px;
+        font-size: 18px;
+        color: $darkBlack;
+        background: white;
+        font-family: 'Proxima Nova', sans-serif;
+      }
+    }
+  }
+}
