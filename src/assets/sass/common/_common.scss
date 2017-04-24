@@ -54,6 +54,26 @@ body {
     padding-bottom: 9px;
   }
 
+  .logomator-textarea {
+    height: 120px;
+    width: 600px;
+    background: white;
+    border: 1px solid $selectBorder;
+    border-radius: 2px;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 18px;
+    color: $darkBlack;
+    padding: 20px 20px 34px 20px;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  .no-show {
+    display: none;
+  }
+
 
   nav {
     height: 70px;

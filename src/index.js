@@ -10,6 +10,7 @@ import  logoReducer from './logo/reducer';
 
 import HomeComponent from './logo/containers/HomeComponent';
 import SetTaglineComponent from './logo/components/SetTaglineComponent';
+import SetIndustryName from './logo/containers/SetIndustryName';
 
 const history = createBrowserHistory();
 const middleware = routerMiddleware(history);
@@ -29,6 +30,7 @@ render(
             <div>
             <Route exact path="/" component={HomeComponent} />
                 <Route path="/tagline" component={SetTaglineComponent} />
+                <Route path="/industry" component={SetIndustryName} />
             </div>
         </Router>
     </Provider>,
