@@ -111,6 +111,23 @@ body input {
   color: #2E2E2E;
   padding-bottom: 9px; }
 
+body .logomator-textarea {
+  height: 120px;
+  width: 600px;
+  background: white;
+  border: 1px solid #B0B5B8;
+  border-radius: 2px;
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 18px;
+  color: #19191A;
+  padding: 20px 20px 34px 20px; }
+
+body .show {
+  display: block; }
+
+body .no-show {
+  display: none; }
+
 body nav {
   height: 70px;
   width: 100%;
@@ -287,37 +304,37 @@ div.selection-progress {
       width: 100%;
       padding: 17px;
       background: #F3F3F3; }
-  .container .logomator-form {
+  .container .logomator-form, .container .logomator-container {
     padding-top: 40px; }
-    .container .logomator-form .orange-bar {
+    .container .logomator-form .orange-bar, .container .logomator-container .orange-bar {
       display: block;
       background: #F5530C;
       height: 4px;
       width: 50px; }
-    .container .logomator-form form {
+    .container .logomator-form form, .container .logomator-container form {
       padding-top: 20px;
       max-width: 600px;
       width: 100%; }
-      .container .logomator-form form label {
+      .container .logomator-form form label, .container .logomator-form form h2, .container .logomator-container form label, .container .logomator-container form h2 {
         display: block;
         color: #19191A;
         font-size: 21px;
         margin-bottom: 19px; }
-      .container .logomator-form form input {
+      .container .logomator-form form input, .container .logomator-container form input {
         display: block;
         border: none;
         border-bottom: 1px solid #F5530C;
         width: 100%; }
-        .container .logomator-form form input:focus {
+        .container .logomator-form form input:focus, .container .logomator-container form input:focus {
           outline: none; }
-      .container .logomator-form form span.bottom-label {
+      .container .logomator-form form span.bottom-label, .container .logomator-container form span.bottom-label {
         display: block;
         font-family: 'Proxima Nova Light', sans-serif;
         font-size: 16px;
         color: #67676F;
         text-align: left;
         margin-top: 10px; }
-      .container .logomator-form form button.logomator-btn {
+      .container .logomator-form form button.logomator-btn, .container .logomator-container form button.logomator-btn {
         margin-top: 10px;
         float: right; }
 
@@ -352,5 +369,33 @@ div.selection-progress {
 .tagline-component.container .no-show {
   display: none; }
 
-.industry-name-component.container {
-  display: none; }
+.industry-name-component.container .logomator-form form {
+  position: relative; }
+  .industry-name-component.container .logomator-form form .select-triangle {
+    position: absolute;
+    top: 82px;
+    right: 272px; }
+    .industry-name-component.container .logomator-form form .select-triangle:after {
+      content: '';
+      width: 0;
+      height: 0;
+      display: inline-block;
+      border-color: #2E2E2E transparent;
+      border-style: solid;
+      margin: 0 8px;
+      border-width: 6px 6px 0;
+      transition: transform 0.25s ease;
+      vertical-align: middle; }
+  .industry-name-component.container .logomator-form form select {
+    display: block;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 50px;
+    width: 340px;
+    border: 1px solid #B0B5B8;
+    border-radius: 2px;
+    padding: 11px 0 14px 20px;
+    font-size: 18px;
+    color: #19191A;
+    background: white;
+    font-family: 'Proxima Nova', sans-serif; }

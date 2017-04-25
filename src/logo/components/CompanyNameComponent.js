@@ -39,18 +39,15 @@ class CompanyNameComponent extends React.Component {
 
                         <span className="bottom-label">This will be used as your main logo text.</span>
 
-                        <a href="/tagline">
-                            <button onClick={ e =>{
-                               e.preventDefault();
-                                this.props.onClick(this.state.companyName.value);
-                                this.props.history.push('/tagline');
-                                }
-
-                              }
-                                    className={ this.state.companyName.length > 0 ? 'logomator-btn' : 'logomator-btn btn-disabled' }>
-                                Continue
-                            </button>
-                        </a>
+                        <button onClick={ e =>{
+                              e.preventDefault();
+                               this.props.onClick(this.state.companyName.value);
+                               this.props.history.push('/tagline');
+                               }
+                             }
+                                className={ this.state.companyName.length > 0 ? 'logomator-btn' : 'logomator-btn btn-disabled' }>
+                            Continue
+                        </button>
                     </form>
                 </div>
             </div>

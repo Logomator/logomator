@@ -11,6 +11,7 @@ import  logoReducer from './logo/reducer';
 import HomeComponent from './logo/containers/HomeComponent';
 import SetTaglineComponent from './logo/components/SetTaglineComponent';
 import SetIndustryName from './logo/containers/SetIndustryName';
+import LogoInspirationContainer from './logo/containers/LogoInspirationContainer';
 
 const history = createBrowserHistory();
 const middleware = routerMiddleware(history);
@@ -31,6 +32,7 @@ render(
             <Route exact path="/" component={HomeComponent} />
                 <Route path="/tagline" component={SetTaglineComponent} />
                 <Route path="/industry" component={SetIndustryName} />
+                <Route path="/inspiration" component={LogoInspirationContainer} />
             </div>
         </Router>
     </Provider>,

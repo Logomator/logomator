@@ -103,6 +103,7 @@ class IndustryNameComponent extends React.Component {
 
                         <button className={this.state.companyDescription.length > 0 && this.state.industry.length > 0 ? 'logomator-btn' : 'logomator-btn btn-disabled'} style={{marginTop: '40px'}} onClick={ e =>{
                               e.preventDefault();
+                              this.props.history.push('/inspiration');
                               this.props.onSelect(this.state.industry);
                               this.props.onClick(this.state.companyDescription);
                               }}>
