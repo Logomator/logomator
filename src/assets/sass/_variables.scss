@@ -23,12 +23,14 @@ $brand-danger: #bf5329;
 $border: #DFE3E6;
 $input-border: #B3B3B3;
 $selectBorder: #B0B5B8;
+$progressBorder: #EBEFF0;
 
 // Shadows
-$logo-selection-box-shadow: 0px -1px 5px 0px rgba(120, 137, 149, 0.25);
+$logoSelectionBoxShadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
 $navBoxShadow: 0 4px 0 0 #F9F9FA;
 $colorPaletteShadow: 0 4px 20px 0 rgba(0,0,0,0.15);
 $logomatorBtnShadow: 0 1px 3px 0 rgba(181,181,181,0.15);
+$progressBarShadow: 0 -4px 0 0 #F9F9FA;
 
 // Typography
 $font-promixa-nova-reg: 'Promixa Nova';

@@ -179,7 +179,7 @@ div.logomator-base {
 div.selection-progress {
   height: 80px;
   width: 100%;
-  box-shadow: 0px -1px 5px 0px rgba(120, 137, 149, 0.25);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
   position: fixed;
   bottom: 0;
   background: white; }
@@ -400,18 +400,65 @@ div.selection-progress {
     background: white;
     font-family: 'Proxima Nova', sans-serif; }
 
-.logo-inspiration-container {
-  padding-top: 40px;
-  width: 960px; }
-  .logo-inspiration-container .logo-inspirations .logo {
-    height: 300px;
-    width: 300px;
-    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
-    border-radius: 2px;
-    margin-right: 30px;
-    margin-bottom: 30px; }
-    .logo-inspiration-container .logo-inspirations .logo img {
-      height: 100%;
-      width: 100%; }
-  .logo-inspiration-container .logo-inspirations div:nth-child(3n) {
-    margin-right: 0; }
+.logomator-base.inspiration {
+  padding-bottom: 0; }
+  .logomator-base.inspiration .container {
+    padding-bottom: 70px; }
+    .logomator-base.inspiration .container .logo-inspiration-container {
+      padding-top: 40px;
+      width: 960px;
+      padding-bottom: 100px; }
+      .logomator-base.inspiration .container .logo-inspiration-container .logo-inspirations .logo {
+        height: 300px;
+        width: 300px;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+        border-radius: 2px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        transition: transform 0.24s ease-in-out;
+        cursor: pointer; }
+        .logomator-base.inspiration .container .logo-inspiration-container .logo-inspirations .logo:hover {
+          transform: translateY(-15px); }
+        .logomator-base.inspiration .container .logo-inspiration-container .logo-inspirations .logo.selected {
+          border: 3px solid #F5530C; }
+        .logomator-base.inspiration .container .logo-inspiration-container .logo-inspirations .logo img {
+          height: 100%;
+          width: 100%; }
+      .logomator-base.inspiration .container .logo-inspiration-container .logo-inspirations div:nth-child(3n) {
+        margin-right: 0; }
+
+.progress {
+  position: fixed;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  border: 1px solid #EBEFF0;
+  box-shadow: 0 -4px 0 0 #F9F9FA;
+  background: white; }
+  .progress .container {
+    padding: 0; }
+    .progress .container .logomator-btn {
+      margin: 0;
+      margin-top: 15px;
+      float: right; }
+    .progress .container .progress-bar {
+      position: relative;
+      top: 30px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      height: 10px;
+      width: 300px;
+      background: #DFE3E6;
+      border-radius: 10px; }
+      .progress .container .progress-bar .progress-bar-fill {
+        position: absolute;
+        height: 10px;
+        width: 20%;
+        background: #F5530C;
+        border-radius: 10px;
+        transition: width 0.3s ease-in-out; }
+    .progress .container .back-btn {
+      margin: 0;
+      margin-top: 6px; }

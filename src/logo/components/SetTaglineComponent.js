@@ -1,6 +1,6 @@
 import React from 'react';
 import TaglineComponent from './TaglineComponent';
-import Navbar from '../../components/Navbar';
+import Navbar from '../../components/common/Navbar';
 
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';

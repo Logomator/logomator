@@ -1,10 +1,10 @@
 import React from 'react';
 import Navbar from './Navbar';
-import SetLogoText from '../logo/containers/SetLogoText';
-import GenerateLogos from '../logo/containers/GenerateLogos';
+import SetLogoText from '../../logo/containers/SetLogoText';
+import GenerateLogos from '../../logo/containers/GenerateLogos';
 import HomeComponent from '../logo/components/HomeComponent';
-import TaglineComponent from '../logo/components/TaglineComponent';
-import ShowTagLineComponent from '../logo/components/SetTaglineComponent';
+import TaglineComponent from '../../logo/components/TaglineComponent';
+import ShowTagLineComponent from '../../logo/components/SetTaglineComponent';
 
 class Layout extends React.Component {
 

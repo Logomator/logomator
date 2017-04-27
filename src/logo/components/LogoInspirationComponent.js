@@ -5,27 +5,11 @@ import logoInspiration from '../../assets/images/logo-inspirations/GunarBolf.png
 class LogoInspirationComponent extends React.Component {
     constructor(props) {
         super(props);
-
-        this.state = {logoInspirations: []}
     }
 
     render() {
         return (
             <div className="container">
-                <div className="chat-container">
-                    <div className="chat-bubble-pic">
-                        <img src={adaChatBubblePic} alt=""/>
-                    </div>
-                    <div className="chat-bubble-message" style={{
-                    height: '80px',
-                    maxWidth: '600px',
-                    padding: '20px'
-                    }}>
-                        <h1>Thanks, that helps! Now, let’s figure out how your logo should look.
-                            I’ll use the examples below to understand what styles I should incorporate in your logo.</h1>
-                    </div>
-                </div>
-
                 <div className="logomator-container">
                     <span className="orange-bar"></span>
                     <h2 style={{
@@ -36,40 +20,9 @@ class LogoInspirationComponent extends React.Component {
 
                     <div className="logo-inspiration-container">
                         <div className="logo-inspirations">
-                           <div className="logo col-md-3">
-                               <img src={logoInspiration} alt=""/>
-                           </div>
-
-                            <div className="logo col-md-3">
-                                <img src={logoInspiration} alt=""/>
-                            </div>
-
-                            <div className="logo col-md-3">
-                                <img src={logoInspiration} alt=""/>
-                            </div>
-
-                            <div className="logo col-md-3">
-                                <img src={logoInspiration} alt=""/>
-                            </div>
-
-                            <div className="logo col-md-3">
-                                <img src={logoInspiration} alt=""/>
-                            </div>
-
-                            <div className="logo col-md-3">
-                                <img src={logoInspiration} alt=""/>
-                            </div>
-
-                            <div className="logo col-md-3">
-                                <img src={logoInspiration} alt=""/>
-                            </div>
-
-                            <div className="logo col-md-3">
-                                <img src={logoInspiration} alt=""/>
-                            </div>
-
-                            <div className="logo col-md-3">
-                                <img src={logoInspiration} alt=""/>
+                            <div className={this.props.inspiration.isSelected ? 'logo col-md-3 selected' : 'logo col-md-3'} onClick={e => {
+                            }}>
+                                <img src={this.props.inspiration.img} alt=""/>
                             </div>
                         </div>
                     </div>
@@ -77,8 +30,5 @@ class LogoInspirationComponent extends React.Component {
             </div>
         )
     }
-
-
 }
-
 export default LogoInspirationComponent;

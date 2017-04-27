@@ -1,19 +1,32 @@
 import React from 'react';
 import LogoInspirationComponent from '../components/LogoInspirationComponent';
-import Navbar from '../../components/Navbar';
+import Navbar from '../../components/common/Navbar';
+import ChatComponent from '../../components/common/ChatComponent';
+import ProgressBarComponent from '../../components/common/ProgressBarComponent';
 
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
 
-const LogoinspirationContainer = withRouter(({ }) => {
+const LogoInspiration = withRouter(({ history, inspirations }) => {
+
+    let logoInspirations = [];
+    let text = 'Thanks, that helps! Now, let’s figure out how your logo should look.' +
+        ' I’ll use the examples below to understand what styles I should incorporate in your logo.';
+
     return (
         <div>
             <Navbar />
-            <div className="logomator-base">
-                <LogoInspirationComponent />
+            <ChatComponent text={text} height="80px" />
+            <div className="logomator-base inspiration">
+                <LogoInspirationComponent history={history} inspiration={inspirations[0]} />
             </div>
+            <ProgressBarComponent history={history} />
         </div>
     )
+});
+
+const mapStateToProps = (state) => ({
+    inspirations: state.inspirations
 });
 
 // const mapDispatchToProps = (dispatch) => {
@@ -24,9 +37,8 @@ const LogoinspirationContainer = withRouter(({ }) => {
 //     }
 // };
 
-// const HomeComponent = connect(
-//     null,
-//     mapDispatchToProps
-// )(SetCompanyName);
+const LogoInspirationContainer = connect(
+    mapStateToProps
+)(LogoInspiration);
 
-export default LogoinspirationContainer;
+export default LogoInspirationContainer;

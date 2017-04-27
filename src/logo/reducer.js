@@ -1,4 +1,5 @@
 import * as actionTypes from './actionTypes';
+import logoInspiration from '../assets/images/logo-inspirations/GunarBolf.png';
 
 const defaultState = {
     companyName: '',
@@ -6,7 +7,20 @@ const defaultState = {
     industry: '',
     companyDescription: '',
     isFetching: false,
-    icons: []
+    icons: [],
+    inspirations: [
+        {
+            img: logoInspiration,
+            isSelected: false,
+            fontFamily: 'Foo Family'
+        },
+        {
+            img: logoInspiration,
+            isSelected: false,
+            fontFamily: 'Bar Family'
+        }
+
+    ]
 };
 
 export function logoReducer (state, action) {

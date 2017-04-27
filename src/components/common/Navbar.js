@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../../assets/images/logomator-logo.png';
+import logo from '../../../../assets/images/logomator-logo.png';
 
 class Navbar extends React.Component {
 
