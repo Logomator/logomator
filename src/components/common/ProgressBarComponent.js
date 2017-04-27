@@ -14,7 +14,7 @@ const ProgressBarComponent = ({ history, inspirations }) => {
     return (
         <div className="progress">
             <div className="container">
-                <button className="logomator-btn btn-disabled" onClick={ e => {
+                <button className={logosSelected() === 5 ? 'logomator-btn' : 'logomator-btn btn-disabled'} onClick={ e => {
                             e.preventDefault();
 
                             }}>
@@ -22,7 +22,11 @@ const ProgressBarComponent = ({ history, inspirations }) => {
                 </button>
 
                 <div className="progress-bar">
-                    <div className="progress-bar-fill" style={{width: logosSelected() * 20 + '%'}}></div>
+                    <div className="progress-bar-fill" style={{
+                    width: logosSelected() * 20 + '%'
+                    }}>
+
+                    </div>
                 </div>
 
                 <button className="back-btn" onClick={ e =>{

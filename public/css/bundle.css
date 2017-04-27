@@ -299,7 +299,6 @@ div.selection-progress {
     .container .chat-container .chat-bubble-message {
       display: inline-block;
       border-radius: 10px;
-      height: 80px;
       max-width: 525px;
       width: 100%;
       padding: 17px;

@@ -33,18 +33,6 @@ class TaglineComponent extends React.Component {
 
     render() {
         return (
-            <div className="tagline-component container">
-                <div className="chat-container">
-
-                    <div className="chat-bubble-pic">
-                        <img src={adaChatBubblePic} alt=""/>
-                    </div>
-
-                    <div className="chat-bubble-message" style={{ height: '60px'}}>
-                        <h1>Great name! <strong>{this.state.companyName}</strong> is going to look so good in your logo. </h1>
-                    </div>
-                </div>
-
                 <div className="logomator-form">
                     <span className="orange-bar"></span>
 
@@ -120,7 +108,6 @@ class TaglineComponent extends React.Component {
 
                     </form>
                 </div>
-            </div>
         )
     }
 }

@@ -39,12 +39,12 @@ const defaultState = {
             isSelected: false
         }
 
-    ]
+    ],
+
+    selectedInspirations: []
 };
 
 const selectInspiration = (state, action) => {
-
-    // Check palette selected matches the palette name.
     if (state.id !== action.inspiration.id) {
         return state;
     }
@@ -52,7 +52,6 @@ const selectInspiration = (state, action) => {
     return Object.assign({}, state, {
         isSelected: !state.isSelected
     });
-
 };
 
 export function logoReducer (state, action) {

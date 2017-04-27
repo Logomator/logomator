@@ -2,8 +2,8 @@ import React from 'react';
 import adaChatBubblePic from '../../assets/images/ada-profile-bubble.png';
 
 const ChatComponent = ({ text, text2, height }) => {
-    text2 = text2 || '';
-
+    height = height || '80px';
+    
     return (
             <div className="chat-container">
                 <div className="chat-bubble-pic">
@@ -16,8 +16,8 @@ const ChatComponent = ({ text, text2, height }) => {
                     padding: '20px'
                   }}>
 
-                <h1>{text}</h1>
-                <h2 className={text2 && text2.length > 0 ? 'show' : 'no-show'}>{text2}</h2>
+                    {text}
+                    {text2}
                 </div>
             </div>
     )

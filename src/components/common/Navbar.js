@@ -6,7 +6,9 @@ class Navbar extends React.Component {
     render() {
         return (
             <nav className="logomator-navbar">
-                <img src={logo} className="logo" alt="Logomator"/>
+                <a href="/">
+                    <img src={logo} className="logo" alt="Logomator"/>
+                </a>
                 <div className="right">
                     <button className="start-over">Start Over</button>
                 </div>

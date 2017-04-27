@@ -1,6 +1,7 @@
 import React from 'react';
 import IndustryNameComponent from '../components/IndustryNameComponent';
 import Navbar from '../../components/common/Navbar';
+import ChatComponent from '../../components/common/ChatComponent';
 
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
@@ -11,7 +12,13 @@ const IndustryName = withRouter(({ companyName, onSelect, onClick, history }) =>
         <div>
             <Navbar />
             <div className="logomator-base">
-                <IndustryNameComponent companyName={companyName} onSelect={onSelect} onClick={onClick} history={history}/>
+                <div className="industry-name-component container">
+                    <ChatComponent
+                        text={<h1>Now, tell me a little bit more about <strong>{companyName}</strong>.</h1>}
+                        height="60px"
+                    />
+                    <IndustryNameComponent companyName={companyName} onSelect={onSelect} onClick={onClick} history={history}/>
+                </div>
             </div>
         </div>
     )

@@ -29,16 +29,6 @@ class IndustryNameComponent extends React.Component {
 
     render() {
         return (
-            <div className="industry-name-component container">
-                <div className="chat-container">
-                    <div className="chat-bubble-pic">
-                        <img src={adaChatBubblePic} alt=""/>
-                    </div>
-                    <div className="chat-bubble-message" style={{height: '60px'}}>
-                        <h1>Now, tell me a little bit more about <strong>{this.props.companyName}</strong>.</h1>
-                    </div>
-                </div>
-
                 <div className="logomator-form">
 
                     <span className="orange-bar"></span>
@@ -118,7 +108,6 @@ class IndustryNameComponent extends React.Component {
                         </button>
                     </form>
                 </div>
-            </div>
         )
     }
 }
