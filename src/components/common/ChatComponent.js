@@ -5,11 +5,11 @@ const ChatComponent = ({ text, text2, height }) => {
     text2 = text2 || '';
 
     return (
-        <div className="container">
             <div className="chat-container">
                 <div className="chat-bubble-pic">
                     <img src={adaChatBubblePic} alt=""/>
                 </div>
+
                 <div className="chat-bubble-message" style={{
                     height: {height},
                     maxWidth: '600px',
@@ -20,7 +20,6 @@ const ChatComponent = ({ text, text2, height }) => {
                 <h2 className={text2 && text2.length > 0 ? 'show' : 'no-show'}>{text2}</h2>
                 </div>
             </div>
-        </div>
     )
 };
 

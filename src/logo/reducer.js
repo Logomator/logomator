@@ -8,11 +8,31 @@ const defaultState = {
     companyDescription: '',
     isFetching: false,
     icons: [],
-    inspirations: [
+    inspirations: [ // This data will fetched by an API call.
         {
             img: logoInspiration,
             isSelected: false,
             fontFamily: 'Foo Family'
+        },
+        {
+            img: logoInspiration,
+            isSelected: false,
+            fontFamily: 'Bar Family'
+        },
+        {
+            img: logoInspiration,
+            isSelected: false,
+            fontFamily: 'Bar Family'
+        },
+        {
+            img: logoInspiration,
+            isSelected: false,
+            fontFamily: 'Bar Family'
+        },
+        {
+            img: logoInspiration,
+            isSelected: false,
+            fontFamily: 'Bar Family'
         },
         {
             img: logoInspiration,

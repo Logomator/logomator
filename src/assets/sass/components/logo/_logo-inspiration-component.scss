@@ -1,15 +1,11 @@
  .logomator-base.inspiration {
    padding-bottom: 0;
 
-   .container {
-     padding-bottom: 70px;
-
      .logo-inspiration-container {
        padding-top: 40px;
        width: 960px;
-       padding-bottom: 100px;
+       padding-bottom: 70px;
 
-       .logo-inspirations {
          .logo {
            height: 300px;
            width: 300px;
@@ -33,10 +29,8 @@
              width: 100%;
            }
          }
-         div:nth-child(3n) {
+         div:nth-child(3n) .logo {
            margin-right: 0;
          }
-       }
      }
-   }
  }
