@@ -1,4 +1,5 @@
 import * as actionTypes from './actionTypes';
+import logoInspiration from '../assets/images/logo-inspirations/GunarBolf.png';
 
 const defaultState = {
     companyName: '',
@@ -6,7 +7,51 @@ const defaultState = {
     industry: '',
     companyDescription: '',
     isFetching: false,
-    icons: []
+    icons: [],
+    inspirations: [ // This data will be fetched via our API eventually.
+        {   id: 0,
+            img: logoInspiration,
+            isSelected: false
+        },
+        {
+            id: 1,
+            img: logoInspiration,
+            isSelected: false
+        },
+        {
+            id: 2,
+            img: logoInspiration,
+            isSelected: false
+        },
+        {
+            id: 3,
+            img: logoInspiration,
+            isSelected: false
+        },
+        {
+            id: 4,
+            img: logoInspiration,
+            isSelected: false
+        },
+        {
+            id: 5,
+            img: logoInspiration,
+            isSelected: false
+        }
+
+    ],
+
+    selectedInspirations: []
+};
+
+const selectInspiration = (state, action) => {
+    if (state.id !== action.inspiration.id) {
+        return state;
+    }
+
+    return Object.assign({}, state, {
+        isSelected: !state.isSelected
+    });
 };
 
 export function logoReducer (state, action) {
@@ -31,6 +76,13 @@ export function logoReducer (state, action) {
             return Object.assign({}, state, {
                 companyDescription: action.description
             });
+        case actionTypes.SELECT_LOGO_INSPIRATION:
+            return {
+                ...state,
+                inspirations: state.inspirations.map(i =>
+                    selectInspiration(i, action, state.inspirations)
+                )
+            };
 
         case actionTypes.REQUEST_ICONS:
             return Object.assign({}, state, {

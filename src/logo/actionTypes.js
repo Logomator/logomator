@@ -23,6 +23,12 @@ export const SET_INDUSTRY_NAME = 'SET_INDUSTRY_NAME';
 export const SET_COMPANY_DESCRIPTION = 'SET_COMPANY_DESCRIPTION';
 
 /**
+ * Select logo inspiration action.
+ * @type {string}
+ */
+export const SELECT_LOGO_INSPIRATION = 'SELECT_LOGO_INSPIRATION';
+
+/**
  * Request icons action.
  * @type {string}
  */

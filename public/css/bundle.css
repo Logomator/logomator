@@ -179,7 +179,7 @@ div.logomator-base {
 div.selection-progress {
   height: 80px;
   width: 100%;
-  box-shadow: 0px -1px 5px 0px rgba(120, 137, 149, 0.25);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
   position: fixed;
   bottom: 0;
   background: white; }
@@ -299,42 +299,41 @@ div.selection-progress {
     .container .chat-container .chat-bubble-message {
       display: inline-block;
       border-radius: 10px;
-      height: 80px;
       max-width: 525px;
       width: 100%;
       padding: 17px;
       background: #F3F3F3; }
-  .container .logomator-form {
+  .container .logomator-form, .container .logomator-container {
     padding-top: 40px; }
-    .container .logomator-form .orange-bar {
+    .container .logomator-form .orange-bar, .container .logomator-container .orange-bar {
       display: block;
       background: #F5530C;
       height: 4px;
       width: 50px; }
-    .container .logomator-form form {
+    .container .logomator-form form, .container .logomator-container form {
       padding-top: 20px;
       max-width: 600px;
       width: 100%; }
-      .container .logomator-form form label {
+      .container .logomator-form form label, .container .logomator-container form label {
         display: block;
         color: #19191A;
         font-size: 21px;
         margin-bottom: 19px; }
-      .container .logomator-form form input {
+      .container .logomator-form form input, .container .logomator-container form input {
         display: block;
         border: none;
         border-bottom: 1px solid #F5530C;
         width: 100%; }
-        .container .logomator-form form input:focus {
+        .container .logomator-form form input:focus, .container .logomator-container form input:focus {
           outline: none; }
-      .container .logomator-form form span.bottom-label {
+      .container .logomator-form form span.bottom-label, .container .logomator-container form span.bottom-label {
         display: block;
         font-family: 'Proxima Nova Light', sans-serif;
         font-size: 16px;
         color: #67676F;
         text-align: left;
         margin-top: 10px; }
-      .container .logomator-form form button.logomator-btn {
+      .container .logomator-form form button.logomator-btn, .container .logomator-container form button.logomator-btn {
         margin-top: 10px;
         float: right; }
 
@@ -399,3 +398,63 @@ div.selection-progress {
     color: #19191A;
     background: white;
     font-family: 'Proxima Nova', sans-serif; }
+
+.logomator-base.inspiration {
+  padding-bottom: 0; }
+  .logomator-base.inspiration .logo-inspiration-container {
+    padding-top: 40px;
+    width: 960px;
+    padding-bottom: 70px; }
+    .logomator-base.inspiration .logo-inspiration-container .logo {
+      height: 300px;
+      width: 300px;
+      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+      border-radius: 2px;
+      margin-right: 30px;
+      margin-bottom: 30px;
+      transition: transform 0.24s ease-in-out;
+      cursor: pointer; }
+      .logomator-base.inspiration .logo-inspiration-container .logo:hover {
+        transform: translateY(-15px); }
+      .logomator-base.inspiration .logo-inspiration-container .logo.selected {
+        border: 3px solid #F5530C; }
+      .logomator-base.inspiration .logo-inspiration-container .logo img {
+        height: 100%;
+        width: 100%; }
+    .logomator-base.inspiration .logo-inspiration-container div:nth-child(3n) .logo {
+      margin-right: 0; }
+
+.progress {
+  position: fixed;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  border: 1px solid #EBEFF0;
+  box-shadow: 0 -4px 0 0 #F9F9FA;
+  background: white; }
+  .progress .container {
+    padding: 0; }
+    .progress .container .logomator-btn {
+      margin: 0;
+      margin-top: 15px;
+      float: right; }
+    .progress .container .progress-bar {
+      position: relative;
+      top: 30px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      height: 10px;
+      width: 300px;
+      background: #DFE3E6;
+      border-radius: 10px; }
+      .progress .container .progress-bar .progress-bar-fill {
+        position: absolute;
+        height: 10px;
+        background: #F5530C;
+        border-radius: 10px;
+        transition: width 0.3s ease-in-out; }
+    .progress .container .back-btn {
+      margin: 0;
+      margin-top: 6px; }
