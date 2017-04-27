@@ -8,39 +8,51 @@ const defaultState = {
     companyDescription: '',
     isFetching: false,
     icons: [],
-    inspirations: [ // This data will fetched by an API call.
-        {
+    inspirations: [ // This data will be fetched via our API eventually.
+        {   id: 0,
             img: logoInspiration,
-            isSelected: false,
-            fontFamily: 'Foo Family'
+            isSelected: false
         },
         {
+            id: 1,
             img: logoInspiration,
-            isSelected: false,
-            fontFamily: 'Bar Family'
+            isSelected: false
         },
         {
+            id: 2,
             img: logoInspiration,
-            isSelected: false,
-            fontFamily: 'Bar Family'
+            isSelected: false
         },
         {
+            id: 3,
             img: logoInspiration,
-            isSelected: false,
-            fontFamily: 'Bar Family'
+            isSelected: false
         },
         {
+            id: 4,
             img: logoInspiration,
-            isSelected: false,
-            fontFamily: 'Bar Family'
+            isSelected: false
         },
         {
+            id: 5,
             img: logoInspiration,
-            isSelected: false,
-            fontFamily: 'Bar Family'
+            isSelected: false
         }
 
     ]
+};
+
+const selectInspiration = (state, action) => {
+
+    // Check palette selected matches the palette name.
+    if (state.id !== action.inspiration.id) {
+        return state;
+    }
+
+    return Object.assign({}, state, {
+        isSelected: !state.isSelected
+    });
+
 };
 
 export function logoReducer (state, action) {
@@ -65,6 +77,13 @@ export function logoReducer (state, action) {
             return Object.assign({}, state, {
                 companyDescription: action.description
             });
+        case actionTypes.SELECT_LOGO_INSPIRATION:
+            return {
+                ...state,
+                inspirations: state.inspirations.map(i =>
+                    selectInspiration(i, action, state.inspirations)
+                )
+            };
 
         case actionTypes.REQUEST_ICONS:
             return Object.assign({}, state, {

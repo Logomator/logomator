@@ -4,18 +4,19 @@ import Navbar from '../../components/common/Navbar';
 import ChatComponent from '../../components/common/ChatComponent';
 import ProgressBarComponent from '../../components/common/ProgressBarComponent';
 import HeaderComponent from '../../components/common/HeaderComponent';
+import { selectLogoInspiration } from '../actions';
 
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
 
-const LogoInspiration = withRouter(({ history, inspirations }) => {
+const LogoInspiration = withRouter(({ history, inspirations, onClick}) => {
 
     let logoInspirations = [];
 
     inspirations.forEach((inspiration) => {
         logoInspirations.push(
             <div>
-                <LogoInspirationComponent history={history} inspiration={inspiration} />
+                <LogoInspirationComponent history={history} inspiration={inspiration} onClick={onClick} />
             </div>
         );
     });
@@ -27,7 +28,11 @@ const LogoInspiration = withRouter(({ history, inspirations }) => {
     return (
         <div>
             <Navbar />
-            <div className="container">
+            <div className="container" style={{
+            paddingRight: '0',
+            paddingLeft: '0',
+            paddingBottom: '70px'}}>
+
                 <ChatComponent text={text} height="80px" />
 
                 <div className="logomator-base inspiration">
@@ -42,7 +47,7 @@ const LogoInspiration = withRouter(({ history, inspirations }) => {
                 </div>
             </div>
 
-            <ProgressBarComponent history={history} />
+            <ProgressBarComponent history={history} inspirations={inspirations} />
         </div>
     )
 });
@@ -51,16 +56,17 @@ const mapStateToProps = (state) => ({
     inspirations: state.inspirations
 });
 
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         onClick: (companyName) => {
-//             dispatch(setCompanyName(companyName))
-//         }
-//     }
-// };
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onClick: (inspiration) => {
+            dispatch(selectLogoInspiration(inspiration))
+        }
+    }
+};
 
 const LogoInspirationContainer = connect(
-    mapStateToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(LogoInspiration);
 
 export default LogoInspirationContainer;

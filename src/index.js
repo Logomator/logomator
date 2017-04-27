@@ -24,6 +24,8 @@ let store = createStore(
     )
 );
 
+window.store = store;
+
 
 render(
     <Provider store={store}>

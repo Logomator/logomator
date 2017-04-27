@@ -3,6 +3,7 @@ import { SET_COMPANY_NAME } from './actionTypes';
 import { SET_TAGLINE_TEXT } from './actionTypes';
 import { SET_INDUSTRY_NAME } from './actionTypes';
 import { SET_COMPANY_DESCRIPTION } from './actionTypes';
+import { SELECT_LOGO_INSPIRATION } from './actionTypes';
 import { REQUEST_ICONS } from './actionTypes';
 import { RECEIVE_ICONS } from './actionTypes';
 
@@ -20,6 +21,10 @@ export const setIndustryName = (industry) => {
 
 export const setCompanyDescription = (description) => {
     return { type: SET_COMPANY_DESCRIPTION, description }
+};
+
+export const selectLogoInspiration = (inspiration) => {
+    return { type: SELECT_LOGO_INSPIRATION, inspiration }
 };
 
 export const requestIconsByTerm = (term) => {
