@@ -1,15 +1,19 @@
 import React from 'react';
 
 const ProgressBarComponent = ({ history, inspirations }) => {
+
     let logosSelected = () => {
         let count = 0;
-        inspirations.forEach((i) => {
-           if (i.isSelected === true) {
-               count++;
-           }
-        });
+        if (inspirations) {
+            inspirations.forEach((i) => {
+                if (i.isSelected === true) {
+                    count++;
+                }
+            });
+        }
         return count;
     };
+
     return (
         <div className="progress">
             <div className="container">

@@ -3,10 +3,12 @@ import Navbar from '../../components/common/Navbar';
 import ChatComponent from '../../components/common/ChatComponent';
 import HeaderComponent from '../../components/common/HeaderComponent';
 import ColorPaletteComponent from '../components/ColorPaletteComponent';
+import ProgressBarComponent from '../../components/common/ProgressBarComponent';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom'
 import { selectColorPalette } from '../actions';
 
-const Palettes = ({ palettes, onClick }) => {
+const Palettes = withRouter(({ palettes, onClick, history}) => {
 
     let paletteArray = [];
 
@@ -19,16 +21,17 @@ const Palettes = ({ palettes, onClick }) => {
     return (
         <div>
             <Navbar />
-            <div className="container">
+            <div className="container" style={{paddingBottom: '179px'}}>
                 <ChatComponent text={<h1>Almost done! I just need to know what colors you like to generate colorful logo concepts for you. Don’t worry, you’ll be able to edit your logo colors later.</h1>}/>
                 <div className="color-palette-container">
                     <HeaderComponent headerText="Choose up to 3 color styles you like." />
                     {paletteArray}
                 </div>
             </div>
+            <ProgressBarComponent history={history} />
         </div>
     )
-};
+});
 
 const mapStateToProps = (state) => ({
     palettes: state.palettes
