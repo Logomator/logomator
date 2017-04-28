@@ -12,6 +12,7 @@ import HomeComponent from './logo/containers/HomeComponent';
 import SetTaglineComponent from './logo/containers/SetTaglineComponent';
 import SetIndustryName from './logo/containers/SetIndustryName';
 import LogoInspirationContainer from './logo/containers/LogoInspirationContainer';
+import ColorPaletteList from './logo/containers/ColorPaletteList';
 
 const history = createBrowserHistory();
 const middleware = routerMiddleware(history);
@@ -24,9 +25,6 @@ let store = createStore(
     )
 );
 
-window.store = store;
-
-
 render(
     <Provider store={store}>
         <Router history={history}>
@@ -35,6 +33,7 @@ render(
                 <Route path="/tagline" component={SetTaglineComponent} />
                 <Route path="/industry" component={SetIndustryName} />
                 <Route path="/inspiration" component={LogoInspirationContainer} />
+                <Route path="/color-palette" component={ColorPaletteList} />
             </div>
         </Router>
     </Provider>,

@@ -1,0 +1,36 @@
+.color-palette-container {
+  padding-top: 40px;
+  max-width: 960px;
+  margin: auto;
+
+  .color-palette.col-5 {
+    padding-top: 40px;
+    width: 20%;
+    float: left;
+
+    .palette {
+      height: 180px;
+      width: 160px;
+      box-shadow: $colorPaletteShadow;
+      border-radius: 2px;
+      transition: transform 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-15px);
+      }
+
+      .color {
+        height: 140px;
+        width: 40px;
+        display: inline-block;
+      }
+
+      p.color-label {
+        margin: 3px 10px 10px;
+        font-size: 16px;
+        font-family: 'Proxima Nova Semi Bold';
+      }
+    }
+  }
+}

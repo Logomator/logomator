@@ -16,7 +16,7 @@ const ProgressBarComponent = ({ history, inspirations }) => {
             <div className="container">
                 <button className={logosSelected() === 5 ? 'logomator-btn' : 'logomator-btn btn-disabled'} onClick={ e => {
                             e.preventDefault();
-
+                                history.push('/color-palette');
                             }}>
                     Continue
                 </button>

@@ -29,6 +29,12 @@ export const SET_COMPANY_DESCRIPTION = 'SET_COMPANY_DESCRIPTION';
 export const SELECT_LOGO_INSPIRATION = 'SELECT_LOGO_INSPIRATION';
 
 /**
+ * Select color palette action.
+ * @type {string}
+ */
+export const SELECT_COLOR_PALETTE = 'SELECT_COLOR_PALETTE';
+
+/**
  * Request icons action.
  * @type {string}
  */

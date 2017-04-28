@@ -4,6 +4,7 @@ import { SET_TAGLINE_TEXT } from './actionTypes';
 import { SET_INDUSTRY_NAME } from './actionTypes';
 import { SET_COMPANY_DESCRIPTION } from './actionTypes';
 import { SELECT_LOGO_INSPIRATION } from './actionTypes';
+import { SELECT_COLOR_PALETTE } from './actionTypes';
 import { REQUEST_ICONS } from './actionTypes';
 import { RECEIVE_ICONS } from './actionTypes';
 
@@ -25,6 +26,10 @@ export const setCompanyDescription = (description) => {
 
 export const selectLogoInspiration = (inspiration) => {
     return { type: SELECT_LOGO_INSPIRATION, inspiration }
+};
+
+export const selectColorPalette = (name) => {
+    return { type: SELECT_COLOR_PALETTE, name }
 };
 
 export const requestIconsByTerm = (term) => {
