@@ -10,7 +10,6 @@ const ProgressBarComponent = ({ history, inspirations }) => {
         });
         return count;
     };
-    logosSelected();
     return (
         <div className="progress">
             <div className="container">
