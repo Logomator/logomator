@@ -22,7 +22,7 @@ const Palettes = withRouter(({ palettes, onClick, history}) => {
         <div>
             <Navbar />
             <div className="container" style={{paddingBottom: '179px'}}>
-                <ChatComponent text={<h1>Almost done! I just need to know what colors you like to generate colorful logo concepts for you. Don’t worry, you’ll be able to edit your logo colors later.</h1>}/>
+                <ChatComponent text={<h1>Almost done! I just need to know what colors you like to generate colorful logo concepts for you. Don’t worry, you’ll be able to edit your logo colors later.</h1>} />
                 <div className="color-palette-container">
                     <HeaderComponent headerText="Choose up to 3 color styles you like." />
                     {paletteArray}
