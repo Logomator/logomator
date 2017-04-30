@@ -40,6 +40,10 @@
     .back-btn {
       margin: 0;
       margin-top: 6px;
+
+      &.generate-logos {
+        margin-top: 15px;
+      }
     }
   }
 }
