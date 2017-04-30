@@ -28,7 +28,7 @@ const Palettes = withRouter(({ palettes, onClick, history}) => {
                     {paletteArray}
                 </div>
             </div>
-            <ProgressBarComponent history={history} />
+            <ProgressBarComponent history={history} isGeneratingLogos={true} palettes={palettes} />
         </div>
     )
 });

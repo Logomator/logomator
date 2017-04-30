@@ -220,6 +220,32 @@ div.selection-progress {
         div.selection-progress div.container-fluid div.right button.logomator-next-step.disabled {
           opacity: .2; }
 
+.color-palette-container {
+  padding-top: 40px;
+  max-width: 960px;
+  margin: auto; }
+  .color-palette-container .color-palette.col-5 {
+    padding-top: 40px;
+    width: 20%;
+    float: left; }
+    .color-palette-container .color-palette.col-5 .palette {
+      height: 180px;
+      width: 160px;
+      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+      border-radius: 2px;
+      transition: transform 0.2s;
+      cursor: pointer; }
+      .color-palette-container .color-palette.col-5 .palette:hover {
+        transform: translateY(-15px); }
+      .color-palette-container .color-palette.col-5 .palette .color {
+        height: 140px;
+        width: 40px;
+        display: inline-block; }
+      .color-palette-container .color-palette.col-5 .palette p.color-label {
+        margin: 3px 10px 10px;
+        font-size: 16px;
+        font-family: 'Proxima Nova Semi Bold'; }
+
 .logomator-base.logo-information {
   padding-bottom: 0; }
   .logomator-base.logo-information .selection.container-fluid .row .logomator-form {
@@ -423,6 +449,32 @@ div.selection-progress {
         width: 100%; }
     .logomator-base.inspiration .logo-inspiration-container div:nth-child(3n) .logo {
       margin-right: 0; }
+
+.color-palette-container {
+  padding-top: 40px;
+  max-width: 960px;
+  margin: auto; }
+  .color-palette-container .color-palette.col-5 {
+    padding-top: 40px;
+    width: 20%;
+    float: left; }
+    .color-palette-container .color-palette.col-5 .palette {
+      height: 180px;
+      width: 160px;
+      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+      border-radius: 2px;
+      transition: transform 0.2s;
+      cursor: pointer; }
+      .color-palette-container .color-palette.col-5 .palette:hover {
+        transform: translateY(-15px); }
+      .color-palette-container .color-palette.col-5 .palette .color {
+        height: 140px;
+        width: 40px;
+        display: inline-block; }
+      .color-palette-container .color-palette.col-5 .palette p.color-label {
+        margin: 3px 10px 10px;
+        font-size: 16px;
+        font-family: 'Proxima Nova Semi Bold'; }
 
 .progress {
   position: fixed;
