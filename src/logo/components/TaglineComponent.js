@@ -1,5 +1,14 @@
 import React from 'react';
-import adaChatBubblePic from '../../assets/images/ada-profile-bubble.png';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+//import { fadeInLeft } from 'react-animations';
+//import { StyleSheet, css } from 'aphrodite';
+
+// const styles = StyleSheet.create({
+//     bounce: {
+//         animationName: fadeInLeft,
+//         animationDuration: '0.5s'
+//     }
+// });
 
 class TaglineComponent extends React.Component {
     constructor(props) {
@@ -34,78 +43,94 @@ class TaglineComponent extends React.Component {
     render() {
         return (
                 <div className="logomator-form">
-                    <span className="orange-bar"></span>
+                    <ReactCSSTransitionGroup
+                        transitionName="content"
+                        transitionAppear={true}
+                        transitionAppearTimeout={0}
+                        transitionEnter={false}
+                        transitionLeave={false}>
+
+                        <span className="orange-bar"></span>
+
+                    </ReactCSSTransitionGroup>
 
                     <form name="tagline">
-                        <label htmlFor="tagline">Do you have a tagline or slogan you want in your logo?</label>
 
-                        <div
-                            className={!this.state.hasTagline ? 'logomator-radio-btn selected' : 'logomator-radio-btn'}
-                            style={{marginRight: '20px'}}>
+                        <ReactCSSTransitionGroup
+                            transitionName="content"
+                            transitionAppear={true}
+                            transitionAppearTimeout={0}
+                            transitionEnter={false}
+                            transitionLeave={false}>
 
-                            <input type="radio" value="false"
-                                   checked={!this.state.hasTagline}
-                                   onChange={this.handleOptionChange} />
+                            <label htmlFor="tagline">Do you have a tagline or slogan you want in your logo?</label>
 
-                            <div className="radio-btn-labels">
-                                <strong>No</strong>
-                                <p>I don't currently have one.</p>
+                            <div
+                                className={!this.state.hasTagline ? 'logomator-radio-btn selected' : 'logomator-radio-btn'}
+                                style={{marginRight: '20px'}}>
+
+                                <input type="radio" value="false"
+                                       checked={!this.state.hasTagline}
+                                       onChange={this.handleOptionChange} />
+
+                                <div className="radio-btn-labels">
+                                    <strong>No</strong>
+                                    <p>I don't currently have one.</p>
+                                </div>
+
                             </div>
 
-                        </div>
 
-                        <div
-                            className={this.state.hasTagline ? 'logomator-radio-btn selected' : 'logomator-radio-btn'}>
+                            <div
+                                className={this.state.hasTagline ? 'logomator-radio-btn selected' : 'logomator-radio-btn'}>
 
-                            <input type="radio" value="true"
-                                   checked={this.state.hasTagline}
-                                   onChange={this.handleOptionChange} />
+                                <input type="radio" value="true"
+                                       checked={this.state.hasTagline}
+                                       onChange={this.handleOptionChange} />
 
-                            <div className="radio-btn-labels">
-                                <strong>Yes</strong>
-                                <p>I have a tagline or slogan.</p>
+                                <div className="radio-btn-labels">
+                                    <strong>Yes</strong>
+                                    <p>I have a tagline or slogan.</p>
+                                </div>
+
                             </div>
 
-                        </div>
+                            <div className={ this.state.hasTagline ? 'show' : 'no-show' } style={{marginTop: '40px'}}>
+                                <label htmlFor="tagline">What is your tagline or slogan?</label>
+                                <input onChange={ this.handleInputChange } ref={text => {
+                                        this.state.tagline = text
+                                    }}/>
 
-                        <div className={ this.state.hasTagline ? 'show' : 'no-show' } style={{marginTop: '40px'}}>
+                                <button onClick={ e =>{
+                                   e.preventDefault();
+                                   this.props.history.push('/industry');
+                                    }
+                                  }
+                                        className={ this.state.tagline.length > 0 ? 'logomator-btn' : 'logomator-btn btn-disabled' }
+                                        style={{marginTop: '40px'}}>
+                                    Continue
+                                </button>
+                            </div>
 
-                            <label htmlFor="tagline">What is your tagline or slogan?</label>
-                            <input onChange={ this.handleInputChange } ref={text => {
-                            this.state.tagline = text
-                            }}/>
-
-                            <button onClick={ e =>{
-                               e.preventDefault();
-                               this.props.history.push('/industry');
-                                }
-                              }
-                                    className={ this.state.tagline.length > 0 ? 'logomator-btn' : 'logomator-btn btn-disabled' }
-                                    style={{marginTop: '40px'}}>
-                                Continue
+                            <button
+                                className={!this.state.hasTagline ? 'logomator-btn' : 'no-show'}
+                                style={{marginTop: '40px'}} onClick={e =>{
+                                   e.preventDefault();
+                                   this.props.onClick(this.state.tagline.value);
+                                   this.props.history.push('/industry');
+                                    }
+                                  }
+                                >Continue
                             </button>
 
-                        </div>
-
-                        <button
-                            className={!this.state.hasTagline ? 'logomator-btn' : 'no-show'}
-                            style={{marginTop: '40px'}} onClick={e =>{
-                               e.preventDefault();
-                               this.props.onClick(this.state.tagline.value);
-                               this.props.history.push('/industry');
-                                }//
-                              }
-                            >Continue
-                        </button>
-
-                        <button className="back-btn" style={{marginTop: '40px'}} onClick={ e =>{
-                               e.preventDefault();
-                                this.props.history.push('/');
-                                }
-                              }>
-                            Back
-                        </button>
-
+                            <button className="back-btn" style={{marginTop: '40px'}} onClick={ e =>{
+                                   e.preventDefault();
+                                    this.props.history.push('/');
+                                    }
+                                  }>
+                                Back
+                            </button>
+                        </ReactCSSTransitionGroup>
                     </form>
                 </div>
         )

@@ -15,7 +15,7 @@ const SetCompanyName = withRouter(({ onClick, history }) => {
             <div className="logomator-base">
                 <ChatComponent
                     text={<h1><strong>Hi, I’m Ada.</strong> Your personal logo design assistant</h1>}
-                    text2={"Let’s start designing you the perfect logo - it only takes a few minutes."}
+                    text2={<h2>Let’s start designing you the perfect logo - it only takes a few minutes.</h2>}
                 />
                 <CompanyNameComponent onClick={onClick} history={history}/>
             </div>

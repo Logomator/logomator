@@ -159,6 +159,40 @@ body nav {
       color: #2E2E2E;
       border-radius: 2px; }
 
+.bubble-appear {
+  height: 80px !important;
+  width: 0 !important;
+  padding: 0 !important;
+  transition: all 350ms ease-in-out; }
+
+.bubble-appear.bubble-appear-active {
+  width: 500px !important;
+  padding: 20px !important;
+  transition: all 350ms ease-in-out; }
+
+.header-appear {
+  opacity: 0.01;
+  transition: opacity 150ms ease-in-out;
+  transition-delay: 350ms; }
+
+.header-appear.header-appear-active {
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
+  transition-delay: 350ms; }
+
+.content-appear {
+  position: relative;
+  opacity: 0.01;
+  transition: all 350ms ease-in-out;
+  transition-delay: 350ms;
+  right: -10px; }
+
+.content-appear.content-appear-active {
+  right: 0;
+  opacity: 1;
+  transition: all 350ms ease-in-out;
+  transition-delay: 350ms; }
+
 div.logomator-base {
   padding-bottom: 80px; }
   div.logomator-base div.selection {
@@ -332,7 +366,7 @@ div.selection-progress {
       display: inline-block;
       border-radius: 10px;
       max-width: 525px;
-      width: 100%;
+      max-height: 80px;
       padding: 17px;
       background: #F3F3F3; }
   .container .logomator-form, .container .logomator-container {

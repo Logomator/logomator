@@ -117,3 +117,46 @@ body {
     }
   }
 }
+
+.bubble-appear {
+  height: 80px !important;
+  width: 0 !important;
+  padding: 0 !important;
+  transition: all 350ms ease-in-out;
+}
+
+.bubble-appear.bubble-appear-active {
+  width: 500px !important;
+  padding: 20px !important;
+  transition: all 350ms ease-in-out;
+}
+
+
+// Header component fade in.
+.header-appear {
+  opacity: 0.01;
+  transition: opacity 150ms ease-in-out;
+  transition-delay: 350ms;
+}
+
+.header-appear.header-appear-active {
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
+  transition-delay: 350ms;
+}
+
+
+.content-appear {
+  position: relative;
+  opacity: 0.01;
+  transition: all 350ms ease-in-out;
+  transition-delay: 350ms;
+  right: -10px;
+}
+
+.content-appear.content-appear-active {
+  right: 0;
+  opacity: 1;
+  transition: all 350ms ease-in-out;
+  transition-delay: 350ms;
+}

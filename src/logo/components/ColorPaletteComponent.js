@@ -1,10 +1,7 @@
 import React from 'react';
 
 class ColorPaletteComponent extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
+    
     render() {
         return (
             <div className="color-palette col-5"

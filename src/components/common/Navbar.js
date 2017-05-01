@@ -9,9 +9,11 @@ class Navbar extends React.Component {
                 <a href="/">
                     <img src={logo} className="logo" alt="Logomator"/>
                 </a>
-                <div className="right">
-                    <button className="start-over">Start Over</button>
-                </div>
+                <a href="/">
+                    <div className="right">
+                        <button className="start-over">Start Over</button>
+                    </div>
+                </a>
             </nav>
         );
     }
