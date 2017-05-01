@@ -5,6 +5,7 @@ import ChatComponent from '../../components/common/ChatComponent';
 import ProgressBarComponent from '../../components/common/ProgressBarComponent';
 import HeaderComponent from '../../components/common/HeaderComponent';
 import { selectLogoInspiration } from '../actions';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
@@ -34,14 +35,23 @@ const LogoInspiration = withRouter(({ history, inspirations, onClick}) => {
                     height="80px"
                 />
 
+
                 <div className="logomator-base inspiration">
                     <div className="logomator-container">
 
                         <HeaderComponent headerText={"Choose 5 or more logo examples you like."} />
 
+                        <ReactCSSTransitionGroup
+                            transitionName="content"
+                            transitionAppear={true}
+                            transitionAppearTimeout={0}
+                            transitionEnter={false}
+                            transitionLeave={false}>
+
                         <div className="logo-inspiration-container">
                             {logoInspirations}
                         </div>
+                            </ReactCSSTransitionGroup>
                     </div>
                 </div>
             </div>

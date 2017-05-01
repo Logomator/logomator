@@ -7,6 +7,7 @@ import ProgressBarComponent from '../../components/common/ProgressBarComponent';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom'
 import { selectColorPalette } from '../actions';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const Palettes = withRouter(({ palettes, onClick, history}) => {
 
@@ -23,12 +24,26 @@ const Palettes = withRouter(({ palettes, onClick, history}) => {
             <Navbar />
             <div className="container" style={{paddingBottom: '179px'}}>
                 <ChatComponent text={<h1>Almost done! I just need to know what colors you like to generate colorful logo concepts for you. Don’t worry, you’ll be able to edit your logo colors later.</h1>} />
-                <div className="color-palette-container">
-                    <HeaderComponent headerText="Choose up to 3 color styles you like." />
-                    {paletteArray}
-                </div>
+                <ReactCSSTransitionGroup
+                    transitionName="content"
+                    transitionAppear={true}
+                    transitionAppearTimeout={0}
+                    transitionEnter={false}
+                    transitionLeave={false}>
+                    <div className="color-palette-container">
+                        <HeaderComponent headerText="Choose up to 3 color styles you like." />
+                        {paletteArray}
+                    </div>
+                </ReactCSSTransitionGroup>
             </div>
-            <ProgressBarComponent history={history} isGeneratingLogos={true} palettes={palettes} />
+            <ReactCSSTransitionGroup
+                transitionName="content"
+                transitionAppear={true}
+                transitionAppearTimeout={0}
+                transitionEnter={false}
+                transitionLeave={false}>
+                <ProgressBarComponent history={history} isGeneratingLogos={true} palettes={palettes} />
+            </ReactCSSTransitionGroup>
         </div>
     )
 });
