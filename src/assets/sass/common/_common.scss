@@ -25,6 +25,7 @@ body {
     font-family: ProximaNova-Semibold, sans-serif;
     font-size: 16px;
     color: white;
+    transition: opacity 0.3s ease-in-out;
 
     &.generate-logos {
       width: 178px;
@@ -149,7 +150,7 @@ body {
 .content-appear {
   position: relative;
   opacity: 0.01;
-  transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;//
   transition-delay: 350ms;
   right: -10px;
 }

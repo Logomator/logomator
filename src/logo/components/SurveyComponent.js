@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const SurveyComponent = ({ history }) => {
     return (
@@ -68,7 +69,7 @@ const SurveyComponent = ({ history }) => {
                         onClick={ e =>{
                             e.preventDefault();
                                 // Route back to generate logos
-                                history.push('/')
+                                history.push('/color-palette')
                             }}>
                     Back
                 </button>

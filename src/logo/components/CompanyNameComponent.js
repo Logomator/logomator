@@ -40,8 +40,8 @@ class CompanyNameComponent extends React.Component {
                             <label htmlFor="company_name">First, what is the name of your business or organization?</label>
 
                         <input onChange={ this.handleInputChange } ref={text => {
-                            this.state.companyName = text
-                        }}/>
+                            this.state.companyName = text;
+                        }} />
                         <span className="bottom-label">This will be used as your main logo text.</span>
                         </ReactCSSTransitionGroup>
 

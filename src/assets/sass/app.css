@@ -88,6 +88,12 @@ body .logomator-btn {
   font-family: ProximaNova-Semibold, sans-serif;
   font-size: 16px;
   color: white; }
+  body .logomator-btn.generate-logos {
+    width: 178px;
+    background: #F5530C url("../images/icons/forward.png") no-repeat;
+    background-position: 148px 14px;
+    background-size: 14px 12px;
+    padding-right: 20px; }
   body .logomator-btn.btn-disabled {
     opacity: .3;
     pointer-events: none;
@@ -152,6 +158,40 @@ body nav {
       font-family: "Proxima Nova Semi Bold";
       color: #2E2E2E;
       border-radius: 2px; }
+
+.bubble-appear {
+  height: 80px !important;
+  width: 0 !important;
+  padding: 0 !important;
+  transition: all 350ms ease-in-out; }
+
+.bubble-appear.bubble-appear-active {
+  width: 500px !important;
+  padding: 20px !important;
+  transition: all 350ms ease-in-out; }
+
+.header-appear {
+  opacity: 0.01;
+  transition: opacity 150ms ease-in-out;
+  transition-delay: 350ms; }
+
+.header-appear.header-appear-active {
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
+  transition-delay: 350ms; }
+
+.content-appear {
+  position: relative;
+  opacity: 0.01;
+  transition: all 350ms ease-in-out;
+  transition-delay: 350ms;
+  right: -10px; }
+
+.content-appear.content-appear-active {
+  right: 0;
+  opacity: 1;
+  transition: all 350ms ease-in-out;
+  transition-delay: 350ms; }
 
 div.logomator-base {
   padding-bottom: 80px; }
@@ -326,7 +366,7 @@ div.selection-progress {
       display: inline-block;
       border-radius: 10px;
       max-width: 525px;
-      width: 100%;
+      max-height: 80px;
       padding: 17px;
       background: #F3F3F3; }
   .container .logomator-form, .container .logomator-container {
@@ -510,3 +550,5 @@ div.selection-progress {
     .progress .container .back-btn {
       margin: 0;
       margin-top: 6px; }
+      .progress .container .back-btn.generate-logos {
+        margin-top: 15px; }

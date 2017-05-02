@@ -87,7 +87,8 @@ body .logomator-btn {
   border-radius: 2px;
   font-family: ProximaNova-Semibold, sans-serif;
   font-size: 16px;
-  color: white; }
+  color: white;
+  transition: opacity 0.3s ease-in-out; }
   body .logomator-btn.generate-logos {
     width: 178px;
     background: #F5530C url("../images/icons/forward.png") no-repeat;

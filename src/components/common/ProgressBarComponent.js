@@ -11,6 +11,10 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, palett
                 }
             });
         }
+
+        if (count >= 5) {
+            return 5;
+        }
         return count;
     };
 
@@ -22,6 +26,10 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, palett
                    count++;
                }
            });
+       }
+
+       if (count >= 3) {
+           return 3;
        }
        return count;
    };
@@ -45,6 +53,7 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, palett
                         onClick={ e => {
                                 e.preventDefault();
                                     // Generate Logos
+                                    history.push('/survey');
                                 }}>
                         Generate Logos
                     </button>
