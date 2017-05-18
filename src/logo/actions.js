@@ -7,45 +7,50 @@ import { SELECT_LOGO_INSPIRATION } from './actionTypes';
 import { SELECT_COLOR_PALETTE } from './actionTypes';
 import { REQUEST_ICONS } from './actionTypes';
 import { RECEIVE_ICONS } from './actionTypes';
+import { GENERATE_LOGOS } from './actionTypes';
 
 export const setCompanyName = (name) => {
-    return { type: SET_COMPANY_NAME, name }
+  return { type: SET_COMPANY_NAME, name }
 };
 
 export const setTaglineText = (tagline) => {
-    return { type: SET_TAGLINE_TEXT, tagline }
+  return { type: SET_TAGLINE_TEXT, tagline }
 };
 
 export const setIndustryName = (industry) => {
-    return { type: SET_INDUSTRY_NAME, industry }
+  return { type: SET_INDUSTRY_NAME, industry }
 };
 
 export const setCompanyDescription = (description) => {
-    return { type: SET_COMPANY_DESCRIPTION, description }
+  return { type: SET_COMPANY_DESCRIPTION, description }
 };
 
 export const selectLogoInspiration = (inspiration) => {
-    return { type: SELECT_LOGO_INSPIRATION, inspiration }
+  return { type: SELECT_LOGO_INSPIRATION, inspiration }
 };
 
 export const selectColorPalette = (name) => {
-    return { type: SELECT_COLOR_PALETTE, name }
+  return { type: SELECT_COLOR_PALETTE, name }
 };
 
 export const requestIconsByTerm = (term) => {
-    return { type: REQUEST_ICONS, term }
+  return { type: REQUEST_ICONS, term }
 };
 
 export const receiveIcons = (icons)  => {
-    return { type: RECEIVE_ICONS, icons }
+  return { type: RECEIVE_ICONS, icons }
+};
+
+export const generateLogos = ()  => {
+  return { type: GENERATE_LOGOS }
 };
 
 export function fetchIcons (term) {
-    return dispatch => {
+  return dispatch => {
 
-        dispatch(requestIconsByTerm(term));
+    dispatch(requestIconsByTerm(term));
 
-        return fetch(`http://localhost:8000/api/icons/${term}`)
-            .then(response => response.json())
-    }
+    return fetch(`http://localhost:8000/api/icons/${term}`)
+      .then(response => response.json())
+  }
 }

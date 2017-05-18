@@ -45,3 +45,9 @@ export const REQUEST_ICONS = 'REQUEST_ICONS';
  * @type {string}
  */
 export const RECEIVE_ICONS = 'RECEIVE_ICONS';
+
+/**
+ * Generate logos action.
+ * @type {string}
+ */
+export const GENERATE_LOGOS = 'GENERATE_LOGOS';
