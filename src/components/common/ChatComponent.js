@@ -12,7 +12,7 @@ const ChatComponent = ({ text, text2, height }) => {
 
                 <div className="chat-bubble-message" style={{
                     height: {height},
-                    maxWidth: '600px',
+                    maxWidth: '540px',
                     padding: '20px'
                   }}>
 

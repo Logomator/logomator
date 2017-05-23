@@ -11,11 +11,10 @@ const SetCompanyName = withRouter(({ onClick, history }) => {
     return (
     <div>
         <Navbar />
-        <div className="container">
-            <div className="logomator-base">
+        <div className="logomator-base">
+            <div className="container">
                 <ChatComponent
-                    text={<h1><strong>Hi, I’m Ada.</strong> Your personal logo design assistant</h1>}
-                    text2={"Let’s start designing you the perfect logo - it only takes a few minutes."}
+                    text={<h1><span>Hi, I’m Ada.</span> Your personal logo design assistant.<br /> Let’s start designing you the perfect logo - it only takes a few minutes.</h1>}
                 />
                 <CompanyNameComponent onClick={onClick} history={history}/>
             </div>

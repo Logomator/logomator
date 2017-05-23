@@ -2,7 +2,7 @@ body {
 
   // Globals fonts
   h1, h2, h3, h4, h5, h6, p, span, input, label {
-    font-family: "Proxima Nova";
+    font-family: "Proxima Nova", sans-serif;
     font-weight: 300;
   }
 
@@ -12,6 +12,17 @@ body {
 
   h2 {
     font-size: 18px;
+  }
+
+  .logomator-base {
+    .container {
+      max-width: 630px;
+      padding-top: 100px;
+    }
+  }
+
+  .logomator-btn, .start-over {
+    transition: 0.25s all linear;
   }
 
   // Buttons
@@ -25,6 +36,7 @@ body {
     font-family: ProximaNova-Semibold, sans-serif;
     font-size: 16px;
     color: white;
+    transition: all 0.25s linear;
 
     &.generate-logos {
       width: 178px;
@@ -60,7 +72,7 @@ body {
   input {
     font-size: 18px;
     color: $black;
-    padding-bottom: 9px;
+    padding-bottom: 3px;
   }
 
   .logomator-textarea {
@@ -85,9 +97,10 @@ body {
 
 
   nav {
+    position: fixed;
     height: 70px;
     width: 100%;
-    padding: 15px 40px 15px 40px;
+    padding: 15px;
     border: 1px solid #EBEFF0;
     box-shadow: $navBoxShadow;
 
@@ -113,6 +126,10 @@ body {
         font-family: "Proxima Nova Semi Bold";
         color: $black;
         border-radius: 2px;
+
+        &:hover {
+          border: 1px solid #B0B5B8;
+        }
       }
     }
   }

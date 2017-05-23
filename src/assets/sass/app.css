@@ -69,7 +69,7 @@
   font-style: normal; }
 
 body h1, body h2, body h3, body h4, body h5, body h6, body p, body span, body input, body label {
-  font-family: "Proxima Nova";
+  font-family: "Proxima Nova", sans-serif;
   font-weight: 300; }
 
 body h1 {
@@ -88,6 +88,12 @@ body .logomator-btn {
   font-family: ProximaNova-Semibold, sans-serif;
   font-size: 16px;
   color: white; }
+  body .logomator-btn.generate-logos {
+    width: 178px;
+    background: #F5530C url("../images/icons/forward.png") no-repeat;
+    background-position: 148px 14px;
+    background-size: 14px 12px;
+    padding-right: 20px; }
   body .logomator-btn.btn-disabled {
     opacity: .3;
     pointer-events: none;
@@ -306,62 +312,61 @@ div.selection-progress {
       width: 398px;
       margin-top: 40px; }
 
-.container {
-  max-width: 960px;
-  padding-top: 40px; }
-  .container h1, .container h2 {
-    margin: 0;
-    color: #2E2E2E;
-    font-size: 16px; }
-  .container .chat-container {
+.container h1, .container h2 {
+  margin: 0;
+  color: #2E2E2E;
+  font-size: 16px; }
+
+.container .chat-container {
+  vertical-align: top; }
+  .container .chat-container .chat-bubble-pic {
+    display: inline-block;
+    margin-right: 10px;
     vertical-align: top; }
-    .container .chat-container .chat-bubble-pic {
-      display: inline-block;
-      margin-right: 10px;
-      vertical-align: top; }
-      .container .chat-container .chat-bubble-pic img {
-        height: 50px;
-        width: 50px; }
-    .container .chat-container .chat-bubble-message {
-      display: inline-block;
-      border-radius: 10px;
-      max-width: 525px;
-      width: 100%;
-      padding: 17px;
-      background: #F3F3F3; }
-  .container .logomator-form, .container .logomator-container {
-    padding-top: 40px; }
-    .container .logomator-form .orange-bar, .container .logomator-container .orange-bar {
-      display: block;
-      background: #F5530C;
-      height: 4px;
+    .container .chat-container .chat-bubble-pic img {
+      height: 50px;
       width: 50px; }
-    .container .logomator-form form, .container .logomator-container form {
-      padding-top: 20px;
-      max-width: 600px;
+  .container .chat-container .chat-bubble-message {
+    display: inline-block;
+    border-radius: 10px;
+    max-width: 525px;
+    width: 100%;
+    padding: 17px;
+    background: #F3F3F3; }
+
+.container .logomator-form, .container .logomator-container {
+  padding-top: 40px; }
+  .container .logomator-form .orange-bar, .container .logomator-container .orange-bar {
+    display: block;
+    background: #F5530C;
+    height: 4px;
+    width: 50px; }
+  .container .logomator-form form, .container .logomator-container form {
+    padding-top: 20px;
+    max-width: 600px;
+    width: 100%; }
+    .container .logomator-form form label, .container .logomator-container form label {
+      display: block;
+      color: #19191A;
+      font-size: 21px;
+      margin-bottom: 19px; }
+    .container .logomator-form form input, .container .logomator-container form input {
+      display: block;
+      border: none;
+      border-bottom: 1px solid #F5530C;
       width: 100%; }
-      .container .logomator-form form label, .container .logomator-container form label {
-        display: block;
-        color: #19191A;
-        font-size: 21px;
-        margin-bottom: 19px; }
-      .container .logomator-form form input, .container .logomator-container form input {
-        display: block;
-        border: none;
-        border-bottom: 1px solid #F5530C;
-        width: 100%; }
-        .container .logomator-form form input:focus, .container .logomator-container form input:focus {
-          outline: none; }
-      .container .logomator-form form span.bottom-label, .container .logomator-container form span.bottom-label {
-        display: block;
-        font-family: 'Proxima Nova Light', sans-serif;
-        font-size: 16px;
-        color: #67676F;
-        text-align: left;
-        margin-top: 10px; }
-      .container .logomator-form form button.logomator-btn, .container .logomator-container form button.logomator-btn {
-        margin-top: 10px;
-        float: right; }
+      .container .logomator-form form input:focus, .container .logomator-container form input:focus {
+        outline: none; }
+    .container .logomator-form form span.bottom-label, .container .logomator-container form span.bottom-label {
+      display: block;
+      font-family: 'Proxima Nova Light', sans-serif;
+      font-size: 16px;
+      color: #67676F;
+      text-align: left;
+      margin-top: 10px; }
+    .container .logomator-form form button.logomator-btn, .container .logomator-container form button.logomator-btn {
+      margin-top: 10px;
+      float: right; }
 
 .tagline-component.container .logomator-radio-btn {
   height: 80px;
@@ -510,3 +515,5 @@ div.selection-progress {
     .progress .container .back-btn {
       margin: 0;
       margin-top: 6px; }
+      .progress .container .back-btn.generate-logos {
+        margin-top: 15px; }
