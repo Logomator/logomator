@@ -7,6 +7,17 @@
       border-radius: 2px;
       padding: 0 20px 0 20px;
       display: inline-block;
+      transition: $transition;
+      cursor: pointer;
+      margin-bottom: 0;
+
+      span {
+        font-size: 18px;
+      }
+
+      &:hover {
+        border: 1px solid $logomatorOrange;
+      }
 
       &.selected {
         border: 1px solid $logomatorOrange;

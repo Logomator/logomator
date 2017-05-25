@@ -1,10 +1,10 @@
 .color-palette-container {
-  padding-top: 40px;
-  max-width: 960px;
+  padding-top: 30px;
+  max-width: 920px;
   margin: auto;
 
   .color-palette.col-5 {
-    padding-top: 40px;
+    padding-top: 30px;
     width: 20%;
     float: left;
 
@@ -13,7 +13,7 @@
       width: 160px;
       box-shadow: $colorPaletteShadow;
       border-radius: 2px;
-      transition: transform 0.2s;
+      transition: transform .25s ease-in-out;
       cursor: pointer;
 
       &:hover {

@@ -78,6 +78,15 @@ body h1 {
 body h2 {
   font-size: 18px; }
 
+body .logomator-base .container {
+  max-width: 630px;
+  padding-top: 100px; }
+
+body .logomator-btn {
+  transition: 0.25s all linear; }
+  body .logomator-btn:hover {
+    background: #E04A08; }
+
 body .logomator-btn {
   height: 40px;
   width: 106px;
@@ -87,7 +96,8 @@ body .logomator-btn {
   border-radius: 2px;
   font-family: ProximaNova-Semibold, sans-serif;
   font-size: 16px;
-  color: white; }
+  color: white;
+  transition: 0.25s all linear; }
   body .logomator-btn.generate-logos {
     width: 178px;
     background: #F5530C url("../images/icons/forward.png") no-repeat;
@@ -110,12 +120,15 @@ body .back-btn {
   border-radius: 2px;
   font-family: ProximaNova-Semibold;
   font-size: 16px;
-  color: #19191A; }
+  color: #19191A;
+  transition: 0.25s all linear; }
+  body .back-btn:hover {
+    border: 1px solid #B0B5B8; }
 
 body input {
   font-size: 18px;
   color: #2E2E2E;
-  padding-bottom: 9px; }
+  padding-bottom: 3px; }
 
 body .logomator-textarea {
   height: 120px;
@@ -135,11 +148,14 @@ body .no-show {
   display: none; }
 
 body nav {
+  position: fixed;
   height: 70px;
   width: 100%;
-  padding: 15px 40px 15px 40px;
+  padding: 15px;
   border: 1px solid #EBEFF0;
-  box-shadow: 0 4px 0 0 #F9F9FA; }
+  background: white;
+  box-shadow: 0 4px 0 rgba(244, 244, 245, 0.5);
+  z-index: 99999; }
   body nav img.logo {
     height: auto;
     width: 40px; }
@@ -157,7 +173,10 @@ body nav {
       font-size: 16px;
       font-family: "Proxima Nova Semi Bold";
       color: #2E2E2E;
-      border-radius: 2px; }
+      border-radius: 2px;
+      transition: 0.25s all linear; }
+      body nav .right button.start-over:hover {
+        border: 1px solid #B0B5B8; }
 
 div.logomator-base {
   padding-bottom: 80px; }
@@ -317,6 +336,10 @@ div.selection-progress {
   color: #2E2E2E;
   font-size: 16px; }
 
+.container span {
+  font-size: 16px;
+  font-family: "Proxima Nova Semi Bold", sans-serif; }
+
 .container .chat-container {
   vertical-align: top; }
   .container .chat-container .chat-bubble-pic {
@@ -329,42 +352,55 @@ div.selection-progress {
   .container .chat-container .chat-bubble-message {
     display: inline-block;
     border-radius: 10px;
-    max-width: 525px;
-    width: 100%;
-    padding: 17px;
-    background: #F3F3F3; }
+    max-width: 540px;
+    width: auto;
+    padding: 20px;
+    background: #F3F3F3;
+    word-wrap: break-word; }
 
-.container .logomator-form, .container .logomator-container {
-  padding-top: 40px; }
-  .container .logomator-form .orange-bar, .container .logomator-container .orange-bar {
+.container .logomator-form {
+  padding-top: 30px; }
+  .container .logomator-form .orange-bar {
     display: block;
     background: #F5530C;
     height: 4px;
     width: 50px; }
-  .container .logomator-form form, .container .logomator-container form {
+  .container .logomator-form form {
     padding-top: 20px;
     max-width: 600px;
     width: 100%; }
-    .container .logomator-form form label, .container .logomator-container form label {
+    .container .logomator-form form label {
       display: block;
       color: #19191A;
-      font-size: 21px;
-      margin-bottom: 19px; }
-    .container .logomator-form form input, .container .logomator-container form input {
+      font-size: 20px;
+      margin-bottom: 20px; }
+      .container .logomator-form form label span {
+        max-width: 600px;
+        display: block;
+        word-wrap: break-word; }
+    .container .logomator-form form input {
       display: block;
       border: none;
-      border-bottom: 1px solid #F5530C;
+      border-bottom: 1px solid #B0B5B8;
       width: 100%; }
-      .container .logomator-form form input:focus, .container .logomator-container form input:focus {
+      .container .logomator-form form input:after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 20px;
+        background: #008CFF;
+        left: 0; }
+      .container .logomator-form form input:focus {
+        border-bottom: 1px solid #F5530C;
         outline: none; }
-    .container .logomator-form form span.bottom-label, .container .logomator-container form span.bottom-label {
+    .container .logomator-form form span.bottom-label {
       display: block;
       font-family: 'Proxima Nova Light', sans-serif;
       font-size: 16px;
       color: #67676F;
       text-align: left;
       margin-top: 10px; }
-    .container .logomator-form form button.logomator-btn, .container .logomator-container form button.logomator-btn {
+    .container .logomator-form form button.logomator-btn {
       margin-top: 10px;
       float: right; }
 
@@ -374,7 +410,14 @@ div.selection-progress {
   border: 1px solid #DFE3E6;
   border-radius: 2px;
   padding: 0 20px 0 20px;
-  display: inline-block; }
+  display: inline-block;
+  transition: 0.25s all linear;
+  cursor: pointer;
+  margin-bottom: 0; }
+  .tagline-component.container .logomator-radio-btn span {
+    font-size: 18px; }
+  .tagline-component.container .logomator-radio-btn:hover {
+    border: 1px solid #F5530C; }
   .tagline-component.container .logomator-radio-btn.selected {
     border: 1px solid #F5530C; }
   .tagline-component.container .logomator-radio-btn .radio-btn-labels {
@@ -401,6 +444,8 @@ div.selection-progress {
 
 .industry-name-component.container .logomator-form form {
   position: relative; }
+  .industry-name-component.container .logomator-form form label span {
+    font-size: 21px; }
   .industry-name-component.container .logomator-form form .select-triangle {
     position: absolute;
     top: 82px;

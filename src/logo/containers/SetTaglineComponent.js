@@ -14,7 +14,7 @@ const SetTaglineComponent = withRouter(({ companyName, onClick, history }) => {
             <div className="logomator-base">
               <div className="tagline-component container">
                   <ChatComponent
-                      text={<h1>Great name! <strong>{companyName}</strong> is going to look so good in your logo.</h1>}
+                      text={<h1><span>{companyName} is a great name!</span> It’s going to look perfect in your logo.</h1>}
                   />
 
                   <TaglineComponent companyName={companyName} onClick={onClick} history={history} />

@@ -10,6 +10,8 @@ const SurveyContainer = withRouter(({ history }) => {
             <Navbar />
             <div className="survey container"
                  style={{
+                    maxWidth: '630px',
+                    paddingTop: '100px',
                     paddingBottom: '70px'
                  }}>
                 <ChatComponent

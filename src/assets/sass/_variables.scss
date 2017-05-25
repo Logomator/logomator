@@ -2,10 +2,11 @@
 $black: #2E2E2E;
 $cursorColor: #008CFF;
 $darkBlack: #19191A;
-$grey: #80858E;
+$darkOrange: #E04A08;
 $darkGrey: #67676F;
-$very-dark-grey: #81868F;
+$grey: #80858E;
 $lightGrey: #FDFDFD;
+$very-dark-grey: #81868F;
 $veryLightGrey: #F3F3F3;
 
 
@@ -31,13 +32,16 @@ $logoSelectionBoxShadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
 $navBoxShadow: 0 4px 0 hsla(240,5%,96%, .5);
 $colorPaletteShadow: 0 4px 20px 0 rgba(0,0,0,0.15);
 $logomatorBtnShadow: 0 1px 3px 0 rgba(181,181,181,0.15);
-$progressBarShadow: 0 -4px 0 0 #F9F9FA;
+$progressBarShadow: 0 -4px 0 hsla(240,5%,96%, .5);
 
 // Typography
 $font-promixa-nova-reg: 'Promixa Nova';
 $font-promixa-nova-bold: 'Promixa Bold';
 $font-promixa-nova-semibold: 'Proxima Nova Semi Bold';
 $font-promixa-nova-light: 'Promixa Light';
+
+// Transition
+$transition: .25s all linear;
 
 // Color palette selection
 

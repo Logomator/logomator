@@ -24,25 +24,21 @@ const LogoInspiration = withRouter(({ history, inspirations, onClick}) => {
     return (
         <div>
             <Navbar />
-            <div className="container" style={{
-            paddingRight: '0',
-            paddingLeft: '0',
-            paddingBottom: '70px'}}>
+            <div className="logomator-base inspiration">
+                <div className="container" style={{
+                paddingBottom: '70px'}}>
 
-                <ChatComponent
-                    text={<h1>Thanks, that helps! Now, let’s figure out how your logo should look. I’ll use the examples below to understand what styles I should incorporate in your logo.</h1>}
-                    height="80px"
-                />
+                    <ChatComponent
+                        text={<h1><span>Thanks, that helps!</span> Now, let’s figure out how your logo should look. I’ll use the examples below to understand what styles I should incorporate in your logo.</h1>}
+                        height="80px"
+                    />
+                    <div style={{paddingTop: '30px'}}></div>
 
-                <div className="logomator-base inspiration">
-                    <div className="logomator-container">
+                            <HeaderComponent headerText={"Choose 5 or more logo examples you like."} />
 
-                        <HeaderComponent headerText={"Choose 5 or more logo examples you like."} />
-
-                        <div className="logo-inspiration-container">
-                            {logoInspirations}
-                        </div>
-                    </div>
+                            <div className="logo-inspiration-container">
+                                {logoInspirations}
+                            </div>
                 </div>
             </div>
 

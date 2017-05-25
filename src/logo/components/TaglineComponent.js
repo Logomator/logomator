@@ -39,7 +39,7 @@ class TaglineComponent extends React.Component {
                     <form name="tagline">
                         <label htmlFor="tagline">Do you have a tagline or slogan you want in your logo?</label>
 
-                        <div
+                        <label
                             className={!this.state.hasTagline ? 'logomator-radio-btn selected' : 'logomator-radio-btn'}
                             style={{marginRight: '20px'}}>
 
@@ -48,13 +48,13 @@ class TaglineComponent extends React.Component {
                                    onChange={this.handleOptionChange} />
 
                             <div className="radio-btn-labels">
-                                <strong>No</strong>
-                                <p>I don't currently have one.</p>
+                                <span>No</span>
+                                <p>I don't currently have one</p>
                             </div>
 
-                        </div>
+                        </label>
 
-                        <div
+                        <label
                             className={this.state.hasTagline ? 'logomator-radio-btn selected' : 'logomator-radio-btn'}>
 
                             <input type="radio" value="true"
@@ -62,13 +62,13 @@ class TaglineComponent extends React.Component {
                                    onChange={this.handleOptionChange} />
 
                             <div className="radio-btn-labels">
-                                <strong>Yes</strong>
-                                <p>I have a tagline or slogan.</p>
+                                <span>Yes</span>
+                                <p>I have a tagline or slogan</p>
                             </div>
 
-                        </div>
+                        </label>
 
-                        <div className={ this.state.hasTagline ? 'show' : 'no-show' } style={{marginTop: '40px'}}>
+                        <div className={ this.state.hasTagline ? 'show' : 'no-show' } style={{marginTop: '30px'}}>
 
                             <label htmlFor="tagline">What is your tagline or slogan?</label>
                             <input onChange={ this.handleInputChange } ref={text => {
@@ -81,7 +81,7 @@ class TaglineComponent extends React.Component {
                                 }
                               }
                                     className={ this.state.tagline.length > 0 ? 'logomator-btn' : 'logomator-btn btn-disabled' }
-                                    style={{marginTop: '40px'}}>
+                                    style={{marginTop: '30px'}}>
                                 Continue
                             </button>
 
@@ -89,7 +89,7 @@ class TaglineComponent extends React.Component {
 
                         <button
                             className={!this.state.hasTagline ? 'logomator-btn' : 'no-show'}
-                            style={{marginTop: '40px'}} onClick={e =>{
+                            style={{marginTop: '30px'}} onClick={e =>{
                                e.preventDefault();
                                this.props.onClick(this.state.tagline.value);
                                this.props.history.push('/industry');
@@ -98,7 +98,7 @@ class TaglineComponent extends React.Component {
                             >Continue
                         </button>
 
-                        <button className="back-btn" style={{marginTop: '40px'}} onClick={ e =>{
+                        <button className="back-btn" style={{marginTop: '30px'}} onClick={ e =>{
                                e.preventDefault();
                                 this.props.history.push('/');
                                 }

@@ -4,10 +4,11 @@
     margin: 0;
     color: $black;
     font-size: 16px;
+  }
 
-    span {
-      font-family: $font-promixa-nova-semibold, sans-serif;
-    }
+  span {
+    font-size: 16px;
+    font-family: $font-promixa-nova-semibold, sans-serif;
   }
 
   .chat-container {
@@ -31,6 +32,7 @@
       width: auto;
       padding: 20px;
       background: $veryLightGrey;
+      word-wrap: break-word;
     }
   }
 
@@ -53,8 +55,14 @@
       label {
         display: block;
         color: $darkBlack;
-        font-size: 21px;
-        margin-bottom: 15px;
+        font-size: 20px;
+        margin-bottom: 20px;
+        
+        span {
+          max-width: 600px;
+          display: inline-block;
+          word-wrap: break-word;
+        }
       }
       
       input {
@@ -62,15 +70,6 @@
         border: none;
         border-bottom: 1px solid $selectBorder;
         width: 100%;
-
-        &:after {
-          content: '';
-          position: absolute;
-          width: 2px;
-          height: 20px;
-          background: $cursorColor;
-          left: 0;
-        }
 
         &:focus {
           border-bottom: 1px solid $logomatorOrange;

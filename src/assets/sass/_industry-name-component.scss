@@ -3,10 +3,17 @@
     form {
       position: relative;
 
+      label {
+        span {
+          font-size: 21px;
+        }
+      }
+
       .select-triangle {
         position: absolute;
-        top: 82px;
-        right: 272px;
+        top: 14px;
+        right: 274px;
+
 
         &:after {
           content: '';

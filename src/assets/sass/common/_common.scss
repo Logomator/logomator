@@ -21,8 +21,12 @@ body {
     }
   }
 
-  .logomator-btn, .start-over {
-    transition: 0.25s all linear;
+  .logomator-btn {
+    transition: $transition;
+
+    &:hover {
+      background: $darkOrange;
+    }
   }
 
   // Buttons
@@ -36,7 +40,7 @@ body {
     font-family: ProximaNova-Semibold, sans-serif;
     font-size: 16px;
     color: white;
-    transition: all 0.25s linear;
+    transition: $transition;
 
     &.generate-logos {
       width: 178px;
@@ -66,6 +70,11 @@ body {
     font-family: ProximaNova-Semibold;
     font-size: 16px;
     color: $darkBlack;
+    transition: $transition;
+
+    &:hover {
+      border: 1px solid $selectBorder;
+    }
   }
 
   // Inputs
@@ -85,6 +94,11 @@ body {
     font-size: 18px;
     color: $darkBlack;
     padding: 20px 20px 34px 20px;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $logomatorOrange;
+    }
   }
   
   .show {
@@ -102,7 +116,9 @@ body {
     width: 100%;
     padding: 15px;
     border: 1px solid #EBEFF0;
+    background: white;
     box-shadow: $navBoxShadow;
+    z-index: 99999;
 
 
     img.logo {
@@ -126,9 +142,10 @@ body {
         font-family: "Proxima Nova Semi Bold";
         color: $black;
         border-radius: 2px;
+        transition: $transition;
 
         &:hover {
-          border: 1px solid #B0B5B8;
+          border: 1px solid $selectBorder;
         }
       }
     }
