@@ -1,5 +1,5 @@
 import * as actionTypes from './actionTypes';
-import logoInspiration from '../assets/images/logo-inspirations/Aerial_Tagline@2x.png';
+import logoInspiration from '../assets/images/logo-inspirations/sample-logo.png';
 
 const defaultState = {
     companyName: '',
