@@ -1,0 +1,47 @@
+.progress {
+  position: fixed;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  border: 1px solid $progressBorder;
+  box-shadow: $progressBarShadow;
+  background: white;
+
+  .container {
+    .logomator-btn {
+      margin: 0;
+      margin-top: 15px;
+      float: right;
+    }
+
+    .progress-bar {
+      position: relative;
+      top: 30px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      height: 10px;
+      width: 300px;
+      background: $border;
+      border-radius: 10px;
+
+      .progress-bar-fill {
+        position: absolute;
+        height: 10px;
+        background: $logomatorOrange;
+        border-radius: 10px;
+        transition: width 0.3s ease-in-out;
+      }
+    }
+
+    .back-btn {
+      margin: 0;
+      margin-top: 6px;
+
+      &.generate-logos {
+        margin-top: 15px;
+      }
+    }
+  }
+}

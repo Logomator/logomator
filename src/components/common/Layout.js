@@ -1,7 +1,10 @@
 import React from 'react';
 import Navbar from './Navbar';
-import SetLogoText from '../logo/containers/SetLogoText';
-import GenerateLogos from '../logo/containers/GenerateLogos';
+import SetLogoText from '../../logo/containers/SetLogoText';
+import GenerateLogos from '../../logo/containers/GenerateLogos';
+import HomeComponent from '../logo/components/HomeComponent';
+import TaglineComponent from '../../logo/components/TaglineComponent';
+import ShowTagLineComponent from '../../logo/containers/SetTaglineComponent';
 
 class Layout extends React.Component {
 
@@ -11,12 +14,7 @@ class Layout extends React.Component {
                 <Navbar />
 
                 <div className="logomator-base">
-                    <h1>First, select 5 or more logos that you like.</h1>
-                    <h2>We’ll use these to understand the logo style you like in order to design you the perfect logo.</h2>
-
-                    <SetLogoText />
-
-                    <GenerateLogos />
+                    <ShowTagLineComponent />
 
                     <div className="selection container-fluid">
                         <div className="row">

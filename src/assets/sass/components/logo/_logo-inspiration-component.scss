@@ -1,0 +1,47 @@
+ .logomator-base.inspiration {
+   padding-bottom: 0;
+
+   .container {
+     max-width: 960px;
+   }
+
+     .logo-inspiration-container {
+       max-width: 960px;
+       width: 960px;
+       padding-top: 30px;
+
+         .logo {
+           height: 230px;
+           width: 300px;
+           box-shadow: $logoSelectionBoxShadow;
+           border-radius: 2px;
+           margin-right: 30px;
+           margin-bottom: 30px;
+           transition: transform .25s ease-in-out;
+           cursor: pointer;
+           position: relative;
+
+           &:hover {
+             transform: translateY(-15px);
+           }
+
+           &.selected {
+             border-radius: 4px;
+             border: 3px solid $logomatorOrange;
+           }
+
+           img {
+             height: 112px;
+             position: absolute;
+             top: 0;
+             right: 0;
+             bottom: 0;
+             left: 0;
+             margin: auto;
+           }
+         }
+         div:nth-child(3n) .logo {
+           margin-right: 0;
+         }
+     }
+ }

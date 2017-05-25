@@ -1,10 +1,35 @@
 import fetch from 'isomorphic-fetch';
-import { SET_LOGO_TEXT } from './actionTypes';
+import { SET_COMPANY_NAME } from './actionTypes';
+import { SET_TAGLINE_TEXT } from './actionTypes';
+import { SET_INDUSTRY_NAME } from './actionTypes';
+import { SET_COMPANY_DESCRIPTION } from './actionTypes';
+import { SELECT_LOGO_INSPIRATION } from './actionTypes';
+import { SELECT_COLOR_PALETTE } from './actionTypes';
 import { REQUEST_ICONS } from './actionTypes';
 import { RECEIVE_ICONS } from './actionTypes';
 
-export const setLogoText = (logoText) => {
-    return { type: SET_LOGO_TEXT, logoText }
+export const setCompanyName = (name) => {
+    return { type: SET_COMPANY_NAME, name }
+};
+
+export const setTaglineText = (tagline) => {
+    return { type: SET_TAGLINE_TEXT, tagline }
+};
+
+export const setIndustryName = (industry) => {
+    return { type: SET_INDUSTRY_NAME, industry }
+};
+
+export const setCompanyDescription = (description) => {
+    return { type: SET_COMPANY_DESCRIPTION, description }
+};
+
+export const selectLogoInspiration = (inspiration) => {
+    return { type: SELECT_LOGO_INSPIRATION, inspiration }
+};
+
+export const selectColorPalette = (name) => {
+    return { type: SELECT_COLOR_PALETTE, name }
 };
 
 export const requestIconsByTerm = (term) => {

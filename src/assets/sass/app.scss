@@ -5,7 +5,12 @@
 @import "fonts";
 @import "mixins";
 
-@import "layout";
+@import "common/common";
 @import "home";
-@import "color-palette";
+@import "components/logo/color-palette";
 @import "logo-information";
+@import "company-name-form-component";
+@import "tagline-component";
+@import "industry-name-component";
+@import "components/logo/index";
+@import "components/common/index";
