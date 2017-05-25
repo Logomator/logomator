@@ -2,7 +2,7 @@ body {
 
   // Globals fonts
   h1, h2, h3, h4, h5, h6, p, span, input, label {
-    font-family: "Proxima Nova";
+    font-family: "Proxima Nova", sans-serif;
     font-weight: 300;
   }
 
@@ -12,6 +12,21 @@ body {
 
   h2 {
     font-size: 18px;
+  }
+
+  .logomator-base {
+    .container {
+      max-width: 630px;
+      padding-top: 100px;
+    }
+  }
+
+  .logomator-btn {
+    transition: $transition;
+
+    &:hover {
+      background: $darkOrange;
+    }
   }
 
   // Buttons
@@ -25,6 +40,7 @@ body {
     font-family: ProximaNova-Semibold, sans-serif;
     font-size: 16px;
     color: white;
+    transition: $transition;
 
     &.generate-logos {
       width: 178px;
@@ -54,13 +70,18 @@ body {
     font-family: ProximaNova-Semibold;
     font-size: 16px;
     color: $darkBlack;
+    transition: $transition;
+
+    &:hover {
+      border: 1px solid $selectBorder;
+    }
   }
 
   // Inputs
   input {
     font-size: 18px;
     color: $black;
-    padding-bottom: 9px;
+    padding-bottom: 3px;
   }
 
   .logomator-textarea {
@@ -73,6 +94,11 @@ body {
     font-size: 18px;
     color: $darkBlack;
     padding: 20px 20px 34px 20px;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $logomatorOrange;
+    }
   }
   
   .show {
@@ -85,11 +111,14 @@ body {
 
 
   nav {
+    position: fixed;
     height: 70px;
     width: 100%;
-    padding: 15px 40px 15px 40px;
+    padding: 15px;
     border: 1px solid #EBEFF0;
+    background: white;
     box-shadow: $navBoxShadow;
+    z-index: 99999;
 
 
     img.logo {
@@ -113,6 +142,11 @@ body {
         font-family: "Proxima Nova Semi Bold";
         color: $black;
         border-radius: 2px;
+        transition: $transition;
+
+        &:hover {
+          border: 1px solid $selectBorder;
+        }
       }
     }
   }

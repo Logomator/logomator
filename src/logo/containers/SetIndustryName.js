@@ -14,7 +14,7 @@ const IndustryName = withRouter(({ companyName, onSelect, onClick, history }) =>
             <div className="logomator-base">
                 <div className="industry-name-component container">
                     <ChatComponent
-                        text={<h1>Now, tell me a little bit more about <strong>{companyName}</strong>.</h1>}
+                        text={<h1>Now, tell me a little bit more about <span>{companyName}</span>.</h1>}
                         height="60px"
                     />
                     <IndustryNameComponent companyName={companyName} onSelect={onSelect} onClick={onClick} history={history}/>

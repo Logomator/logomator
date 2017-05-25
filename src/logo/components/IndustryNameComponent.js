@@ -29,15 +29,17 @@ class IndustryNameComponent extends React.Component {
 
     render() {
         return (
-                <div className="logomator-form">
+          <div className="logomator-form">
 
-                    <span className="orange-bar"></span>
+              <span className="orange-bar"></span>
 
-                    <form name="industry_name">
+              <form name="industry_name">
 
-                        <label htmlFor="industry">What industry do you think <strong>{this.props.companyName}</strong> is most related to?</label>
+                  <label htmlFor="industry">What industry do you think <span>{this.props.companyName}</span> is most related to?</label>
 
-                        <div className="select-triangle"></div>
+                        <div style={{position: 'relative'}}>
+                            <div className="select-triangle"></div>
+                        </div>
                         <select value={this.state.industry} onChange={this.handleSelect}>
                             <option selected value="''">Select Industry</option>
                             <option value="accounting">Accounting &amp; Financial</option>
@@ -85,13 +87,13 @@ class IndustryNameComponent extends React.Component {
                         </select>
 
 
-                        <div className={this.state.industry.length > 0 ? 'show' : 'no-show'} style={{marginTop: '40px'}}>
-                            <label htmlFor="company_description">Describe what <strong>{this.props.companyName}</strong> does and what you want your logo to convey.</label>
+                        <div style={{marginTop: '30px'}}>
+                            <label htmlFor="company_description">Describe what <span>{this.props.companyName}</span> does and what you want your logo to convey.</label>
 
                             <textarea onChange={this.handleInputChange} className="logomator-textarea" name="company_description" id="" cols="30" rows="10" placeholder="We sell pizzas and italian sandwiches to hungry customers in downtown Boston, Massachusetts. We want our logo to be modern and playful with bright colors."></textarea>
                         </div>
 
-                        <button className={this.state.companyDescription.length > 0 && this.state.industry.length > 0 ? 'logomator-btn' : 'logomator-btn btn-disabled'} style={{marginTop: '40px'}} onClick={ e =>{
+                        <button className={this.state.companyDescription.length > 0 && this.state.industry.length > 0 ? 'logomator-btn' : 'logomator-btn btn-disabled'} style={{marginTop: '30px'}} onClick={ e =>{
                               e.preventDefault();
                               this.props.history.push('/inspiration');
                               this.props.onSelect(this.state.industry);
@@ -100,7 +102,7 @@ class IndustryNameComponent extends React.Component {
                             Continue
                         </button>
 
-                        <button className="back-btn" style={{marginTop: '40px'}} onClick={ e =>{
+                        <button className="back-btn" style={{marginTop: '30px'}} onClick={ e =>{
                             e.preventDefault();
                             this.props.history.push('/tagline');
                             }}>

@@ -14,7 +14,7 @@ const SurveyComponent = ({ history }) => {
                 <label htmlFor="experience"
                        style={{
                            fontSize: '20px',
-                           paddingTop: '40px'
+                           paddingTop: '30px'
                         }}>
                     How would you describe your experience using our tool to design your logo?</label>
 
@@ -25,8 +25,8 @@ const SurveyComponent = ({ history }) => {
 
                 <label htmlFor="most_liked"
                        style={{
-                           'fontSize': '20px',
-                           'paddingTop': '40px'
+                           fontSize: '20px',
+                           paddingTop: '30px'
                         }}>
                     What did you like the most about using our tool?</label>
 
@@ -38,7 +38,7 @@ const SurveyComponent = ({ history }) => {
                 <label htmlFor="improvements"
                        style={{
                            fontSize: '20px',
-                           paddingTop: '40px'
+                           paddingTop: '30px'
                         }}>
                     If we could improve one thing, what would it be?</label>
 
@@ -51,7 +51,7 @@ const SurveyComponent = ({ history }) => {
                 <button
                     style={{
                         width: '171px',
-                        marginTop: '40px'
+                        marginTop: '30px'
                     }}
                     onClick={ e =>{
                               e.preventDefault();
@@ -64,7 +64,7 @@ const SurveyComponent = ({ history }) => {
                 </button>
 
                 <button className="back-btn"
-                        style={{marginTop: '40px'}}
+                        style={{marginTop: '30px'}}
                         onClick={ e =>{
                             e.preventDefault();
                                 // Route back to generate logos

@@ -43,8 +43,8 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, palett
                     <button
                         className={palettesSelected() === 3 ? 'logomator-btn generate-logos': 'logomator-btn generate-logos btn-disabled'}
                         onClick={ e => {
-                                e.preventDefault();
-                                    // Generate Logos
+                                history.push('/survey');
+
                                 }}>
                         Generate Logos
                     </button>
