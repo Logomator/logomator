@@ -18,13 +18,15 @@ import SurveyContainer from './logo/containers/SurveyContainer';
 const history = createBrowserHistory();
 const middleware = routerMiddleware(history);
 
-let store = createStore(
+const store = createStore(
     logoReducer,
     applyMiddleware(
         thunkMiddleware,
         middleware
     )
 );
+
+    window.store = store;
 
 render(
     <Provider store={store}>

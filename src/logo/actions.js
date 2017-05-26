@@ -7,6 +7,7 @@ import { SELECT_LOGO_INSPIRATION } from './actionTypes';
 import { SELECT_COLOR_PALETTE } from './actionTypes';
 import { REQUEST_ICONS } from './actionTypes';
 import { RECEIVE_ICONS } from './actionTypes';
+import { REQUEST_LOGOS } from './actionTypes';
 
 export const setCompanyName = (name) => {
     return { type: SET_COMPANY_NAME, name }
@@ -40,12 +41,30 @@ export const receiveIcons = (icons)  => {
     return { type: RECEIVE_ICONS, icons }
 };
 
+export const requestLogos = (chars) => {
+    return { type: REQUEST_LOGOS, chars }
+};
+
 export function fetchIcons (term) {
     return dispatch => {
 
         dispatch(requestIconsByTerm(term));
 
         return fetch(`http://localhost:8000/api/icons/${term}`)
-            .then(response => response.json())
+          .then(response => response.json())
+    }
+}
+
+export function fetchLogos (chars) {
+    return dispatch => {
+        dispatch(requestLogos(chars));
+
+        const fetchLogoRequest = new Request('http://localhost:8000/api/logos/chars', {method: 'POST', body: `{'chars' : ${chars}`});
+
+        console.log("LOGO_REQUEST: ", fetchLogoRequest);
+
+        return fetch(fetchLogoRequest)
+          .then(response => response.json());
+
     }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, palettes }) => {
+const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, onGenerate, state, palettes }) => {
 
     let logosSelected = () => {
         let count = 0;
@@ -30,7 +30,7 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, palett
         <div className="progress">
             <div className="container">
                 <div className={isGeneratingLogos ? 'no-show': ''}>
-                    <button className={logosSelected() === 5 ? 'logomator-btn' : 'logomator-btn btn-disabled'}
+                    <button className={logosSelected() === 2 ? 'logomator-btn' : 'logomator-btn btn-disabled'}
                             onClick={ e => {
                                 e.preventDefault();
                                     history.push('/color-palette');
@@ -43,8 +43,8 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, palett
                     <button
                         className={palettesSelected() === 3 ? 'logomator-btn generate-logos': 'logomator-btn generate-logos btn-disabled'}
                         onClick={ e => {
-                                history.push('/survey');
-
+                                  e.preventDefault();
+                                  onGenerate(state);
                                 }}>
                         Generate Logos
                     </button>
@@ -61,7 +61,8 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, palett
                 <button className={isGeneratingLogos ? 'back-btn generate-logos': 'back-btn'} onClick={ e =>{
                     e.preventDefault();
                     if (isGeneratingLogos) {
-                      history.push('/inspiration');
+
+
                     } else {
                       history.push('/industry');
                     }
