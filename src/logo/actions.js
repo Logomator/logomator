@@ -1,4 +1,5 @@
 import fetch from 'isomorphic-fetch';
+import request from 'request';
 import { SET_COMPANY_NAME } from './actionTypes';
 import { SET_TAGLINE_TEXT } from './actionTypes';
 import { SET_INDUSTRY_NAME } from './actionTypes';
@@ -57,14 +58,28 @@ export function fetchIcons (term) {
 
 export function fetchLogos (chars) {
     return dispatch => {
+
         dispatch(requestLogos(chars));
 
-        const fetchLogoRequest = new Request('http://localhost:8000/api/logos/chars', {method: 'POST', body: `{'chars' : ${chars}`});
+        console.log("CHARS", chars);
 
-        console.log("LOGO_REQUEST: ", fetchLogoRequest);
+        const generateLogoRequest = {
+            url: 'http://localhost:8000/api/logos/chars',
+            method: 'POST',
+            body: JSON.stringify(chars),
+            headers: {'Content-Type': 'application/json'}
+        };
 
-        return fetch(request)
-          .then(response => response.json());
-
+        return new Promise((fulfill, reject) => {
+            request(generateLogoRequest, (err, body, res) => {
+                res = JSON.parse(res);
+                if (res.statusCode === 200) {
+                    console.log(res.statusCode);
+                    fulfill(body);
+                } else {
+                    reject(res);
+                }
+            });
+        });
     }
 }
