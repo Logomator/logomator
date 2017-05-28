@@ -63,7 +63,7 @@ export function fetchLogos (chars) {
 
         console.log("LOGO_REQUEST: ", fetchLogoRequest);
 
-        return fetch(fetchLogoRequest)
+        return fetch(request)
           .then(response => response.json());
 
     }
