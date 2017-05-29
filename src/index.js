@@ -4,7 +4,7 @@ import thunkMiddleware from 'redux-thunk'
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { Router, Route }  from 'react-router';
-import { routerMiddleware } from 'react-router-redux'
+import { routerMiddleware, push } from 'react-router-redux'
 import createBrowserHistory from 'history/createBrowserHistory';
 import  logoReducer from './logo/reducer';
 
@@ -18,13 +18,15 @@ import SurveyContainer from './logo/containers/SurveyContainer';
 const history = createBrowserHistory();
 const middleware = routerMiddleware(history);
 
-let store = createStore(
+const store = createStore(
     logoReducer,
     applyMiddleware(
         thunkMiddleware,
         middleware
     )
 );
+
+    window.store = store;
 
 render(
     <Provider store={store}>

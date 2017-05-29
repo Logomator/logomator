@@ -1,4 +1,5 @@
 import fetch from 'isomorphic-fetch';
+import request from 'request';
 import { SET_COMPANY_NAME } from './actionTypes';
 import { SET_TAGLINE_TEXT } from './actionTypes';
 import { SET_INDUSTRY_NAME } from './actionTypes';
@@ -7,6 +8,8 @@ import { SELECT_LOGO_INSPIRATION } from './actionTypes';
 import { SELECT_COLOR_PALETTE } from './actionTypes';
 import { REQUEST_ICONS } from './actionTypes';
 import { RECEIVE_ICONS } from './actionTypes';
+import { REQUEST_LOGOS } from './actionTypes';
+import { RECEIVE_LOGOS } from './actionTypes';
 
 export const setCompanyName = (name) => {
     return { type: SET_COMPANY_NAME, name }
@@ -40,12 +43,47 @@ export const receiveIcons = (icons)  => {
     return { type: RECEIVE_ICONS, icons }
 };
 
+export const requestLogos = (chars) => {
+    return { type: REQUEST_LOGOS, chars }
+};
+
+export const receiveLogos = (concepts) => {
+    return { type: RECEIVE_LOGOS, concepts }
+};
+
 export function fetchIcons (term) {
     return dispatch => {
 
         dispatch(requestIconsByTerm(term));
 
         return fetch(`http://localhost:8000/api/icons/${term}`)
-            .then(response => response.json())
+          .then(response => response.json())
+    }
+}
+
+export function fetchLogos (chars) {
+    return dispatch => {
+        dispatch(requestLogos(chars));
+
+        const generateLogoRequest = {
+            url: 'http://localhost:8000/api/logos/chars',
+            method: 'POST',
+            body: JSON.stringify(chars),
+            headers: {'Content-Type': 'application/json'}
+        };
+
+        return new Promise((fulfill, reject) => {
+            request(generateLogoRequest, (err, body, res) => {
+                res = JSON.parse(res);
+                if (res.statusCode === 200) {
+                    console.log(res.concepts);
+                    dispatch(receiveLogos(res.concepts));
+                    fulfill(body);
+
+                } else {
+                    reject(res);
+                }
+            });
+        });
     }
 }

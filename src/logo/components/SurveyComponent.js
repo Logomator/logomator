@@ -66,7 +66,7 @@ const SurveyComponent = ({ history }) => {
                 <button className="back-btn"
                         style={{marginTop: '30px'}}
                         onClick={ e =>{
-                            e.preventDefault();
+                            e.preventDefault();//
                                 // Route back to generate logos
                                 history.push('/')
                             }}>

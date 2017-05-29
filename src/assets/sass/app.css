@@ -140,6 +140,9 @@ body .logomator-textarea {
   font-size: 18px;
   color: #19191A;
   padding: 20px 20px 34px 20px; }
+  body .logomator-textarea:focus {
+    outline: none;
+    border: 1px solid #F5530C; }
 
 body .show {
   display: block; }
@@ -246,11 +249,11 @@ div.selection-progress {
           opacity: .2; }
 
 .color-palette-container {
-  padding-top: 40px;
-  max-width: 960px;
+  padding-top: 30px;
+  max-width: 920px;
   margin: auto; }
   .color-palette-container .color-palette.col-5 {
-    padding-top: 40px;
+    padding-top: 30px;
     width: 20%;
     float: left; }
     .color-palette-container .color-palette.col-5 .palette {
@@ -258,7 +261,7 @@ div.selection-progress {
       width: 160px;
       box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
       border-radius: 2px;
-      transition: transform 0.2s;
+      transition: transform .25s ease-in-out;
       cursor: pointer; }
       .color-palette-container .color-palette.col-5 .palette:hover {
         transform: translateY(-15px); }
@@ -376,20 +379,13 @@ div.selection-progress {
       margin-bottom: 20px; }
       .container .logomator-form form label span {
         max-width: 600px;
-        display: block;
+        display: inline-block;
         word-wrap: break-word; }
     .container .logomator-form form input {
       display: block;
       border: none;
       border-bottom: 1px solid #B0B5B8;
       width: 100%; }
-      .container .logomator-form form input:after {
-        content: '';
-        position: absolute;
-        width: 2px;
-        height: 20px;
-        background: #008CFF;
-        left: 0; }
       .container .logomator-form form input:focus {
         border-bottom: 1px solid #F5530C;
         outline: none; }
@@ -448,8 +444,8 @@ div.selection-progress {
     font-size: 21px; }
   .industry-name-component.container .logomator-form form .select-triangle {
     position: absolute;
-    top: 82px;
-    right: 272px; }
+    top: 14px;
+    right: 274px; }
     .industry-name-component.container .logomator-form form .select-triangle:after {
       content: '';
       width: 0;
@@ -477,35 +473,44 @@ div.selection-progress {
 
 .logomator-base.inspiration {
   padding-bottom: 0; }
+  .logomator-base.inspiration .container {
+    max-width: 960px; }
   .logomator-base.inspiration .logo-inspiration-container {
-    padding-top: 40px;
+    max-width: 960px;
     width: 960px;
-    padding-bottom: 70px; }
+    padding-top: 30px; }
     .logomator-base.inspiration .logo-inspiration-container .logo {
-      height: 300px;
+      height: 230px;
       width: 300px;
       box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
       border-radius: 2px;
       margin-right: 30px;
       margin-bottom: 30px;
-      transition: transform 0.24s ease-in-out;
-      cursor: pointer; }
+      transition: transform .25s ease-in-out;
+      cursor: pointer;
+      position: relative; }
       .logomator-base.inspiration .logo-inspiration-container .logo:hover {
         transform: translateY(-15px); }
       .logomator-base.inspiration .logo-inspiration-container .logo.selected {
+        border-radius: 4px;
         border: 3px solid #F5530C; }
       .logomator-base.inspiration .logo-inspiration-container .logo img {
-        height: 100%;
-        width: 100%; }
+        max-height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto; }
     .logomator-base.inspiration .logo-inspiration-container div:nth-child(3n) .logo {
       margin-right: 0; }
 
 .color-palette-container {
-  padding-top: 40px;
-  max-width: 960px;
+  padding-top: 30px;
+  max-width: 920px;
   margin: auto; }
   .color-palette-container .color-palette.col-5 {
-    padding-top: 40px;
+    padding-top: 30px;
     width: 20%;
     float: left; }
     .color-palette-container .color-palette.col-5 .palette {
@@ -513,7 +518,7 @@ div.selection-progress {
       width: 160px;
       box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
       border-radius: 2px;
-      transition: transform 0.2s;
+      transition: transform .25s ease-in-out;
       cursor: pointer; }
       .color-palette-container .color-palette.col-5 .palette:hover {
         transform: translateY(-15px); }
@@ -532,33 +537,31 @@ div.selection-progress {
   height: 70px;
   width: 100%;
   border: 1px solid #EBEFF0;
-  box-shadow: 0 -4px 0 0 #F9F9FA;
+  box-shadow: 0 -4px 0 rgba(244, 244, 245, 0.5);
   background: white; }
-  .progress .container {
-    padding: 0; }
-    .progress .container .logomator-btn {
-      margin: 0;
-      margin-top: 15px;
-      float: right; }
-    .progress .container .progress-bar {
-      position: relative;
-      top: 30px;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      margin: auto;
+  .progress .container .logomator-btn {
+    margin: 0;
+    margin-top: 15px;
+    float: right; }
+  .progress .container .progress-bar {
+    position: relative;
+    top: 30px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 10px;
+    width: 300px;
+    background: #DFE3E6;
+    border-radius: 10px; }
+    .progress .container .progress-bar .progress-bar-fill {
+      position: absolute;
       height: 10px;
-      width: 300px;
-      background: #DFE3E6;
-      border-radius: 10px; }
-      .progress .container .progress-bar .progress-bar-fill {
-        position: absolute;
-        height: 10px;
-        background: #F5530C;
-        border-radius: 10px;
-        transition: width 0.3s ease-in-out; }
-    .progress .container .back-btn {
-      margin: 0;
-      margin-top: 6px; }
-      .progress .container .back-btn.generate-logos {
-        margin-top: 15px; }
+      background: #F5530C;
+      border-radius: 10px;
+      transition: width 0.3s ease-in-out; }
+  .progress .container .back-btn {
+    margin: 0;
+    margin-top: 6px; }
+    .progress .container .back-btn.generate-logos {
+      margin-top: 15px; }
