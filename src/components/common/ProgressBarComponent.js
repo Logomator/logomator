@@ -43,9 +43,10 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, onGene
           <button
             className={palettesSelected() === 3 ? 'logomator-btn generate-logos': 'logomator-btn generate-logos btn-disabled'}
             onClick={ e => {
-                                  e.preventDefault();
-                                  onGenerate(state);
-                                }}>
+              e.preventDefault();
+              onGenerate(state);
+               history.push('/');
+            }}>
             Generate Logos
           </button>
         </div>

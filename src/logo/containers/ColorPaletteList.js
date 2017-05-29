@@ -4,11 +4,12 @@ import ChatComponent from '../../components/common/ChatComponent';
 import HeaderComponent from '../../components/common/HeaderComponent';
 import ColorPaletteComponent from '../components/ColorPaletteComponent';
 import ProgressBarComponent from '../../components/common/ProgressBarComponent';
+import LoadingComponent from '../../components/common/LoadingComponent';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom'
 import { selectColorPalette, fetchLogos } from '../actions';
 
-const Palettes = withRouter(({ palettes, onClick, state, onGenerate, history}) => {
+const Palettes = withRouter(({ palettes, onClick, isFetching, state, onGenerate, history}) => {
 
     let paletteArray = [];
 
@@ -20,6 +21,7 @@ const Palettes = withRouter(({ palettes, onClick, state, onGenerate, history}) =
 
     return (
       <div>
+          <LoadingComponent isFetching={isFetching} />
           <Navbar />
           <div className="logomator-base">
               <div className="container" style={{
@@ -40,6 +42,7 @@ const Palettes = withRouter(({ palettes, onClick, state, onGenerate, history}) =
 
 const mapStateToProps = (state) => ({
     state: state,
+    isFetching: state.isFetching,
     palettes: state.palettes
 });
 

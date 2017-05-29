@@ -9,6 +9,7 @@ import { SELECT_COLOR_PALETTE } from './actionTypes';
 import { REQUEST_ICONS } from './actionTypes';
 import { RECEIVE_ICONS } from './actionTypes';
 import { REQUEST_LOGOS } from './actionTypes';
+import { RECEIVE_LOGOS } from './actionTypes';
 
 export const setCompanyName = (name) => {
     return { type: SET_COMPANY_NAME, name }
@@ -46,6 +47,10 @@ export const requestLogos = (chars) => {
     return { type: REQUEST_LOGOS, chars }
 };
 
+export const receiveLogos = (concepts) => {
+    return { type: RECEIVE_LOGOS, concepts }
+};
+
 export function fetchIcons (term) {
     return dispatch => {
 
@@ -58,10 +63,7 @@ export function fetchIcons (term) {
 
 export function fetchLogos (chars) {
     return dispatch => {
-
         dispatch(requestLogos(chars));
-
-        console.log("CHARS", chars);
 
         const generateLogoRequest = {
             url: 'http://localhost:8000/api/logos/chars',
@@ -74,8 +76,10 @@ export function fetchLogos (chars) {
             request(generateLogoRequest, (err, body, res) => {
                 res = JSON.parse(res);
                 if (res.statusCode === 200) {
-                    console.log(res.statusCode);
+                    console.log(res.concepts);
+                    dispatch(receiveLogos(res.concepts));
                     fulfill(body);
+
                 } else {
                     reject(res);
                 }
