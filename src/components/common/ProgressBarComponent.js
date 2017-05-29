@@ -45,7 +45,7 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, onGene
             onClick={ e => {
               e.preventDefault();
               onGenerate(state);
-               history.push('/');
+               //history.push('/');
             }}>
             Generate Logos
           </button>

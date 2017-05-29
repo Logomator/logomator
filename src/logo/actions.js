@@ -77,8 +77,10 @@ export function fetchLogos (chars) {
                 res = JSON.parse(res);
                 if (res.statusCode === 200) {
                     console.log(res.concepts);
-                    dispatch(receiveLogos(res.concepts));
-                    fulfill(body);
+                    setTimeout(() => {
+                        dispatch(receiveLogos(res.concepts));
+                        fulfill(body);
+                    }, 3000);
 
                 } else {
                     reject(res);
