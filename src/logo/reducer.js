@@ -1,5 +1,6 @@
 import * as actionTypes from './actionTypes';
-import logoInspiration from '../assets/images/logo-inspirations/Aerial_Tagline@2x.png';
+import logoInspiration1 from '../assets/images/logo-inspirations/text-based-inspiration.png';
+import logoInspiration2 from '../assets/images/logo-inspirations/Aerial_Tagline@2x.png';
 
 const defaultState = {
     companyName: '',
@@ -10,32 +11,12 @@ const defaultState = {
     icons: [],
     inspirations: [ // This data will be fetched via our API eventually.
         {   id: 0,
-            img: logoInspiration,
+            img: logoInspiration1,
             isSelected: false
         },
         {
             id: 1,
-            img: logoInspiration,
-            isSelected: false
-        },
-        {
-            id: 2,
-            img: logoInspiration,
-            isSelected: false
-        },
-        {
-            id: 3,
-            img: logoInspiration,
-            isSelected: false
-        },
-        {
-            id: 4,
-            img: logoInspiration,
-            isSelected: false
-        },
-        {
-            id: 5,
-            img: logoInspiration,
+            img: logoInspiration2,
             isSelected: false
         }
 
@@ -92,7 +73,8 @@ const defaultState = {
             "hexcodes": ["#C4C6CC", "#818691", "#484C53", "#1A191C"],
             "isSelected": false
         }
-    ]
+    ],
+    concepts: null
 };
 
 const selectInspiration = (state, action) => {
@@ -163,6 +145,17 @@ export function logoReducer (state, action) {
             return Object.assign({}, state, {
                 isFetching: false,
                 icons: action.icons
+            });
+        
+        case actionTypes.REQUEST_LOGOS:
+            return Object.assign({}, state, {
+                isFetching: true
+            });
+        
+        case actionTypes.RECEIVE_LOGOS:
+            return Object.assign({}, state, {
+                isFetching: false,
+                concepts: action.concepts
             });
 
         default:

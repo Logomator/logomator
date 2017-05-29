@@ -11,32 +11,6 @@
     font-family: $font-promixa-nova-semibold, sans-serif;
   }
 
-  .chat-container {
-    vertical-align: top;
-
-    .chat-bubble-pic {
-      display: inline-block;
-      margin-right: 10px;
-      vertical-align: top;
-
-      img {
-        height: 50px;
-        width: 50px;
-      }
-    }
-
-    .chat-bubble-message {
-      display: inline-block;
-      border-radius: 10px;
-      max-width: 540px;
-      width: auto;
-      padding: 20px;
-      background: $veryLightGrey;
-      word-wrap: break-word;
-    }
-  }
-
-
   .logomator-form {
     padding-top: 30px;
 

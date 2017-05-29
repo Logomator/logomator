@@ -45,3 +45,15 @@ export const REQUEST_ICONS = 'REQUEST_ICONS';
  * @type {string}
  */
 export const RECEIVE_ICONS = 'RECEIVE_ICONS';
+
+/**
+ * Request logos action.
+ * @type {string}
+ */
+export const REQUEST_LOGOS = 'REQUEST_LOGOS';
+
+/**
+ * Receive logos action.
+ * @type {string}
+ */
+export const RECEIVE_LOGOS = 'RECEIVE_LOGOS';
