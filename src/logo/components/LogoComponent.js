@@ -1,13 +1,12 @@
 import React from 'react';
 
-const LogoComponent = ({ concept, onClick }) => {
+const setInnerHTML = (concept) => {
+  return { __html: concept}
+}
+
+const LogoComponent = ({ concept }) => {
   return (
-    <div className="logo col-md-3"
-         onClick={e => {
-                e.preventDefault();
-                onClick();
-              }}>
-      {{ concept }}
+    <div className="logo col-md-3" dangerouslySetInnerHTML={setInnerHTML(concept)}>
     </div>
   )
 };

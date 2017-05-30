@@ -1,14 +1,19 @@
 import React from 'react';
 import LogoComponent from '../components/LogoComponent';
+import Navbar from '../../components/common/Navbar';
+import ChatComponent from '../../components/common/ChatComponent';
 import { connect } from 'react-redux';
 
 const LogoList = ({ concepts }) => {
-
   const logos = [];
+
+  concepts = concepts || [];
 
   concepts.forEach((concept) => {
     logos.push(
-      <LogoComponent concept={concept} />
+      <div>
+        <LogoComponent concept={concept} />
+      </div>
     )
   });
 
@@ -40,8 +45,7 @@ const mapStateToProps = (state) => ({
 });
 
 const LogoListContainer = connect(
-  mapStateToProps,
-  null
+  mapStateToProps
 )(LogoList);
 
 export default LogoListContainer;
