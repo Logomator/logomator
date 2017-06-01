@@ -86,7 +86,7 @@
   font-style: normal;
 }
 
-@font-face {//
+@font-face {
   font-family: 'Proxima Nova Semi Bold';
   src: url('../fonts/proxima-nova/proxima-nova-semibold-webfont.woff');
   src: url('../fonts/proxima-nova/proxima-nova-semibold-webfont.woff2'),
@@ -97,9 +97,8 @@
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('../fonts/montserrat/montserrat-regular/montserrat-regular-webfont.woff');
-  src: url('../fonts/montserrat/montserrat-regular/montserrat-regular-webfont.woff2'),
-  url('../fonts/montserrat/montserrat-regular/montserrat-regular-webfont.woff') format('woff');
+  src: url('../fonts/montserrat/montserrat-regular/montserrat-regular-webfont.woff') format('woff'),
+  url('../fonts/montserrat/montserrat-regular/montserrat-regular-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -114,7 +113,7 @@
 }
 
 @font-face {
-  font-family: 'Montserrat bold';
+  font-family: 'Montserrat Bold';
   src: url('../fonts/montserrat/montserrat-bold/montserrat-bold-webfont.woff');
   src: url('../fonts/montserrat/montserrat-bold/montserrat-bold-webfont.woff2'),
   url('../fonts/montserrat/montserrat-bold/montserrat-bold-webfont.woff') format('woff');
