@@ -74,7 +74,7 @@ const defaultState = {
             "isSelected": false
         }
     ],
-    concepts: null
+    concepts: [],
 };
 
 const selectInspiration = (state, action) => {

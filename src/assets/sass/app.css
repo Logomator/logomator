@@ -1,46 +1,4 @@
 @font-face {
-  font-family: 'Arimo';
-  src: url("../fonts/arimo/arimo-regular-webfont.woff");
-  src: url("../fonts/arimo/arimo-regular-webfont.woff2"), url("../fonts/arimo/arimo-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Catamaran';
-  src: url("../fonts/catamaran/catamaran-regular-webfont.woff");
-  src: url("../fonts/catamaran/catamaran-regular-webfont.woff2"), url("../fonts/catamaran/catamaran-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Nunito';
-  src: url("../fonts/nunito/nunito-regular-webfont.woff");
-  src: url("../fonts/nunito/nunito-regular-webfont.woff2"), url("../fonts/nunito/nunito-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Palanquin';
-  src: url("../fonts/palanquin/palanquin-regular-webfont.woff");
-  src: url("../fonts/palanquin/palanquin-regular-webfont.woff2"), url("../fonts/palanquin/palanquin-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Raleway';
-  src: url("../fonts/raleway/raleway-regular-webfont.woff");
-  src: url("../fonts/raleway/raleway-regular-webfont.woff2"), url("../fonts/raleway/raleway-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Roboto';
-  src: url("../fonts/roboto/roboto-regular-webfont.woff");
-  src: url("../fonts/roboto/roboto-regular-webfont.woff2"), url("../fonts/roboto/roboto-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
   font-family: 'Proxima Nova';
   src: url("../fonts/proxima-nova/proximanova-regular-webfont.woff");
   src: url("../fonts/proxima-nova/proximanova-regular-webfont.woff2"), url("../fonts/proxima-nova/proximanova-regular-webfont.woff") format("woff");
@@ -65,6 +23,292 @@
   font-family: 'Proxima Nova Semi Bold';
   src: url("../fonts/proxima-nova/proxima-nova-semibold-webfont.woff");
   src: url("../fonts/proxima-nova/proxima-nova-semibold-webfont.woff2"), url("../fonts/proxima-nova/proxima-nova-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/montserrat/montserrat-regular/montserrat-regular-webfont.woff") format("woff"), url("../fonts/montserrat/montserrat-regular/montserrat-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat Semibold';
+  src: url("../fonts/montserrat/montserrat-semibold/montserrat-semibold-webfont.woff");
+  src: url("../fonts/montserrat/montserrat-semibold/montserrat-semibold-webfont.woff2"), url("../fonts/montserrat/montserrat-semibold/montserrat-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url("../fonts/montserrat/montserrat-bold/montserrat-bold-webfont.woff");
+  src: url("../fonts/montserrat/montserrat-bold/montserrat-bold-webfont.woff2"), url("../fonts/montserrat/montserrat-bold/montserrat-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Abril Fat Face';
+  src: url("../fonts/abril-fatface/abrilfatface-regular-webfont.woff");
+  src: url("../fonts/abril-fatface/abrilfatface-regular-webfont.woff2"), url("../fonts/abril-fatface/abrilfatface-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Alex Brush';
+  src: url("../../../public/fonts/alex-brush/alexbrush-regular-webfont.woff");
+  src: url("../../../public/fonts/alex-brush/alexbrush-regular-webfont.woff2"), url("../../../public/fonts/alex-brush/alexbrush-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("../../../public/fonts/bebas_neue/bebasneue-webfont.woff");
+  src: url("../../../public/fonts/bebas_neue/bebasneue-webfont.woff2"), url("../../../public/fonts/bebas_neue/bebasneue-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Boogaloo';
+  src: url("../../../public/fonts/boogaloo/boogaloo-regular-webfont.woff");
+  src: url("../../../public/fonts/boogaloo/boogaloo-regular-webfont.woff2"), url("../../../public/fonts/boogaloo/boogaloo-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Caviar Dreams';
+  src: url("../../../public/fonts/Caviar-Dreams/caviardreams-webfont.woff");
+  src: url("../../../public/fonts/Caviar-Dreams/caviardreams-webfont.woff2"), url("../../../public/fonts/Caviar-Dreams/caviardreams-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Caviar Dreams Bold';
+  src: url("../../../public/fonts/Caviar-Dreams/caviar_dreams_bold-webfont.woff");
+  src: url("../../../public/fonts/Caviar-Dreams/caviar_dreams_bold-webfont.woff2"), url("../../../public/fonts/Caviar-Dreams/caviar_dreams_bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Caviar Dreams Italic';
+  src: url("../../../public/fonts/Caviar-Dreams/caviardreams_italic-webfont.woff");
+  src: url("../../../public/fonts/Caviar-Dreams/caviardreams_italic-webfont.woff2"), url("../../../public/fonts/Caviar-Dreams/caviardreams_italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Caviar Dreams Bold Italic';
+  src: url("../../../public/fonts/Caviar-Dreams/caviardreams_bolditalic-webfont.woff");
+  src: url("../../../public/fonts/Caviar-Dreams/caviardreams_bolditalic-webfont.woff2"), url("../../../public/fonts/Caviar-Dreams/caviardreams_bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Chunk Five';
+  src: url("../../../public/fonts/ChunkFive/chunkfive-webfont.woff");
+  src: url("../../../public/fonts/ChunkFive/chunkfive-webfont.woff2"), url("../../../public/fonts/ChunkFive/chunkfive-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Cinzel';
+  src: url("../../../public/fonts/cinzel/cinzel-regular-webfont.woff");
+  src: url("../../../public/fonts/cinzel/cinzel-regular-webfont.woff2"), url("../../../public/fonts/cinzel/cinzel-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Cinzel Black';
+  src: url("../../../public/fonts/cinzel/cinzel-black-webfont.woff");
+  src: url("../../../public/fonts/cinzel/cinzel-black-webfont.woff2"), url("../../../public/fonts/cinzel/cinzel-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Cinzel Bold';
+  src: url("../../../public/fonts/cinzel/cinzel-bold-webfont.woff");
+  src: url("../../../public/fonts/cinzel/cinzel-bold-webfont.woff2"), url("../../../public/fonts/cinzel/cinzel-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Cinzel Decorative';
+  src: url("../../../public/fonts/cinzel/cinzeldecorative-regular-webfont.woff");
+  src: url("../../../public/fonts/cinzel/cinzeldecorative-regular-webfont.woff2"), url("../../../public/fonts/cinzel/cinzeldecorative-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Cinzel Black Decorative';
+  src: url("../../../public/fonts/cinzel/cinzeldecorative-black-webfont.woff");
+  src: url("../../../public/fonts/cinzel/cinzeldecorative-black-webfont.woff2"), url("../../../public/fonts/cinzel/cinzeldecorative-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Cinzel Black Decorative Bold';
+  src: url("../../../public/fonts/cinzel/cinzeldecorative-bold-webfont.woff");
+  src: url("../../../public/fonts/cinzel/cinzeldecorative-bold-webfont.woff2"), url("../../../public/fonts/cinzel/cinzeldecorative-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Dancing Script';
+  src: url("../../../public/fonts/dancing-script-ot/dancingscript-regular-webfont.woff");
+  src: url("../../../public/fonts/dancing-script-ot/dancingscript-regular-webfont.woff2"), url("../../../public/fonts/dancing-script-ot/dancingscript-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Great Vibes';
+  src: url("../../../public/fonts/great-vibes/greatvibes-regular-webfont.woff");
+  src: url("../../../public/fonts/great-vibes/greatvibes-regular-webfont.woff2"), url("../../../public/fonts/great-vibes/greatvibes-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Happy Monkey';
+  src: url("../../../public/fonts/happy-monkey/happymonkey-regular-webfont.woff");
+  src: url("../../../public/fonts/happy-monkey/happymonkey-regular-webfont.woff2"), url("../../../public/fonts/happy-monkey/happymonkey-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../../../public/fonts/lato/lato-regular-webfont.woff");
+  src: url("../../../public/fonts/lato/lato-regular-webfont.woff2"), url("../../../public/fonts/lato/lato-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Italic';
+  src: url("../../../public/fonts/lato/lato-italic-webfont.woff");
+  src: url("../../../public/fonts/lato/lato-italic-webfont.woff2"), url("../../../public/fonts/lato/lato-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Semi Bold';
+  src: url("../../../public/fonts/lato/lato-semibold-webfont.woff");
+  src: url("../../../public/fonts/lato/lato-semibold-webfont.woff2"), url("../../../public/fonts/lato/lato-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Semi Bold';
+  src: url("../../../public/fonts/lato/lato-semibolditalic-webfont.woff");
+  src: url("../../../public/fonts/lato/lato-semibolditalic-webfont.woff2"), url("../../../public/fonts/lato/lato-semibolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Bold';
+  src: url("../../../public/fonts/lato/lato-bold-webfont.woff");
+  src: url("../../../public/fonts/lato/lato-bold-webfont.woff2"), url("../../../public/fonts/lato/lato-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Bold Italic';
+  src: url("../../../public/fonts/lato/lato-bolditalic-webfont.woff");
+  src: url("../../../public/fonts/lato/lato-bolditalic-webfont.woff2"), url("../../../public/fonts/lato/lato-bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Black';
+  src: url("../../../public/fonts/lato/lato-black-webfont.woff");
+  src: url("../../../public/fonts/lato/lato-black-webfont.woff2"), url("../../../public/fonts/lato/lato-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Black Italic';
+  src: url("../../../public/fonts/lato/lato-blackitalic-webfont.woff");
+  src: url("../../../public/fonts/lato/lato-blackitalic-webfont.woff2"), url("../../../public/fonts/lato/lato-blackitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Hairline';
+  src: url("../../../public/fonts/lato/lato-hairline-webfont.woff");
+  src: url("../../../public/fonts/lato/lato-hairline-webfont.woff2"), url("../../../public/fonts/lato/lato-hairline-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Hairline Italic';
+  src: url("../../../public/fonts/lato/lato-hairlineitalic-webfont.woff");
+  src: url("../../../public/fonts/lato/lato-hairlineitalic-webfont.woff2"), url("../../../public/fonts/lato/lato-hairlineitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Heavy';
+  src: url("../../../public/fonts/lato/lato-heavy-webfont.woff");
+  src: url("../../../public/fonts/lato/lato-heavy-webfont.woff2"), url("../../../public/fonts/lato/lato-heavy-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Heavy Italic';
+  src: url("../../../public/fonts/lato/lato-heavyitalic-webfont.woff");
+  src: url("../../../public/fonts/lato/lato-heavyitalic-webfont.woff2"), url("../../../public/fonts/lato/lato-heavyitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Light';
+  src: url("../../../public/fonts/lato/lato-light-webfont.woff");
+  src: url("../../../public/fonts/lato/lato-light-webfont.woff2"), url("../../../public/fonts/lato/lato-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Light Italic';
+  src: url("../../../public/fonts/lato/lato-lightitalic-webfont.woff");
+  src: url("../../../public/fonts/lato/lato-lightitalic-webfont.woff2"), url("../../../public/fonts/lato/lato-lightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Medium';
+  src: url("../../../public/fonts/lato/lato-medium-webfont.woff");
+  src: url("../../../public/fonts/lato/lato-medium-webfont.woff2"), url("../../../public/fonts/lato/lato-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Medium Italic';
+  src: url("../../../public/fonts/lato/lato-mediumitalic-webfont.woff");
+  src: url("../../../public/fonts/lato/lato-mediumitalic-webfont.woff2"), url("../../../public/fonts/lato/lato-mediumitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Thin';
+  src: url("../../../public/fonts/lato/lato-thin-webfont.woff");
+  src: url("../../../public/fonts/lato/lato-thin-webfont.woff2"), url("../../../public/fonts/lato/lato-thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato Thin Italic';
+  src: url("../../../public/fonts/lato/lato-thinitalic-webfont.woff");
+  src: url("../../../public/fonts/lato/lato-thinitalic-webfont.woff2"), url("../../../public/fonts/lato/lato-thinitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Oswald';
+  src: url("../../../public/fonts/oswald/oswald-regular-webfont.woff");
+  src: url("../../../public/fonts/oswald/oswald-regular-webfont.woff2"), url("../../../public/fonts/oswald/oswald-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url("../../../public/fonts/pacifico/pacifico-webfont.woff");
+  src: url("../../../public/fonts/pacifico/pacifico-webfont.woff2"), url("../../../public/fonts/pacifico/pacifico-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -180,6 +424,56 @@ body nav {
       transition: 0.25s all linear; }
       body nav .right button.start-over:hover {
         border: 1px solid #B0B5B8; }
+
+body .chat-container {
+  vertical-align: top; }
+  body .chat-container .chat-bubble-pic {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: top; }
+    body .chat-container .chat-bubble-pic img {
+      height: 50px;
+      width: 50px; }
+  body .chat-container .chat-bubble-message {
+    display: inline-block;
+    border-radius: 10px;
+    max-width: 540px;
+    width: auto;
+    padding: 20px;
+    background: #F3F3F3;
+    word-wrap: break-word; }
+
+body .loading-container {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: white;
+  position: fixed;
+  z-index: 999999; }
+  body .loading-container.show {
+    display: block; }
+  body .loading-container .loading {
+    height: 700px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto; }
+    body .loading-container .loading .chat-container {
+      max-height: 472px;
+      max-width: 630px; }
+      body .loading-container .loading .chat-container h1, body .loading-container .loading .chat-container h2 {
+        margin: 0;
+        color: #2E2E2E;
+        font-size: 16px; }
+      body .loading-container .loading .chat-container span {
+        font-size: 16px;
+        font-family: "Proxima Nova Semi Bold", sans-serif; }
+    body .loading-container .loading img.loading-gif {
+      display: block;
+      width: 145px;
+      height: 109px; }
 
 div.logomator-base {
   padding-bottom: 80px; }
@@ -342,24 +636,6 @@ div.selection-progress {
 .container span {
   font-size: 16px;
   font-family: "Proxima Nova Semi Bold", sans-serif; }
-
-.container .chat-container {
-  vertical-align: top; }
-  .container .chat-container .chat-bubble-pic {
-    display: inline-block;
-    margin-right: 10px;
-    vertical-align: top; }
-    .container .chat-container .chat-bubble-pic img {
-      height: 50px;
-      width: 50px; }
-  .container .chat-container .chat-bubble-message {
-    display: inline-block;
-    border-radius: 10px;
-    max-width: 540px;
-    width: auto;
-    padding: 20px;
-    background: #F3F3F3;
-    word-wrap: break-word; }
 
 .container .logomator-form {
   padding-top: 30px; }
