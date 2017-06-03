@@ -48,8 +48,8 @@
 
 @font-face {
   font-family: 'Abril Fat Face';
-  src: url("../../../public/fonts/abril-fatface/abrilfatface-regular-webfont.woff");
-  src: url("../../../public/fonts/abril-fatface/abrilfatface-regular-webfont.woff2"), url("../../../public/fonts/abril-fatface/abrilfatface-regular-webfont.woff") format("woff");
+  src: url("../fonts/abril-fatface/abrilfatface-regular-webfont.woff");
+  src: url("../fonts/abril-fatface/abrilfatface-regular-webfont.woff2"), url("../fonts/abril-fatface/abrilfatface-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
