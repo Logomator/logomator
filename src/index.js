@@ -1,4 +1,4 @@
-    import React from 'react';
+import React from 'react';
 import { render } from 'react-dom';
 import thunkMiddleware from 'redux-thunk'
 import { Provider } from 'react-redux';
@@ -14,32 +14,34 @@ import SetIndustryName from './logo/containers/SetIndustryName';
 import LogoInspirationContainer from './logo/containers/LogoInspirationContainer';
 import ColorPaletteList from './logo/containers/ColorPaletteList';
 import SurveyContainer from './logo/containers/SurveyContainer';
+import LogoList from './logo/containers/LogoList';
 
 const history = createBrowserHistory();
 const middleware = routerMiddleware(history);
 
 const store = createStore(
-    logoReducer,
-    applyMiddleware(
-        thunkMiddleware,
-        middleware
-    )
+  logoReducer,
+  applyMiddleware(
+    thunkMiddleware,
+    middleware
+  )
 );
 
-    window.store = store;
+window.store = store;
 
 render(
-    <Provider store={store}>
-        <Router history={history}>
-            <div>
-            <Route exact path="/" component={HomeComponent} />
-                <Route path="/tagline" component={SetTaglineComponent} />
-                <Route path="/industry" component={SetIndustryName} />
-                <Route path="/inspiration" component={LogoInspirationContainer} />
-                <Route path="/color-palette" component={ColorPaletteList} />
-                <Route path="/survey" component={SurveyContainer} />
-            </div>
-        </Router>
-    </Provider>,
-    document.getElementById('root')
+  <Provider store={store}>
+    <Router history={history}>
+      <div>
+        <Route exact path="/" component={HomeComponent} />
+        <Route path="/tagline" component={SetTaglineComponent} />
+        <Route path="/industry" component={SetIndustryName} />
+        <Route path="/inspiration" component={LogoInspirationContainer} />
+        <Route path="/color-palette" component={ColorPaletteList} />
+        <Route path="/logos" component={LogoList} />
+        <Route path="/survey" component={SurveyContainer} />
+      </div>
+    </Router>
+  </Provider>,
+  document.getElementById('root')
 );
