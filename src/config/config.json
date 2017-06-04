@@ -1,0 +1,6 @@
+{
+  "URLS": {
+    "heroku": "https://fathomless-harbor-10088.herokuapp.com",
+    "local": "http://localhost:8000"
+  }
+}

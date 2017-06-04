@@ -57,3 +57,15 @@ export const REQUEST_LOGOS = 'REQUEST_LOGOS';
  * @type {string}
  */
 export const RECEIVE_LOGOS = 'RECEIVE_LOGOS';
+
+/**
+ * Request more logos action.
+ * @type {string}
+ */
+export const REQUEST_MORE_LOGOS = 'REQUEST_MORE_LOGOS';
+
+/**
+ * Received more logos action.
+ * @type {string}
+ */
+export const RECEIVED_MORE_LOGOS = 'RECEIVED_MORE_LOGOS';
