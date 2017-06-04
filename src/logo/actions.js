@@ -12,7 +12,7 @@ import { REQUEST_LOGOS } from './actionTypes';
 import { RECEIVE_LOGOS } from './actionTypes';
 import { REQUEST_MORE_LOGOS } from './actionTypes';
 import { RECEIVED_MORE_LOGOS } from './actionTypes';
-const config = require('../config/config.json');
+const config = require('../config/config.json'); // TODO use import statement here. Need to modify webpack config.
 
 export const setCompanyName = (name) => {
   return { type: SET_COMPANY_NAME, name }
