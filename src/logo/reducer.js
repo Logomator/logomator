@@ -1,6 +1,43 @@
 import * as actionTypes from './actionTypes';
-import logoInspiration1 from '../assets/images/logo-inspirations/text-based-inspiration.png';
-import logoInspiration2 from '../assets/images/logo-inspirations/Aerial_Tagline@2x.png';
+// Inspiration imports
+/**
+ * One word no tagline
+ */
+import aerial from '../assets/images/logo-inspirations/Aerial@2x.png';
+import aerialWithTagline from '../assets/images/logo-inspirations/Aerial_Consulting@2x.png';
+
+import centurion from '../assets/images/logo-inspirations/Centurion@2x.png';
+import centurionWithTagline from '../assets/images/logo-inspirations/Centurion_Financial_Group@2x.png';
+
+import happyFaces from '../assets/images/logo-inspirations/Happy_Faces@2x.png';
+import happyFacesWithTagline from '../assets/images/logo-inspirations/Happy_Faces_Child@2x.png';
+
+import socialWine from '../assets/images/logo-inspirations/Social_Wine@2x.png';
+import socialWineWithTagline from '../assets/images/logo-inspirations/Social_Wine_Lounge@2x.png';
+
+import darkRoast from '../assets/images/logo-inspirations/Dark_Roast@2x.png';
+import darkRoastWithTagline from '../assets/images/logo-inspirations/Dark_Roast_Cafe@2x.png';
+
+import matchBook from '../assets/images/logo-inspirations/Match_Book@2x.png';
+import matchBookWithTagline from '../assets/images/logo-inspirations/Match_Book_Studios@2x.png';
+
+
+import vantagePoint from '../assets/images/logo-inspirations/Vantage_Point@2x.png';
+import vantagePointWithTagline from '../assets/images/logo-inspirations/Vantage_Point_Photography@2x.png';
+
+import summerBelleWithTagline from '../assets/images/logo-inspirations/Summer_Belle_Clothing@2x.png';
+
+import honeyBee from '../assets/images/logo-inspirations/Honey_Bee@2x.png';
+import honeyBeeWithTagline from '../assets/images/logo-inspirations/Honey_Bee_Sweeten@2x.png';
+
+import smokeHouse from '../assets/images/logo-inspirations/Smokehouse_BBQ@2x.png';
+import smokeHouseWithTagline from '../assets/images/logo-inspirations/Smokehouse_BBQ_Restaurant@2x.png';
+
+import charlesPorter from '../assets/images/logo-inspirations/Charles_Porter@2x.png';
+import charlesPorterWithTagline from '../assets/images/logo-inspirations/Charles_Porter_Real_Estate@2x.png';
+
+import claireBiddens from '../assets/images/logo-inspirations/Claire_Biddens@2x.png';
+import claireBiddensWithTagline from '../assets/images/logo-inspirations/Claire_Biddens_Event@2x.png';
 
 const defaultState = {
   companyName: '',
@@ -9,18 +46,189 @@ const defaultState = {
   companyDescription: '',
   isFetching: false,
   icons: [],
-  inspirations: [ // This data will be fetched via our API eventually.
-    {   id: 0,
-      img: logoInspiration1,
-      isSelected: false
-    },
-    {
-      id: 1,
-      img: logoInspiration2,
-      isSelected: false
-    }
-
-  ],
+  inspirations: {
+    oneWordNoTagline: [
+      {
+        id: 0,
+        img: claireBiddens,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: happyFaces,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: aerial,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: socialWine,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: darkRoast,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: matchBook,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: centurion,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: vantagePoint,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: honeyBee,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: charlesPorter,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: smokeHouse,
+        isSelected: false
+      },
+    ],
+    oneWordWithTagline: [
+      {
+        id: 0,
+        img: aerialWithTagline,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: socialWineWithTagline,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: darkRoastWithTagline,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: summerBelleWithTagline,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: centurionWithTagline,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: matchBookWithTagline,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: honeyBeeWithTagline,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: smokeHouseWithTagline,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: vantagePointWithTagline,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: charlesPorterWithTagline,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: claireBiddensWithTagline,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: happyFacesWithTagline,
+        isSelected: false
+      }
+    ],
+    twoWordsNoTagline: [
+      {
+        id: 0,
+        img: aerial,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: claireBiddens,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: happyFaces,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: socialWineWithTagline,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: darkRoastWithTagline,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: matchBookWithTagline,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: centurionWithTagline,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: vantagePointWithTagline,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: summerBelleWithTagline,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: honeyBee,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: charlesPorter,
+        isSelected: false
+      },
+      {
+        id: 0,
+        img: smokeHouse,
+        isSelected: false
+      },
+    ]
+  },
   palettes: [
     {
       "name": "Blues",

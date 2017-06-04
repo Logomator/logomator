@@ -9,59 +9,91 @@ import { selectLogoInspiration } from '../actions';
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
 
-const LogoInspiration = withRouter(({ history, inspirations, onClick}) => {
+const LogoInspiration = withRouter(({ companyName, tagline, history, inspirations, onClick}) => {
 
-    let logoInspirations = [];
+  const filterInspirations = (companyName, tagline) => {
+    const filteredInspirations = [];
 
-    inspirations.forEach((inspiration) => {
-        logoInspirations.push(
-            <div>
-                <LogoInspirationComponent history={history} inspiration={inspiration} onClick={onClick} />
-            </div>
-        );
-    });
+    const companyNameSplit = companyName.split(' ');
 
-    return (
-        <div>
-            <Navbar />
-            <div className="logomator-base inspiration">
-                <div className="container" style={{
+    // Company name one word and no tagline
+    if (companyNameSplit.length === 1 && tagline === '') {
+      inspirations.oneWordNoTagline.forEach((i) => {
+        filteredInspirations.push(i);
+      });
+    }
+
+    // Company name one word and tagline
+    if (companyNameSplit.length === 1 && tagline.length >= 1) {
+      inspirations.oneWordWithTagline.forEach((i) => {
+        filteredInspirations.push(i);
+      });
+    }
+
+    // Company name two words and no tagline
+    if (companyNameSplit.length === 2 && tagline === '') {
+      inspirations.twoWordsNoTagline.forEach((i) => {
+        filteredInspirations.push(i);
+      });
+    }
+    return filteredInspirations;
+  };
+
+  let logoInspirations = [];
+
+  const filteredInspirations = filterInspirations(companyName, tagline);
+
+  filteredInspirations.forEach((inspiration) => {
+    logoInspirations.push(
+      <div>
+        <LogoInspirationComponent history={history} inspiration={inspiration} onClick={onClick} />
+      </div>
+    );
+  });
+
+  return (
+    <div>
+      <Navbar />
+      <div className="logomator-base inspiration">
+        <div className="container" style={{
                 paddingBottom: '70px'}}>
 
-                    <ChatComponent
-                        text={<h1><span>Thanks, that helps!</span> Now, let’s figure out how your logo should look. I’ll use the examples below to understand what styles I should incorporate in your logo.</h1>}
-                        height="80px"
-                    />
-                    <div style={{paddingTop: '30px'}}></div>
+          <ChatComponent
+            text={<h1><span>Thanks, that helps!</span> Now, let’s figure out how your logo should look. I’ll use the examples below to understand what styles I should incorporate in your logo.</h1>}
+            height="80px"
+          />
+          <div style={{paddingTop: '30px'}}></div>
 
-                            <HeaderComponent headerText={"Choose 1 or more logo examples you like."} />
+          <HeaderComponent headerText={"Choose 1 or more logo examples you like."} />
 
-                            <div className="logo-inspiration-container">
-                                {logoInspirations}
-                            </div>
-                </div>
-            </div>
-
-            <ProgressBarComponent history={history} inspirations={inspirations} />
+          <div className="logo-inspiration-container">
+            {logoInspirations}
+          </div>
         </div>
-    )
+      </div>
+
+      <ProgressBarComponent history={history} inspirations={filteredInspirations} />
+    </div>
+  )
 });
 
 const mapStateToProps = (state) => ({
-    inspirations: state.inspirations
+  companyName: state.companyName,
+  tagline: state.tagline,
+  inspirations: state.inspirations
 });
 
 const mapDispatchToProps = (dispatch) => {
-    return {
-        onClick: (inspiration) => {
-            dispatch(selectLogoInspiration(inspiration))
-        }
+  return {
+    onClick: (inspiration) => {
+      dispatch(selectLogoInspiration(inspiration))
     }
+  }
 };
 
 const LogoInspirationContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(LogoInspiration);
 
 export default LogoInspirationContainer;
