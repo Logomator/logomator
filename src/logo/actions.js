@@ -10,80 +10,118 @@ import { REQUEST_ICONS } from './actionTypes';
 import { RECEIVE_ICONS } from './actionTypes';
 import { REQUEST_LOGOS } from './actionTypes';
 import { RECEIVE_LOGOS } from './actionTypes';
+import { REQUEST_MORE_LOGOS } from './actionTypes';
+import { RECEIVED_MORE_LOGOS } from './actionTypes';
 
 export const setCompanyName = (name) => {
-    return { type: SET_COMPANY_NAME, name }
+  return { type: SET_COMPANY_NAME, name }
 };
 
 export const setTaglineText = (tagline) => {
-    return { type: SET_TAGLINE_TEXT, tagline }
+  return { type: SET_TAGLINE_TEXT, tagline }
 };
 
 export const setIndustryName = (industry) => {
-    return { type: SET_INDUSTRY_NAME, industry }
+  return { type: SET_INDUSTRY_NAME, industry }
 };
 
 export const setCompanyDescription = (description) => {
-    return { type: SET_COMPANY_DESCRIPTION, description }
+  return { type: SET_COMPANY_DESCRIPTION, description }
 };
 
 export const selectLogoInspiration = (inspiration) => {
-    return { type: SELECT_LOGO_INSPIRATION, inspiration }
+  return { type: SELECT_LOGO_INSPIRATION, inspiration }
 };
 
 export const selectColorPalette = (name) => {
-    return { type: SELECT_COLOR_PALETTE, name }
+  return { type: SELECT_COLOR_PALETTE, name }
 };
 
 export const requestIconsByTerm = (term) => {
-    return { type: REQUEST_ICONS, term }
+  return { type: REQUEST_ICONS, term }
 };
 
 export const receiveIcons = (icons)  => {
-    return { type: RECEIVE_ICONS, icons }
+  return { type: RECEIVE_ICONS, icons }
 };
 
 export const requestLogos = (chars) => {
-    return { type: REQUEST_LOGOS, chars }
+  return { type: REQUEST_LOGOS, chars }
 };
 
 export const receiveLogos = (concepts) => {
-    return { type: RECEIVE_LOGOS, concepts }
+  return { type: RECEIVE_LOGOS, concepts }
 };
 
-export function fetchIcons (term) {
-    return dispatch => {
+export const requestMoreLogos = (chars) => {
+  return { type: REQUEST_MORE_LOGOS, chars }
+};
 
-        dispatch(requestIconsByTerm(term));
+export const receivedMoreLogos = (concepts) => {
+  return { type: RECEIVED_MORE_LOGOS, concepts }
+};
 
-        return fetch(`http://localhost:8000/api/icons/${term}`)
-          .then(response => response.json())
-    }
+  export function fetchIcons (term) {
+  return dispatch => {
+
+    dispatch(requestIconsByTerm(term));
+
+    return fetch(`http://localhost:8000/api/icons/${term}`)
+      .then(response => response.json())
+  }
 }
 
 export function fetchLogos (chars) {
-    return dispatch => {
-        dispatch(requestLogos(chars));
+  return dispatch => {
+    dispatch(requestLogos(chars));
 
-        const generateLogoRequest = {
-            url: 'http://localhost:8000/api/logos/chars',
-            method: 'POST',
-            body: JSON.stringify(chars),
-            headers: {'Content-Type': 'application/json'}
-        };
+    const generateLogoRequest = {
+      url: 'http://localhost:8000/api/logos/chars',
+      method: 'POST',
+      body: JSON.stringify(chars),
+      headers: {'Content-Type': 'application/json'}
+    };
 
-        return new Promise((fulfill, reject) => {
-            request(generateLogoRequest, (err, body, res) => {
-                res = JSON.parse(res);
-                if (res.statusCode === 200) {
-                    console.log(res.concepts);
-                        dispatch(receiveLogos(res.concepts));
-                        fulfill(body);
+    return new Promise((fulfill, reject) => {
+      request(generateLogoRequest, (err, body, res) => {
+        res = JSON.parse(res);
+        if (res.statusCode === 200) {
+          console.log(res.concepts);
+          dispatch(receiveLogos(res.concepts));
+          fulfill(body);
 
-                } else {
-                    reject(res);
-                }
-            });
-        });
-    }
+        } else {
+          reject(res);
+        }
+      });
+    });
+  }
+}
+
+export function fetchMoreLogos (chars) {
+  return dispatch => {
+    dispatch(requestMoreLogos(chars));
+
+    const generateLogoRequest = {
+      url: 'http://localhost:8000/api/logos/concepts',
+      method: 'POST',
+      body: JSON.stringify(chars),
+      headers: {'Content-Type': 'application/json'}
+    };
+
+    return new Promise((fulfill, reject) => {
+      request(generateLogoRequest, (err, body, res) => {
+        console.log(res);
+        res = JSON.parse(res);
+        if (res.statusCode === 200) {
+          console.log(res.concepts);
+          dispatch(receivedMoreLogos(res.concepts));
+          fulfill(body);
+
+        } else {
+          reject(res);
+        }
+      });
+    });
+  }
 }

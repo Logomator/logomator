@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, onGenerate, state, palettes }) => {
+const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, onGenerate, state, palettes, generateMoreConcepts, isGeneratingConcepts }) => {
 
   let logosSelected = () => {
     let count = 0;
@@ -30,7 +30,7 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, onGene
     <div className="progress">
       <div className="container">
         <div className={isGeneratingLogos ? 'no-show': ''}>
-          <button className={logosSelected() === 2 ? 'logomator-btn' : 'logomator-btn btn-disabled'}
+          <button className={logosSelected() >= 1 ? 'logomator-btn' : 'logomator-btn btn-disabled'}
                   onClick={ e => {
                                 e.preventDefault();
                                     history.push('/color-palette');
@@ -39,26 +39,40 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, onGene
           </button>
         </div>
 
-        <div className={isGeneratingLogos ? '': 'no-show'}>
-          <button
-            className={palettesSelected() === 3 ? 'logomator-btn generate-logos': 'logomator-btn generate-logos btn-disabled'}
-            onClick={ e => {
-              e.preventDefault();
-              onGenerate(state);
-              history.push('/logos');
-            }}>
-            Generate Logos
-          </button>
-        </div>
-
-        <div className={isGeneratingLogos ? 'no-show': 'progress-bar'}>
-          <div className="progress-bar-fill" style={{
-                    width: logosSelected() * 20 + '%'
-                    }}>
-
+        <div className={isGeneratingConcepts ? 'no-show': ''}>
+          <div className={isGeneratingLogos ? '': 'no-show'}>
+            <button
+              className={palettesSelected() >= 1 ? 'logomator-btn generate-logos': 'logomator-btn generate-logos btn-disabled'}
+              onClick={ e => {
+                e.preventDefault();
+                onGenerate(state);
+                history.push('/logos');
+              }}>
+              Generate Logos
+            </button>
           </div>
         </div>
 
+        <div className={isGeneratingConcepts ? '' : 'no-show'} style={{
+          textAlign: 'center'
+        }}>
+          <button
+            className="logomator-btn generate-logos"
+            style={{
+              width: '326px',
+              background: '#F5530C',
+              float: 'none'
+            }}
+            onClick={ e => {
+                e.preventDefault();
+                console.log("STATE", state);
+                generateMoreConcepts(state);
+                history.push('/logos');
+              }}>
+            Generate More Logos
+          </button>
+        </div>
+        <div className={isGeneratingConcepts ? 'no-show' : ''}>
         <button className={isGeneratingLogos ? 'back-btn generate-logos': 'back-btn'} onClick={ e =>{
                     e.preventDefault();
                     if (isGeneratingLogos) {
@@ -70,7 +84,8 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, onGene
                     }}>
           Back
         </button>
-      </div>
+          </div>
+        </div>
     </div>
   )
 };
