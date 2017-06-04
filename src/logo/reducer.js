@@ -46,189 +46,146 @@ const defaultState = {
   companyDescription: '',
   isFetching: false,
   icons: [],
-  inspirations: {
-    oneWordNoTagline: [
+  inspirations: [
       {
-        id: 0,
+        id: 1,
         img: claireBiddens,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordNoTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'FourPlusWordsNoTagline']
       },
       {
-        id: 0,
+        id: 2,
         img: happyFaces,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordNoTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'FourPlusWordsNoTagline']
       },
       {
-        id: 0,
+        id: 3,
         img: aerial,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordNoTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'FourPlusWordsNoTagline']
       },
       {
-        id: 0,
+        id: 4,
         img: socialWine,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordNoTagline', 'FourPlusWordsNoTagline']
       },
       {
-        id: 0,
+        id: 5,
         img: darkRoast,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordNoTagline', 'FourPlusWordsNoTagline']
       },
       {
-        id: 0,
+        id: 6,
         img: matchBook,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordNoTagline', 'FourPlusWordsNoTagline']
       },
       {
-        id: 0,
+        id: 7,
         img: centurion,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordNoTagline', 'FourPlusWordsNoTagline']
       },
       {
-        id: 0,
+        id: 8,
         img: vantagePoint,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordNoTagline', 'FourPlusWordsNoTagline']
       },
       {
-        id: 0,
+        id: 9,
         img: honeyBee,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordNoTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'FourPlusWordsNoTagline']
       },
       {
-        id: 0,
+        id: 10,
         img: charlesPorter,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordNoTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'FourPlusWordsNoTagline']
       },
       {
-        id: 0,
+        id: 11,
         img: smokeHouse,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordNoTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'FourPlusWordsNoTagline']
       },
-    ],
-    oneWordWithTagline: [
       {
-        id: 0,
+        id: 12,
         img: aerialWithTagline,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
-        id: 0,
+        id: 13,
         img: socialWineWithTagline,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
-        id: 0,
+        id: 14,
         img: darkRoastWithTagline,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
-        id: 0,
+        id: 15,
         img: summerBelleWithTagline,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
-        id: 0,
+        id: 16,
         img: centurionWithTagline,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
-        id: 0,
+        id: 17,
         img: matchBookWithTagline,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
-        id: 0,
+        id: 18,
         img: honeyBeeWithTagline,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
-        id: 0,
+        id: 19,
         img: smokeHouseWithTagline,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
-        id: 0,
+        id: 20,
         img: vantagePointWithTagline,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
-        id: 0,
+        id: 21,
         img: charlesPorterWithTagline,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
-        id: 0,
+        id: 22,
         img: claireBiddensWithTagline,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
-        id: 0,
+        id: 23,
         img: happyFacesWithTagline,
-        isSelected: false
+        isSelected: false,
+        categories: ['oneWordWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       }
-    ],
-    twoWordsNoTagline: [
-      {
-        id: 0,
-        img: aerial,
-        isSelected: false
-      },
-      {
-        id: 0,
-        img: claireBiddens,
-        isSelected: false
-      },
-      {
-        id: 0,
-        img: happyFaces,
-        isSelected: false
-      },
-      {
-        id: 0,
-        img: socialWineWithTagline,
-        isSelected: false
-      },
-      {
-        id: 0,
-        img: darkRoastWithTagline,
-        isSelected: false
-      },
-      {
-        id: 0,
-        img: matchBookWithTagline,
-        isSelected: false
-      },
-      {
-        id: 0,
-        img: centurionWithTagline,
-        isSelected: false
-      },
-      {
-        id: 0,
-        img: vantagePointWithTagline,
-        isSelected: false
-      },
-      {
-        id: 0,
-        img: summerBelleWithTagline,
-        isSelected: false
-      },
-      {
-        id: 0,
-        img: honeyBee,
-        isSelected: false
-      },
-      {
-        id: 0,
-        img: charlesPorter,
-        isSelected: false
-      },
-      {
-        id: 0,
-        img: smokeHouse,
-        isSelected: false
-      },
-    ]
-  },
+  ],
   palettes: [
     {
       "name": "Blues",

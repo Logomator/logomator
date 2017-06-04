@@ -18,24 +18,81 @@ const LogoInspiration = withRouter(({ companyName, tagline, history, inspiration
 
     // Company name one word and no tagline
     if (companyNameSplit.length === 1 && tagline === '') {
-      inspirations.oneWordNoTagline.forEach((i) => {
-        filteredInspirations.push(i);
+      inspirations.forEach((i) => {
+        i.categories.forEach((category) => {
+          if (category === 'oneWordNoTagline') {
+            filteredInspirations.push(i);
+          }
+        });
       });
     }
 
     // Company name one word and tagline
     if (companyNameSplit.length === 1 && tagline.length >= 1) {
-      inspirations.oneWordWithTagline.forEach((i) => {
-        filteredInspirations.push(i);
+      inspirations.forEach((i) => {
+        i.categories.forEach((category) => {
+          if (category === 'oneWordWithTagline') {
+            filteredInspirations.push(i);
+          }
+        });
       });
     }
 
     // Company name two words and no tagline
     if (companyNameSplit.length === 2 && tagline === '') {
-      inspirations.twoWordsNoTagline.forEach((i) => {
-        filteredInspirations.push(i);
+      inspirations.forEach((i) => {
+        i.categories.forEach((category) => {
+          if (category === 'twoWordsNoTagline') {
+            filteredInspirations.push(i);
+          }
+        });
       });
     }
+
+    // Company name three words and no tagline
+    if (companyNameSplit.length === 3 && tagline === '') {
+      inspirations.forEach((i) => {
+        i.categories.forEach((category) => {
+          if (category === 'threeWordsNoTagline') {
+            filteredInspirations.push(i);
+          }
+        });
+      });
+    }
+
+    // Company name three words with tagline
+    if (companyNameSplit.length === 3 && tagline.length >= 1) {
+      inspirations.forEach((i) => {
+        i.categories.forEach((category) => {
+          if (category === 'threeWordsWithTagline') {
+            filteredInspirations.push(i);
+          }
+        });
+      });
+    }
+
+    // Company name four plus words and no tagline
+    if (companyNameSplit.length >= 4 && tagline === '') {
+      inspirations.forEach((i) => {
+        i.categories.forEach((category) => {
+          if (category === 'FourPlusWordsNoTagline') {
+            filteredInspirations.push(i);
+          }
+        });
+      });
+    }
+
+    // Company name four plus words with tagline
+    if (companyNameSplit.length >= 4 && tagline.length >= 1) {
+      inspirations.forEach((i) => {
+        i.categories.forEach((category) => {
+          if (category === 'FourPlusWordsWithTagline') {
+            filteredInspirations.push(i);
+          }
+        });
+      });
+    }
+
     return filteredInspirations;
   };
 
