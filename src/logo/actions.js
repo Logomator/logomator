@@ -12,6 +12,7 @@ import { REQUEST_LOGOS } from './actionTypes';
 import { RECEIVE_LOGOS } from './actionTypes';
 import { REQUEST_MORE_LOGOS } from './actionTypes';
 import { RECEIVED_MORE_LOGOS } from './actionTypes';
+const config = require('../config/config.json');
 
 export const setCompanyName = (name) => {
   return { type: SET_COMPANY_NAME, name }
@@ -66,7 +67,7 @@ export const receivedMoreLogos = (concepts) => {
 
     dispatch(requestIconsByTerm(term));
 
-    return fetch(`http://localhost:8000/api/icons/${term}`)
+    return fetch(`https://fathomless-harbor-10088.herokuapp.com/api/icons/${term}`)
       .then(response => response.json())
   }
 }
@@ -75,8 +76,10 @@ export function fetchLogos (chars) {
   return dispatch => {
     dispatch(requestLogos(chars));
 
+    const URL = config.URLS.heroku + '/api/logos/chars';
+
     const generateLogoRequest = {
-      url: 'http://localhost:8000/api/logos/chars',
+      url: URL,
       method: 'POST',
       body: JSON.stringify(chars),
       headers: {'Content-Type': 'application/json'}
@@ -101,9 +104,10 @@ export function fetchLogos (chars) {
 export function fetchMoreLogos (chars) {
   return dispatch => {
     dispatch(requestMoreLogos(chars));
+    const URL = config.URLS.heroku + '/api/logos/concepts';
 
     const generateLogoRequest = {
-      url: 'http://localhost:8000/api/logos/concepts',
+      url: URL,
       method: 'POST',
       body: JSON.stringify(chars),
       headers: {'Content-Type': 'application/json'}

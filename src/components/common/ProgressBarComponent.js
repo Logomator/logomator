@@ -67,7 +67,6 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, onGene
                 e.preventDefault();
                 console.log("STATE", state);
                 generateMoreConcepts(state);
-                history.push('/logos');
               }}>
             Generate More Logos
           </button>
