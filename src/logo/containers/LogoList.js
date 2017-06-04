@@ -3,8 +3,11 @@ import LogoComponent from '../components/LogoComponent';
 import Navbar from '../../components/common/Navbar';
 import ChatComponent from '../../components/common/ChatComponent';
 import { connect } from 'react-redux';
+import ProgressBar from '../../components/common/ProgressBarComponent';
+import LoadingComponent from '../../components/common/LoadingComponent';
+import { fetchMoreLogos } from '../actions';
 
-const LogoList = ({ concepts }) => {
+const LogoList = ({ concepts, generateMoreConcepts, isFetching, state }) => {
   const logos = [];
 
   concepts = concepts || [];
@@ -19,6 +22,7 @@ const LogoList = ({ concepts }) => {
 
   return (
     <div>
+      <LoadingComponent isFetching={isFetching} />
       <Navbar />
       <div className="logomator-base inspiration">
         <div className="container" style={{ paddingBottom: '70px' }}>
@@ -36,16 +40,26 @@ const LogoList = ({ concepts }) => {
 
         </div>
       </div>
+      <ProgressBar isGeneratingLogos={true} isGeneratingConcepts={true} generateMoreConcepts={generateMoreConcepts} state={state}/>
     </div>
   )
 };
 
 const mapStateToProps = (state) => ({
-  concepts: state.concepts
+  isFetching: state.isFetching,
+  concepts: state.concepts,
+  state: state
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  generateMoreConcepts: (state) => {
+    dispatch(fetchMoreLogos(state));
+  }
 });
 
 const LogoListContainer = connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps,
 )(LogoList);
 
 export default LogoListContainer;

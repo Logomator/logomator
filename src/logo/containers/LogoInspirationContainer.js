@@ -34,7 +34,7 @@ const LogoInspiration = withRouter(({ history, inspirations, onClick}) => {
                     />
                     <div style={{paddingTop: '30px'}}></div>
 
-                            <HeaderComponent headerText={"Choose 5 or more logo examples you like."} />
+                            <HeaderComponent headerText={"Choose 1 or more logo examples you like."} />
 
                             <div className="logo-inspiration-container">
                                 {logoInspirations}
