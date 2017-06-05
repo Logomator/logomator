@@ -25,6 +25,7 @@ const LogoInspiration = withRouter(({ companyName, tagline, history, inspiration
           }
         });
       });
+      return filteredInspirations;
     }
 
     // Company name one word and tagline
@@ -36,6 +37,7 @@ const LogoInspiration = withRouter(({ companyName, tagline, history, inspiration
           }
         });
       });
+      return filteredInspirations;
     }
 
     // Company name two words and no tagline
@@ -47,6 +49,19 @@ const LogoInspiration = withRouter(({ companyName, tagline, history, inspiration
           }
         });
       });
+      return filteredInspirations;
+    }
+
+    // Company name two words with tagline
+    if (companyNameSplit.length === 2 && tagline.length > 1) {
+      inspirations.forEach((i) => {
+        i.categories.forEach((category) => {
+          if (category === 'twoWordsWithTagline') {
+            filteredInspirations.push(i);
+          }
+        });
+      });
+      return filteredInspirations;
     }
 
     // Company name three words and no tagline
@@ -58,6 +73,7 @@ const LogoInspiration = withRouter(({ companyName, tagline, history, inspiration
           }
         });
       });
+      return filteredInspirations;
     }
 
     // Company name three words with tagline
@@ -69,6 +85,7 @@ const LogoInspiration = withRouter(({ companyName, tagline, history, inspiration
           }
         });
       });
+      return filteredInspirations;
     }
 
     // Company name four plus words and no tagline
@@ -80,6 +97,7 @@ const LogoInspiration = withRouter(({ companyName, tagline, history, inspiration
           }
         });
       });
+      return filteredInspirations;
     }
 
     // Company name four plus words with tagline
@@ -91,9 +109,10 @@ const LogoInspiration = withRouter(({ companyName, tagline, history, inspiration
           }
         });
       });
+      return filteredInspirations;
     }
 
-    return filteredInspirations;
+    return inspirations;
   };
 
   let logoInspirations = [];
