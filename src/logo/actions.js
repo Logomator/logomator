@@ -76,7 +76,7 @@ export function fetchLogos (chars) {
   return dispatch => {
     dispatch(requestLogos(chars));
 
-    const URL = config.URLS.local + '/api/logos/chars';
+    const URL = config.URLS.heroku + '/api/logos/chars';
 
     const generateLogoRequest = {
       url: URL,
@@ -104,7 +104,7 @@ export function fetchLogos (chars) {
 export function fetchMoreLogos (chars) {
   return dispatch => {
     dispatch(requestMoreLogos(chars));
-    const URL = config.URLS.local + '/api/logos/concepts';
+    const URL = config.URLS.heroku + '/api/logos/concepts';
 
     const generateLogoRequest = {
       url: URL,
