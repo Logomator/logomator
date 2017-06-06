@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, onGenerate, state, palettes, generateMoreConcepts, isGeneratingConcepts }) => {
+const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, isConceptSelection, isColorSelection, onGenerate, state, palettes, generateMoreConcepts, isGeneratingConcepts }) => {
 
   let logosSelected = () => {
     let count = 0;
@@ -65,24 +65,25 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, onGene
             }}
             onClick={ e => {
                 e.preventDefault();
-                console.log("STATE", state);
                 generateMoreConcepts(state);
               }}>
             Generate More Logos
           </button>
         </div>
         <div className={isGeneratingConcepts ? 'no-show' : ''}>
-        <button className={isGeneratingLogos ? 'back-btn generate-logos': 'back-btn'} onClick={ e =>{
+          <button className={isGeneratingLogos || isConceptSelection ? 'back-btn generate-logos': 'back-btn'} onClick={ e =>{
                     e.preventDefault();
-                    if (isGeneratingLogos) {
-
+                    if (isColorSelection) {
+                      return history.push('/inspiration');
+                    } else if(isGeneratingLogos) {
 
                     } else {
-                      history.push('/industry');
+                      return history.push('/industry');
                     }
+
                     }}>
-          Back
-        </button>
+            Back
+          </button>
           </div>
         </div>
     </div>
