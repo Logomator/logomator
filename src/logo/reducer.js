@@ -117,73 +117,73 @@ const defaultState = {
         id: 12,
         img: aerialWithTagline,
         isSelected: false,
-        categories: ['oneWordWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
+        categories: ['oneWordWithTagline', 'twoWordsWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
         id: 13,
         img: socialWineWithTagline,
         isSelected: false,
-        categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
+        categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'twoWordsWithTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
         id: 14,
         img: darkRoastWithTagline,
         isSelected: false,
-        categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
+        categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'twoWordsWithTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
         id: 15,
         img: summerBelleWithTagline,
         isSelected: false,
-        categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
+        categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'twoWordsWithTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
         id: 16,
         img: centurionWithTagline,
         isSelected: false,
-        categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
+        categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'twoWordsWithTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
         id: 17,
         img: matchBookWithTagline,
         isSelected: false,
-        categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
+        categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'twoWordsWithTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
         id: 18,
         img: honeyBeeWithTagline,
         isSelected: false,
-        categories: ['oneWordWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
+        categories: ['oneWordWithTagline', 'threeWordsWithTagline', 'twoWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
         id: 19,
         img: smokeHouseWithTagline,
         isSelected: false,
-        categories: ['oneWordWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
+        categories: ['oneWordWithTagline', 'twoWordsWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
         id: 20,
         img: vantagePointWithTagline,
         isSelected: false,
-        categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
+        categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'twoWordsWithTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
         id: 21,
         img: charlesPorterWithTagline,
         isSelected: false,
-        categories: ['oneWordWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
+        categories: ['oneWordWithTagline', 'twoWordsWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
         id: 22,
         img: claireBiddensWithTagline,
         isSelected: false,
-        categories: ['oneWordWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
+        categories: ['oneWordWithTagline', 'twoWordsWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
       {
         id: 23,
         img: happyFacesWithTagline,
         isSelected: false,
-        categories: ['oneWordWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
+        categories: ['oneWordWithTagline', 'twoWordsWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       }
   ],
   palettes: [
