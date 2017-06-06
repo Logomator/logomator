@@ -65,14 +65,13 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, onGene
             }}
             onClick={ e => {
                 e.preventDefault();
-                console.log("STATE", state);
                 generateMoreConcepts(state);
               }}>
             Generate More Logos
           </button>
         </div>
         <div className={isGeneratingConcepts ? 'no-show' : ''}>
-        <button className={isGeneratingLogos ? 'back-btn generate-logos': 'back-btn'} onClick={ e =>{
+          <button className={isGeneratingLogos ? 'back-btn generate-logos': 'back-btn'} onClick={ e =>{
                     e.preventDefault();
                     if (isGeneratingLogos) {
 
@@ -81,8 +80,8 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, onGene
                       history.push('/industry');
                     }
                     }}>
-          Back
-        </button>
+            Back
+          </button>
           </div>
         </div>
     </div>
