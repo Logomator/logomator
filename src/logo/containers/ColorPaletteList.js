@@ -35,7 +35,7 @@ const Palettes = withRouter(({ palettes, onClick, isFetching, state, onGenerate,
                   </div>
               </div>
           </div>
-          <ProgressBarComponent history={history} isGeneratingLogos={true} palettes={palettes} state={state} onGenerate={onGenerate} />
+          <ProgressBarComponent history={history} isGeneratingLogos={true} isColorSelection={true} palettes={palettes} state={state} onGenerate={onGenerate} />
       </div>
     )
 });

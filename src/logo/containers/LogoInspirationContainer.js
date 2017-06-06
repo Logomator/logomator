@@ -148,7 +148,7 @@ const LogoInspiration = withRouter(({ companyName, tagline, history, inspiration
         </div>
       </div>
 
-      <ProgressBarComponent history={history} inspirations={filteredInspirations} />
+      <ProgressBarComponent history={history} inspirations={filteredInspirations} isConceptSelection={true} />
     </div>
   )
 });
