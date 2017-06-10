@@ -188,53 +188,53 @@ const defaultState = {
   ],
   palettes: [
     {
-      "name": "Blues",
+      "name": "Blue",
       "hexcodes": ["#84C4F5", "#1C87E1", "#0D5DA0", "#073E75"],
       "isSelected": false
     },
     {
-      "name": "Aquas",
+      "name": "Aqua",
       "hexcodes": ["#9AD9E1", "#4BB8C3", "#337683", "#1D5463"],
       "isSelected": false
     },
 
     {
-      "name": "Greens",
+      "name": "Green",
       "hexcodes": ["#8AB28B", "#5A935C", "#2B742C", "#005502"],
       "isSelected": false
     },
     {
-      "name": "Purples",
+      "name": "Purple",
       "hexcodes": ["#C7A2D9", "#9D5CBE", "#812EAB", "#660099"],
       "isSelected": false
     },
     {
-      "name": "Pinks",
+      "name": "Pink",
       "hexcodes": ["#E79BCB", "#DF73B6", "#D54AA1", "#CC1F8D"],
       "isSelected": false
     },
     {
-      "name": "Reds",
+      "name": "Red",
       "hexcodes": ["#E98A89", "#E05B59", "#D72C26", "#CE0000"],
       "isSelected": false
     },
     {
-      "name": "Oranges",
+      "name": "Orange",
       "hexcodes": ["#FFB987", "#FF9D54", "#FF811A", "#FF6600"],
       "isSelected": false
     },
     {
-      "name": "Yellows",
+      "name": "Yellow",
       "hexcodes": ["#FFE885", "#FFDF4F", "#FFD600", "#FFCD00"],
       "isSelected": false
     },
     {
-      "name": "Browns",
+      "name": "Brown",
       "hexcodes": ["#938A80", "#6F6356", "#4B3C2C", "#352615"],
       "isSelected": false
     },
     {
-      "name": "Neutrals",
+      "name": "Neutral",
       "hexcodes": ["#C4C6CC", "#818691", "#484C53", "#1A191C"],
       "isSelected": false
     }

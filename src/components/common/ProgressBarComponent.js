@@ -59,9 +59,10 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, isConc
           <button
             className="logomator-btn generate-logos"
             style={{
-              width: '326px',
+              width: '195px',
               background: '#F5530C',
-              float: 'none'
+              float: 'none',
+              padding: '0'
             }}
             onClick={ e => {
                 e.preventDefault();
