@@ -5,17 +5,18 @@ import ChatComponent from '../../components/common/ChatComponent';
 import { connect } from 'react-redux';
 import ProgressBar from '../../components/common/ProgressBarComponent';
 import LoadingComponent from '../../components/common/LoadingComponent';
-import { fetchMoreLogos } from '../actions';
+import { fetchMoreLogos, selectLogo } from '../actions';
+import { withRouter } from 'react-router-dom'
 
-const LogoList = ({ concepts, generateMoreConcepts, isFetching, state }) => {
+const LogoList =  withRouter(({ concepts, generateMoreConcepts, isFetching, state, selectLogo, history }) => {
   const logos = [];
 
   concepts = concepts || [];
 
   concepts.forEach((concept) => {
     logos.push(
-      <div>
-        <LogoComponent concept={concept} />
+      <div style={{position: 'relative'}}>
+        <LogoComponent concept={concept} selectLogo={selectLogo} history={history}/>
       </div>
     )
   });
@@ -43,7 +44,7 @@ const LogoList = ({ concepts, generateMoreConcepts, isFetching, state }) => {
       <ProgressBar isGeneratingLogos={true} isGeneratingConcepts={true} generateMoreConcepts={generateMoreConcepts} state={state}/>
     </div>
   )
-};
+});
 
 const mapStateToProps = (state) => ({
   isFetching: state.isFetching,
@@ -54,6 +55,9 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   generateMoreConcepts: (state) => {
     dispatch(fetchMoreLogos(state));
+  },
+  selectLogo: (logo) => {
+    dispatch(selectLogo(logo))
   }
 });
 

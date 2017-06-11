@@ -721,7 +721,8 @@ div.selection-progress {
   .industry-name-component.container .logomator-form form .select-triangle {
     position: absolute;
     top: 14px;
-    right: 274px; }
+    right: 274px;
+    display: none; }
     .industry-name-component.container .logomator-form form .select-triangle:after {
       content: '';
       width: 0;
@@ -734,7 +735,7 @@ div.selection-progress {
       transition: transform 0.25s ease;
       vertical-align: middle; }
   .industry-name-component.container .logomator-form form select {
-    display: block;
+    display: none;
     -webkit-appearance: none;
     appearance: none;
     height: 50px;
@@ -762,11 +763,33 @@ div.selection-progress {
       border-radius: 2px;
       margin-right: 30px;
       margin-bottom: 30px;
-      transition: transform .25s ease-in-out;
+      transition: 0.25s all linear;
       cursor: pointer;
       position: relative; }
+      .logomator-base.inspiration .logo-inspiration-container .logo .concept {
+        transition: 0.25s all linear;
+        position: absolute;
+        height: 100%;
+        width: 100%; }
+        .logomator-base.inspiration .logo-inspiration-container .logo .concept:hover {
+          height: 310px;
+          width: 320px;
+          transform: translateY(-10px);
+          margin-bottom: 0;
+          margin-right: 9px; }
+      .logomator-base.inspiration .logo-inspiration-container .logo .get-logo-files {
+        position: absolute;
+        height: 60px;
+        width: 100%;
+        display: none;
+        transition: 0.25s all linear;
+        bottom: 0;
+        background: #FBFBFB;
+        text-align: center; }
       .logomator-base.inspiration .logo-inspiration-container .logo:hover {
         transform: translateY(-15px); }
+      .logomator-base.inspiration .logo-inspiration-container .logo:hover .get-logo-files {
+        display: block; }
       .logomator-base.inspiration .logo-inspiration-container .logo.selected {
         border-radius: 4px;
         border: 3px solid #F5530C; }
