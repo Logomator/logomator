@@ -17,12 +17,42 @@
            border-radius: 2px;
            margin-right: 30px;
            margin-bottom: 30px;
-           transition: transform .25s ease-in-out;
+           transition: $transition;
            cursor: pointer;
            position: relative;
 
+           .concept {
+             transition: $transition;
+             position: absolute;
+             height: 100%;
+             width: 100%;
+
+             &:hover {
+               height: 310px;
+               width: 320px;
+               transform: translateY(-10px);
+               margin-bottom: 0;
+               margin-right: 9px;
+             }
+           }
+
+           .get-logo-files {
+             position: absolute;
+             height: 60px;
+             width: 100%;
+             display: none;
+             transition: $transition;
+             bottom: 0;
+             background: $superLightGrey;
+             text-align: center;
+           }
+
            &:hover {
              transform: translateY(-15px);
+           }
+           
+           &:hover .get-logo-files {
+             display: block;
            }
 
            &.selected {
@@ -44,6 +74,10 @@
              margin: auto;
            }
          }
+       .logo:hover .get-logo-files {
+         display: block;
+       }
+
          div:nth-child(3n) .logo {
            margin-right: 0;
          }

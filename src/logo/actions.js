@@ -12,6 +12,8 @@ import { REQUEST_LOGOS } from './actionTypes';
 import { RECEIVE_LOGOS } from './actionTypes';
 import { REQUEST_MORE_LOGOS } from './actionTypes';
 import { RECEIVED_MORE_LOGOS } from './actionTypes';
+import { SELECT_LOGO } from './actionTypes';
+
 const config = require('../config/config.json'); // TODO use import statement here. Need to modify webpack config.
 
 export const setCompanyName = (name) => {
@@ -62,6 +64,10 @@ export const receivedMoreLogos = (concepts) => {
   return { type: RECEIVED_MORE_LOGOS, concepts }
 };
 
+export const selectLogo = (logo) => {
+  return { type: SELECT_LOGO, logo }
+};
+
   export function fetchIcons (term) {
   return dispatch => {
 
@@ -76,7 +82,7 @@ export function fetchLogos (chars) {
   return dispatch => {
     dispatch(requestLogos(chars));
 
-    const URL = config.URLS.heroku + '/api/logos/chars';
+    const URL = config.URLS.local + '/api/logos/chars';
 
     const generateLogoRequest = {
       url: URL,
@@ -103,7 +109,7 @@ export function fetchLogos (chars) {
 export function fetchMoreLogos (chars) {
   return dispatch => {
     dispatch(requestMoreLogos(chars));
-    const URL = config.URLS.heroku + '/api/logos/concepts';
+    const URL = config.URLS.local + '/api/logos/concepts';
 
     const generateLogoRequest = {
       url: URL,

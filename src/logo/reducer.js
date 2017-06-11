@@ -240,6 +240,7 @@ const defaultState = {
     }
   ],
   concepts: [],
+  selectedLogo: null
 };
 
 const selectInspiration = (state, action) => {
@@ -332,6 +333,11 @@ export function logoReducer (state, action) {
       return Object.assign({}, state, {
         isFetching: false,
         concepts: state.concepts.concat(action.concepts)
+      });
+
+    case actionTypes.SELECT_LOGO:
+      return Object.assign({}, state, {
+        selectedLogo: action.logo
       });
 
     default:

@@ -69,3 +69,9 @@ export const REQUEST_MORE_LOGOS = 'REQUEST_MORE_LOGOS';
  * @type {string}
  */
 export const RECEIVED_MORE_LOGOS = 'RECEIVED_MORE_LOGOS';
+
+/**
+ * Select logo action.
+ * @type {string}
+ */
+export const SELECT_LOGO = 'SELECT_LOGO';
