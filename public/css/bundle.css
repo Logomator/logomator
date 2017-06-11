@@ -803,8 +803,6 @@ div.selection-progress {
         bottom: 0;
         left: 0;
         margin: auto; }
-    .logomator-base.inspiration .logo-inspiration-container .logo:hover .get-logo-files {
-      display: block; }
     .logomator-base.inspiration .logo-inspiration-container div:nth-child(3n) .logo {
       margin-right: 0; }
 

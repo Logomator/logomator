@@ -13,6 +13,8 @@ import { RECEIVE_LOGOS } from './actionTypes';
 import { REQUEST_MORE_LOGOS } from './actionTypes';
 import { RECEIVED_MORE_LOGOS } from './actionTypes';
 import { SELECT_LOGO } from './actionTypes';
+import { MAKE_REQUEST } from './actionTypes';
+import { REQUEST_SUCCESS } from './actionTypes';
 
 const config = require('../config/config.json'); // TODO use import statement here. Need to modify webpack config.
 
@@ -67,6 +69,42 @@ export const receivedMoreLogos = (concepts) => {
 export const selectLogo = (logo) => {
   return { type: SELECT_LOGO, logo }
 };
+
+export const makeRequest = () => {
+  return { type: MAKE_REQUEST }
+};
+
+export const requestSuccess = () => {
+  return { type: REQUEST_SUCCESS }
+};
+
+export function postSurveyRequest (survey) {
+  return dispatch => {
+    dispatch(makeRequest());
+
+    const URL = config.URLS.local + '/api/survey';
+
+    const surveyRequest = {
+      url: URL,
+      method: 'POST',
+      body: JSON.stringify(survey),
+      headers: {'Content-Type': 'application/json'}
+    };
+
+    return new Promise((fulfill, reject) => {
+      request(surveyRequest, (err, body, res) => {
+        res = JSON.parse(res);
+        if (res.statusCode === 200) {
+          dispatch(requestSuccess())
+          fulfill(body);
+
+        } else {
+          reject(res);
+        }
+      });
+    });
+  }
+}
 
   export function fetchIcons (term) {
   return dispatch => {

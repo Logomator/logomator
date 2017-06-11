@@ -75,3 +75,15 @@ export const RECEIVED_MORE_LOGOS = 'RECEIVED_MORE_LOGOS';
  * @type {string}
  */
 export const SELECT_LOGO = 'SELECT_LOGO';
+
+/**
+ * Save survey action.
+ * @type {string}
+ */
+export const MAKE_REQUEST = 'SAVE_SURVEY';
+
+/**
+ * Request success action.
+ * @type {string}
+ */
+export const REQUEST_SUCCESS = 'REQUEST_SUCCESS';

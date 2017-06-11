@@ -2,9 +2,11 @@ import React from 'react';
 import Navbar from '../../components/common/Navbar';
 import ChatComponent from '../../components/common/ChatComponent';
 import SurveyComponent from '../../logo/components/SurveyComponent';
-import { withRouter } from 'react-router-dom'
+import { postSurveyRequest } from '../../logo/actions';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-const SurveyContainer = withRouter(({ history }) => {
+const Survey = withRouter(({ history, experience, improvements, mostLiked, onSubmit }) => {
     return (
         <div>
             <Navbar />
@@ -19,10 +21,31 @@ const SurveyContainer = withRouter(({ history }) => {
                     <h1><strong>Help us provide a better experience!</strong> Please give us your feedback and we’ll send you your logo.</h1>}
                 />
 
-                <SurveyComponent history={history} />
+                <SurveyComponent experience={experience} improvements={improvements}
+                                 mostLiked={mostLiked} onSubmit={onSubmit} history={history} />
             </div>
         </div>
     )
 });
+
+const mapDispatchToProps = (dispatch) => ({
+  onSubmit: (formData) => {
+    dispatch(postSurveyRequest(formData));
+  }
+});
+
+const mapStateToProps = (state) => ({
+  email: state.email,
+  experience: state.experience,
+  mostLiked: state.mostLiked,
+  improvements: state.improvements
+});
+
+const SurveyContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Survey);
+
+
 
 export default SurveyContainer;
