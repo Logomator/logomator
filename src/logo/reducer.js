@@ -240,6 +240,11 @@ const defaultState = {
     }
   ],
   concepts: [],
+  selectedLogo: null,
+  email: null,
+  experience: null,
+  mostLiked: null,
+  improvements: null,
 };
 
 const selectInspiration = (state, action) => {
@@ -332,6 +337,21 @@ export function logoReducer (state, action) {
       return Object.assign({}, state, {
         isFetching: false,
         concepts: state.concepts.concat(action.concepts)
+      });
+
+    case actionTypes.SELECT_LOGO:
+      return Object.assign({}, state, {
+        selectedLogo: action.logo
+      });
+
+    case actionTypes.MAKE_REQUEST:
+      return Object.assign({}, state, {
+        isFetching: true
+      });
+
+    case actionTypes.REQUEST_SUCCESS:
+      return Object.assign({}, state, {
+        isFetching: false
       });
 
     default:

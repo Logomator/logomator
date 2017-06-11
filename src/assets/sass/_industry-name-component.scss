@@ -13,6 +13,7 @@
         position: absolute;
         top: 14px;
         right: 274px;
+        display: none;
 
 
         &:after {
@@ -30,7 +31,7 @@
       }
 
       select {
-        display: block;
+        display: none;
         -webkit-appearance: none;
         appearance: none;
         height: 50px;
