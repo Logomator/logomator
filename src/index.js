@@ -15,6 +15,7 @@ import LogoInspirationContainer from './logo/containers/LogoInspirationContainer
 import ColorPaletteList from './logo/containers/ColorPaletteList';
 import SurveyContainer from './logo/containers/SurveyContainer';
 import LogoList from './logo/containers/LogoList';
+import DownloadContainer from './logo/containers/DownloadContainer';
 
 const history = createBrowserHistory();
 const middleware = routerMiddleware(history);
@@ -38,6 +39,7 @@ render(
         <Route path="/color-palette" component={ColorPaletteList} />
         <Route path="/logos" component={LogoList} />
         <Route path="/survey" component={SurveyContainer} />
+        <Route path="/download" component={DownloadContainer} />
       </div>
     </Router>
   </Provider>,
