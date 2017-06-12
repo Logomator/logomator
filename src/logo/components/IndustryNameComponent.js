@@ -34,14 +34,7 @@ class IndustryNameComponent extends React.Component {
               <span className="orange-bar"></span>
 
               <form name="industry_name">
-
-                  <label htmlFor="industry">What industry do you think <span>{this.props.companyName}</span> is most related to?</label>
-
-                        <div style={{position: 'relative'}}>
-                            <div className="select-triangle"></div>
-                        </div>
-
-                        <div style={{marginTop: '30px'}}>
+                        <div>
                             <label htmlFor="company_description">Describe what <span>{this.props.companyName}</span> does and what you want your logo to convey.</label>
 
                             <textarea onChange={this.handleInputChange} className="logomator-textarea" name="company_description" id="" cols="30" rows="10" placeholder="We sell pizzas and italian sandwiches to hungry customers in downtown Boston, Massachusetts. We want our logo to be modern and playful with bright colors."></textarea>
