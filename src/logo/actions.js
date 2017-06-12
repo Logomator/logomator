@@ -173,12 +173,16 @@ export function fetchMoreLogos (chars) {
 
 export function downloadLogo (logo) {
   return dispatch => {
-    const URL = config.URLS.local + '/api/logos/download';
+    const URL = config.URLS.local + '/api/logo/download';
+
+    const data = {
+      logo: logo
+    };
 
     const downloadRequest = {
       url: URL,
       method: 'POST',
-      body: JSON.stringify(logo),
+      body: JSON.stringify(data),
       headers: {'Content-Type': 'application/json'}
     };
 
