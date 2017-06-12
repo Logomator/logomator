@@ -82,7 +82,7 @@ export function postSurveyRequest (survey) {
   return dispatch => {
     dispatch(makeRequest());
 
-    const URL = config.URLS.local + '/api/survey';
+    const URL = config.URLS.heroku + '/api/survey';
 
     const surveyRequest = {
       url: URL,
@@ -173,7 +173,7 @@ export function fetchMoreLogos (chars) {
 
 export function downloadLogo (logo) {
   return dispatch => {
-    const URL = config.URLS.local + '/api/logo/download';
+    const URL = config.URLS.heroku + '/api/logo/download';
 
     const data = {
       logo: logo
