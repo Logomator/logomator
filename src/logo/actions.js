@@ -95,7 +95,7 @@ export function postSurveyRequest (survey) {
       request(surveyRequest, (err, body, res) => {
         res = JSON.parse(res);
         if (res.statusCode === 200) {
-          dispatch(requestSuccess())
+          dispatch(requestSuccess());
           fulfill(body);
 
         } else {
@@ -163,6 +163,30 @@ export function fetchMoreLogos (chars) {
           dispatch(receivedMoreLogos(res.concepts));
           fulfill(body);
 
+        } else {
+          reject(res);
+        }
+      });
+    });
+  }
+}
+
+export function downloadLogo (logo) {
+  return dispatch => {
+    const URL = config.URLS.local + '/api/logos/download';
+
+    const downloadRequest = {
+      url: URL,
+      method: 'POST',
+      body: JSON.stringify(logo),
+      headers: {'Content-Type': 'application/json'}
+    };
+
+    return new Promise((fulfill, reject) => {
+      request(downloadRequest, (err, body, res) => {
+        res = JSON.parse(res);
+        if (res.statusCode === 200) {
+          fulfill(body);
         } else {
           reject(res);
         }

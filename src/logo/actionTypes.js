@@ -77,6 +77,12 @@ export const RECEIVED_MORE_LOGOS = 'RECEIVED_MORE_LOGOS';
 export const SELECT_LOGO = 'SELECT_LOGO';
 
 /**
+ * Download logo action.
+ * @type {string}
+ */
+export const DOWNLOAD_LOGO = 'DOWNLOAD_LOGO';
+
+/**
  * Save survey action.
  * @type {string}
  */

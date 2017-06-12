@@ -70,8 +70,7 @@ const SurveyComponent = ({ history, email, experience, improvements, mostLiked, 
                                 improvements: improvements
                               };
                               onSubmit(data);
-                               // this.props.onClick(this.state.companyName.value);
-                               // this.props.history.push('/tagline');
+                               history.push('/download');
                                }
                              }
                         className="logomator-btn">
@@ -83,7 +82,7 @@ const SurveyComponent = ({ history, email, experience, improvements, mostLiked, 
                         onClick={ e =>{
                             e.preventDefault();//
                                 // Route back to generate logos
-                                history.push('/')
+                                history.push('/logos')
                             }}>
                     Back
                 </button>
