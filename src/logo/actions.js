@@ -16,6 +16,8 @@ import { SELECT_LOGO } from './actionTypes';
 import { MAKE_REQUEST } from './actionTypes';
 import { REQUEST_SUCCESS } from './actionTypes';
 
+const fileDownload = require('react-file-download');
+
 const config = require('../config/config.json'); // TODO use import statement here. Need to modify webpack config.
 
 export const setCompanyName = (name) => {
@@ -82,7 +84,7 @@ export function postSurveyRequest (survey) {
   return dispatch => {
     dispatch(makeRequest());
 
-    const URL = config.URLS.heroku + '/api/survey';
+    const URL = config.URLS.local + '/api/survey';
 
     const surveyRequest = {
       url: URL,
@@ -147,7 +149,7 @@ export function fetchLogos (chars) {
 export function fetchMoreLogos (chars) {
   return dispatch => {
     dispatch(requestMoreLogos(chars));
-    const URL = config.URLS.heroku + '/api/logos/concepts';
+    const URL = config.URLS.local + '/api/logos/concepts';
 
     const generateLogoRequest = {
       url: URL,
@@ -173,7 +175,7 @@ export function fetchMoreLogos (chars) {
 
 export function downloadLogo (logo) {
   return dispatch => {
-    const URL = config.URLS.heroku + '/api/logo/download';
+    const URL = config.URLS.local + '/api/logo/download';
 
     const data = {
       logo: logo
@@ -186,15 +188,9 @@ export function downloadLogo (logo) {
       headers: {'Content-Type': 'application/json'}
     };
 
-    return new Promise((fulfill, reject) => {
-      request(downloadRequest, (err, body, res) => {
-        res = JSON.parse(res);
-        if (res.statusCode === 200) {
-          fulfill(body);
-        } else {
-          reject(res);
-        }
-      });
+
+    request(downloadRequest, (err, body, res) => {
+      fileDownload(res, 'logos.zip');
     });
   }
 }
