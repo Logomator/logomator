@@ -82,7 +82,7 @@ export function postSurveyRequest (survey) {
   return dispatch => {
     dispatch(makeRequest());
 
-    const URL = config.URLS.heroku + '/api/survey';
+    const URL = config.URLS.local + '/api/survey';
 
     const surveyRequest = {
       url: URL,
@@ -173,7 +173,7 @@ export function fetchMoreLogos (chars) {
 
 export function downloadLogo (logo) {
   return dispatch => {
-    const URL = config.URLS.heroku + '/api/logo/download';
+    const URL = config.URLS.local + '/api/logo/download';
 
     const data = {
       logo: logo
@@ -186,15 +186,13 @@ export function downloadLogo (logo) {
       headers: {'Content-Type': 'application/json'}
     };
 
-    return new Promise((fulfill, reject) => {
-      request(downloadRequest, (err, body, res) => {
-        res = JSON.parse(res);
-        if (res.statusCode === 200) {
-          fulfill(body);
-        } else {
-          reject(res);
-        }
-      });
+
+    request(downloadRequest, (err, body, res) => {
+      if (res.statusCode === 200) {
+        window.open(config.URLS.local + '/api/logo/logos.zip');
+      } else {
+        // TODO show error here.
+      }
     });
   }
 }
