@@ -16,8 +16,6 @@ import { SELECT_LOGO } from './actionTypes';
 import { MAKE_REQUEST } from './actionTypes';
 import { REQUEST_SUCCESS } from './actionTypes';
 
-const fileDownload = require('react-file-download');
-
 const config = require('../config/config.json'); // TODO use import statement here. Need to modify webpack config.
 
 export const setCompanyName = (name) => {
@@ -122,7 +120,7 @@ export function fetchLogos (chars) {
   return dispatch => {
     dispatch(requestLogos(chars));
 
-    const URL = config.URLS.heroku + '/api/logos/chars';
+    const URL = config.URLS.local + '/api/logos/chars';
 
     const generateLogoRequest = {
       url: URL,
@@ -190,7 +188,11 @@ export function downloadLogo (logo) {
 
 
     request(downloadRequest, (err, body, res) => {
-      fileDownload(res, 'logos.zip');
+      if (res.statusCode === 200) {
+        window.open(config.URLS.local + '/api/logo/logos.zip');
+      } else {
+        // TODO show error here.
+      }
     });
   }
 }
