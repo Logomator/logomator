@@ -299,6 +299,14 @@ export function logoReducer (state, action) {
       };
 
     case actionTypes.SELECT_COLOR_PALETTE:
+      // Get selected palettes.
+      const palettes = state.palettes.filter((p) => {
+        return p.isSelected;
+      });
+      // Check if 2 palettes are already selected, if so, deselect the first palette.
+      if (palettes.length === 2) {
+        palettes[0].isSelected = false;
+      }
       return {
         ...state,
         palettes: state.palettes.map(p =>
