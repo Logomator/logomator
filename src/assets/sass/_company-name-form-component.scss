@@ -51,6 +51,14 @@
         }
       }
 
+      span.disclaimer {
+        display: block;
+        font-family: 'Proxima Nova Light', sans-serif;
+        color: $darkGrey;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+
       span.bottom-label {
         display: block;
         font-family: 'Proxima Nova Light', sans-serif;

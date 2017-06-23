@@ -28,10 +28,10 @@ const Palettes = withRouter(({ palettes, onClick, isFetching, state, onGenerate,
                     maxWidth: '920px',
                     paddingBottom: '30px'
                 }}>
-                  <ChatComponent text={<h1><span>Almost done!</span> I just need to know what colors you like to generate colorful logo concepts for you. Don’t worry, you’ll be able to edit your logo colors later.</h1>} />
+                  <ChatComponent text={<h1><span>Almost done!</span> I just need to know what colors you like to generate colorful logo concepts for you.</h1>} />
                   <div className="color-palette-container">
-                      <HeaderComponent headerText="Choose up to 3 color styles you like." />
-                      {paletteArray}
+                    <HeaderComponent headerText="Choose up to 2 color styles you like." />
+                    {paletteArray}
                   </div>
               </div>
           </div>

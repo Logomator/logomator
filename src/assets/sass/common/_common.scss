@@ -15,6 +15,8 @@ body {
   }
 
   .logomator-base {
+    background: $lightGrey;
+
     .container {
       max-width: 630px;
       padding-top: 100px;
@@ -180,7 +182,7 @@ body {
     display: none;
     width: 100%;
     height: 100%;
-    background: white;
+    background: $lightGrey;
     position: fixed;
     z-index: 999999;
     
@@ -220,4 +222,20 @@ body {
       }
     }
   }
+}
+
+// Input text area placeholders
+::-webkit-input-placeholder { /* Chrome */
+  color: $selectBorder;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $selectBorder;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $selectBorder;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: $selectBorder;
+  opacity: 1;
 }
