@@ -8,6 +8,10 @@
     width: 20%;
     float: left;
 
+    &.disabled {
+      pointer-events: none;
+    }
+
     .palette {
       height: 180px;
       width: 160px;
@@ -21,6 +25,21 @@
         transform: translateY(-15px);
       }
 
+      &.selected {
+        outline: 3px solid $logomatorOrange;
+      }
+
+      &.disabled {
+        opacity: .5;
+        box-shadow: $colorPaletteDisabledShadow;
+        cursor: default;
+        pointer-events: none;
+
+        &:hover {
+          transform: translateY(0);
+        }
+      }
+
       .color {
         height: 140px;
         width: 40px;
@@ -31,6 +50,7 @@
         margin: 3px 10px 10px;
         font-size: 16px;
         font-family: 'Proxima Nova Semi Bold';
+
       }
     }
   }

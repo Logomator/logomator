@@ -570,6 +570,8 @@ div.selection-progress {
     padding-top: 30px;
     width: 20%;
     float: left; }
+    .color-palette-container .color-palette.col-5.disabled {
+      pointer-events: none; }
     .color-palette-container .color-palette.col-5 .palette {
       height: 180px;
       width: 160px;
@@ -580,6 +582,15 @@ div.selection-progress {
       cursor: pointer; }
       .color-palette-container .color-palette.col-5 .palette:hover {
         transform: translateY(-15px); }
+      .color-palette-container .color-palette.col-5 .palette.selected {
+        outline: 3px solid #F5530C; }
+      .color-palette-container .color-palette.col-5 .palette.disabled {
+        opacity: .5;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+        cursor: default;
+        pointer-events: none; }
+        .color-palette-container .color-palette.col-5 .palette.disabled:hover {
+          transform: translateY(0); }
       .color-palette-container .color-palette.col-5 .palette .color {
         height: 140px;
         width: 40px;
@@ -837,6 +848,8 @@ div.selection-progress {
     padding-top: 30px;
     width: 20%;
     float: left; }
+    .color-palette-container .color-palette.col-5.disabled {
+      pointer-events: none; }
     .color-palette-container .color-palette.col-5 .palette {
       height: 180px;
       width: 160px;
@@ -847,6 +860,15 @@ div.selection-progress {
       cursor: pointer; }
       .color-palette-container .color-palette.col-5 .palette:hover {
         transform: translateY(-15px); }
+      .color-palette-container .color-palette.col-5 .palette.selected {
+        outline: 3px solid #F5530C; }
+      .color-palette-container .color-palette.col-5 .palette.disabled {
+        opacity: .5;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+        cursor: default;
+        pointer-events: none; }
+        .color-palette-container .color-palette.col-5 .palette.disabled:hover {
+          transform: translateY(0); }
       .color-palette-container .color-palette.col-5 .palette .color {
         height: 140px;
         width: 40px;

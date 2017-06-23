@@ -190,52 +190,62 @@ const defaultState = {
     {
       "name": "Blue",
       "hexcodes": ["#84C4F5", "#1C87E1", "#0D5DA0", "#073E75"],
+      "isDisabled": false,
       "isSelected": false
     },
     {
       "name": "Aqua",
       "hexcodes": ["#9AD9E1", "#4BB8C3", "#337683", "#1D5463"],
+      "isDisabled": false,
       "isSelected": false
     },
 
     {
       "name": "Green",
       "hexcodes": ["#8AB28B", "#5A935C", "#2B742C", "#005502"],
+      "isDisabled": false,
       "isSelected": false
     },
     {
       "name": "Purple",
       "hexcodes": ["#C7A2D9", "#9D5CBE", "#812EAB", "#660099"],
+      "isDisabled": false,
       "isSelected": false
     },
     {
       "name": "Pink",
       "hexcodes": ["#E79BCB", "#DF73B6", "#D54AA1", "#CC1F8D"],
+      "isDisabled": false,
       "isSelected": false
     },
     {
       "name": "Red",
       "hexcodes": ["#E98A89", "#E05B59", "#D72C26", "#CE0000"],
+      "isDisabled": false,
       "isSelected": false
     },
     {
       "name": "Orange",
       "hexcodes": ["#FFB987", "#FF9D54", "#FF811A", "#FF6600"],
+      "isDisabled": false,
       "isSelected": false
     },
     {
       "name": "Yellow",
       "hexcodes": ["#FFE885", "#FFDF4F", "#FFD600", "#FFCD00"],
+      "isDisabled": false,
       "isSelected": false
     },
     {
       "name": "Brown",
       "hexcodes": ["#938A80", "#6F6356", "#4B3C2C", "#352615"],
+      "isDisabled": false,
       "isSelected": false
     },
     {
       "name": "Neutral",
       "hexcodes": ["#C4C6CC", "#818691", "#484C53", "#1A191C"],
+      "isDisabled": false,
       "isSelected": false
     }
   ],
@@ -257,14 +267,38 @@ const selectInspiration = (state, action) => {
   });
 };
 
-const selectPalette = (state, action) => {
-  if (state.name !== action.name) {
-    return state;
+const selectPalette = (palette, action, state) => {
+
+  if (palette.name !== action.name) {
+    return palette;
   }
 
-  return Object.assign({}, state, {
-    isSelected: !state.isSelected
+  // Get selected palettes.
+  const palettes = state.palettes.filter((p) => {
+    return p.isSelected;
   });
+
+  // TODO refactor this first after V1 launch.
+  if (palettes.length === 1 && palette.name !== palettes[0].name && !palette.isSelected) {
+    state.palettes.forEach((p) => {
+      if (!p.isSelected && p.name !== palette.name) {
+        p.isDisabled = true;
+      }
+    });
+  } else {
+    state.palettes.forEach((p) => {
+      if (!p.isSelected && p.name !== palette.name) {
+        p.isDisabled = false;
+      }
+    });
+  }
+
+  return Object.assign({}, palette, {
+    isSelected: !palette.isSelected,
+    disabled: !palette.isDisabled
+  });
+
+
 };
 
 export function logoReducer (state, action) {
@@ -299,19 +333,11 @@ export function logoReducer (state, action) {
       };
 
     case actionTypes.SELECT_COLOR_PALETTE:
-      // Get selected palettes.
-      const palettes = state.palettes.filter((p) => {
-        return p.isSelected;
-      });
-      // Check if 2 palettes are already selected, if so, deselect the first palette.
-      if (palettes.length === 2) {
-        palettes[0].isSelected = false;
-      }
       return {
         ...state,
         palettes: state.palettes.map(p =>
-          selectPalette(p, action)
-        )
+          selectPalette(p, action, state))
+
       };
 
     case actionTypes.REQUEST_ICONS:
