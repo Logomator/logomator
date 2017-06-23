@@ -27,11 +27,10 @@ const LogoList =  withRouter(({ concepts, generateMoreConcepts, isFetching, stat
       <Navbar />
       <div className="logomator-base inspiration">
         <div className="container" style={{ paddingBottom: '70px' }}>
-
           <ChatComponent
             text={
             <h1>
-              <span>Here are the first set of logos I’ve designed for you!</span> Once you’ve found the perfect logo, just download it. If not, teach me what you like by clicking the hearts and I’ll design your more logos based on them.
+              <span>Here are the first set of logos I’ve designed for you!</span> Once you’ve found the perfect logo, download the logo files.
             </h1>}
           />
 

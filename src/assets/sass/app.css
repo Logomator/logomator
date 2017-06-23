@@ -322,9 +322,11 @@ body h1 {
 body h2 {
   font-size: 18px; }
 
-body .logomator-base .container {
-  max-width: 630px;
-  padding-top: 100px; }
+body .logomator-base {
+  background: #FDFDFD; }
+  body .logomator-base .container {
+    max-width: 630px;
+    padding-top: 100px; }
 
 body .logomator-btn {
   transition: 0.25s all linear; }
@@ -447,7 +449,7 @@ body .loading-container {
   display: none;
   width: 100%;
   height: 100%;
-  background: white;
+  background: #FDFDFD;
   position: fixed;
   z-index: 999999; }
   body .loading-container.show {
@@ -546,24 +548,22 @@ div.selection-progress {
   padding-top: 30px;
   max-width: 920px;
   margin: auto; }
-  .color-palette-container .color-palette.col-5 {
-    padding-top: 30px;
-    width: 20%;
-    float: left; }
-    .color-palette-container .color-palette.col-5 .palette {
+  .color-palette-container .color-palette.col {
+    padding-top: 30px; }
+    .color-palette-container .color-palette.col .palette {
       height: 180px;
       width: 160px;
       box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
       border-radius: 2px;
       transition: transform .25s ease-in-out;
       cursor: pointer; }
-      .color-palette-container .color-palette.col-5 .palette:hover {
+      .color-palette-container .color-palette.col .palette:hover {
         transform: translateY(-15px); }
-      .color-palette-container .color-palette.col-5 .palette .color {
+      .color-palette-container .color-palette.col .palette .color {
         height: 140px;
         width: 40px;
         display: inline-block; }
-      .color-palette-container .color-palette.col-5 .palette p.color-label {
+      .color-palette-container .color-palette.col .palette p.color-label {
         margin: 3px 10px 10px;
         font-size: 16px;
         font-family: 'Proxima Nova Semi Bold'; }
@@ -665,6 +665,12 @@ div.selection-progress {
       .container .logomator-form form input:focus {
         border-bottom: 1px solid #F5530C;
         outline: none; }
+    .container .logomator-form form span.disclaimer {
+      display: block;
+      font-family: 'Proxima Nova Light', sans-serif;
+      color: #67676F;
+      font-size: 16px;
+      margin-top: 10px; }
     .container .logomator-form form span.bottom-label {
       display: block;
       font-family: 'Proxima Nova Light', sans-serif;
@@ -694,7 +700,7 @@ div.selection-progress {
     border: 1px solid #F5530C; }
   .tagline-component.container .logomator-radio-btn .radio-btn-labels {
     display: inline-block;
-    padding-top: 17px;
+    padding-top: 11px;
     margin-left: 20px; }
     .tagline-component.container .logomator-radio-btn .radio-btn-labels strong {
       color: #19191A;
@@ -706,7 +712,7 @@ div.selection-progress {
       font-size: 16px; }
   .tagline-component.container .logomator-radio-btn input[type="radio"] {
     vertical-align: top;
-    margin-top: 20px;
+    margin-top: 30px;
     height: 16px;
     width: 16px;
     display: inline-block; }
@@ -721,7 +727,8 @@ div.selection-progress {
   .industry-name-component.container .logomator-form form .select-triangle {
     position: absolute;
     top: 14px;
-    right: 274px; }
+    right: 274px;
+    display: none; }
     .industry-name-component.container .logomator-form form .select-triangle:after {
       content: '';
       width: 0;
@@ -734,7 +741,7 @@ div.selection-progress {
       transition: transform 0.25s ease;
       vertical-align: middle; }
   .industry-name-component.container .logomator-form form select {
-    display: block;
+    display: none;
     -webkit-appearance: none;
     appearance: none;
     height: 50px;
@@ -762,17 +769,32 @@ div.selection-progress {
       border-radius: 2px;
       margin-right: 30px;
       margin-bottom: 30px;
-      transition: transform .25s ease-in-out;
+      transition: transform 0.25s linear;
       cursor: pointer;
       position: relative; }
+      .logomator-base.inspiration .logo-inspiration-container .logo .concept {
+        transition: 0.25s all linear;
+        position: absolute;
+        height: 100%;
+        width: 100%; }
+      .logomator-base.inspiration .logo-inspiration-container .logo .get-logo-files {
+        position: absolute;
+        height: 60px;
+        width: 100%;
+        display: none;
+        transition: 0.25s all linear;
+        bottom: 0;
+        background: #FBFBFB;
+        text-align: center; }
       .logomator-base.inspiration .logo-inspiration-container .logo:hover {
-        height: 310px;
-        width: 320px;
-        transform: translateY(-10px);
-        margin-right: 19px; }
+        transform: translateY(-15px); }
+      .logomator-base.inspiration .logo-inspiration-container .logo:hover .get-logo-files {
+        display: block; }
       .logomator-base.inspiration .logo-inspiration-container .logo.selected {
         border-radius: 4px;
         border: 3px solid #F5530C; }
+        .logomator-base.inspiration .logo-inspiration-container .logo.selected:hover {
+          transform: translateY(0); }
         .logomator-base.inspiration .logo-inspiration-container .logo.selected img {
           width: 100%; }
       .logomator-base.inspiration .logo-inspiration-container .logo img {
@@ -790,24 +812,22 @@ div.selection-progress {
   padding-top: 30px;
   max-width: 920px;
   margin: auto; }
-  .color-palette-container .color-palette.col-5 {
-    padding-top: 30px;
-    width: 20%;
-    float: left; }
-    .color-palette-container .color-palette.col-5 .palette {
+  .color-palette-container .color-palette.col {
+    padding-top: 30px; }
+    .color-palette-container .color-palette.col .palette {
       height: 180px;
       width: 160px;
       box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
       border-radius: 2px;
       transition: transform .25s ease-in-out;
       cursor: pointer; }
-      .color-palette-container .color-palette.col-5 .palette:hover {
+      .color-palette-container .color-palette.col .palette:hover {
         transform: translateY(-15px); }
-      .color-palette-container .color-palette.col-5 .palette .color {
+      .color-palette-container .color-palette.col .palette .color {
         height: 140px;
         width: 40px;
         display: inline-block; }
-      .color-palette-container .color-palette.col-5 .palette p.color-label {
+      .color-palette-container .color-palette.col .palette p.color-label {
         margin: 3px 10px 10px;
         font-size: 16px;
         font-family: 'Proxima Nova Semi Bold'; }
