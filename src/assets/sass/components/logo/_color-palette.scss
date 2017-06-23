@@ -14,6 +14,7 @@
       box-shadow: $colorPaletteShadow;
       border-radius: 2px;
       transition: transform .25s ease-in-out;
+      margin: auto;
       cursor: pointer;
 
       &:hover {

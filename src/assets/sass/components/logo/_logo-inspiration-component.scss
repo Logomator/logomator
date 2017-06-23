@@ -17,7 +17,7 @@
            border-radius: 2px;
            margin-right: 30px;
            margin-bottom: 30px;
-           transition: $transition;
+           transition: transform 0.25s linear;
            cursor: pointer;
            position: relative;
 
@@ -26,14 +26,6 @@
              position: absolute;
              height: 100%;
              width: 100%;
-
-             &:hover {
-               height: 310px;
-               width: 320px;
-               transform: translateY(-10px);
-               margin-bottom: 0;
-               margin-right: 9px;
-             }
            }
 
            .get-logo-files {
@@ -58,6 +50,10 @@
            &.selected {
              border-radius: 4px;
              border: 3px solid $logomatorOrange;
+
+             &:hover {
+               transform: translateY(0);
+             }
 
              img {
                width: 100%;

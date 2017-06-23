@@ -37,7 +37,7 @@ class IndustryNameComponent extends React.Component {
                         <div>
                             <label htmlFor="company_description">Describe what <span>{this.props.companyName}</span> does and what you want your logo to convey.</label>
 
-                            <textarea onChange={this.handleInputChange} className="logomator-textarea" name="company_description" id="" cols="30" rows="10" placeholder="We sell pizzas and italian sandwiches to hungry customers in downtown Boston, Massachusetts. We want our logo to be modern and playful with bright colors."></textarea>
+                            <textarea onChange={this.handleInputChange} className="logomator-textarea" autoFocus={true} name="company_description" id="" cols="30" rows="10" placeholder="We sell pizzas and italian sandwiches to hungry customers in downtown Boston, Massachusetts. We want our logo to be modern and playful with bright colors."></textarea>
                         </div>
 
                         <button className={this.state.companyDescription.length > 0 ? 'logomator-btn' : 'logomator-btn btn-disabled'} style={{marginTop: '30px'}} onClick={ e =>{

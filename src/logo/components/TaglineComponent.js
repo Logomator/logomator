@@ -36,7 +36,7 @@ class TaglineComponent extends React.Component {
                 <div className="logomator-form">
                     <span className="orange-bar"></span>
 
-                    <form name="tagline">
+                    <form name="tagline-form">
                         <label htmlFor="tagline">Do you have a tagline or slogan you want in your logo?</label>
 
                         <label
@@ -71,8 +71,12 @@ class TaglineComponent extends React.Component {
                         <div className={ this.state.hasTagline ? 'show' : 'no-show' } style={{marginTop: '30px'}}>
 
                             <label htmlFor="tagline">What is your tagline or slogan?</label>
-                            <input onChange={ this.handleInputChange } ref={text => {
-                            this.state.tagline = text
+                            <input onChange={ this.handleInputChange } name="tagline" ref={text => {
+                                if (text !== null) {
+                                    // Focus input after render.
+                                    text.focus();
+                                }
+                                this.state.tagline = text
                             }}/>
 
                             <button onClick={ e =>{

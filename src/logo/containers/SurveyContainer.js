@@ -16,9 +16,9 @@ const Survey = withRouter(({ history, experience, improvements, mostLiked, onSub
                     paddingTop: '100px',
                     paddingBottom: '70px'
                  }}>
-                <ChatComponent
+              <ChatComponent
                     text={
-                    <h1><strong>Help us provide a better experience!</strong> Please give us your feedback and we’ll send you your logo.</h1>}
+                    <h1><strong>Help us provide a better experience!</strong> Please give us your feedback to download your logo files.</h1>}
                 />
 
                 <SurveyComponent experience={experience} improvements={improvements}

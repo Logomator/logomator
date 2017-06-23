@@ -28,10 +28,17 @@ const store = createStore(
   )
 );
 
+// Reset scroll to top on route change.
+const ScrollToTop = () => {
+  window.scrollTo(0, 0);
+  return null;
+};
+
 render(
   <Provider store={store}>
     <Router history={history}>
       <div>
+        <Route path="*" component={ScrollToTop} />
         <Route exact path="/" component={HomeComponent} />
         <Route path="/tagline" component={SetTaglineComponent} />
         <Route path="/industry" component={SetIndustryName} />
@@ -45,3 +52,4 @@ render(
   </Provider>,
   document.getElementById('root')
 );
+
