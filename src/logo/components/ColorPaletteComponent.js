@@ -7,14 +7,14 @@ class ColorPaletteComponent extends React.Component {
 
     render() {
         return (
-            <div className="color-palette col-5"
+            <div className={ this.props.palette.isDisabled ? 'color-palette col-5 disabled': 'color-palette col-5'}
                  onClick={e => {
                     e.preventDefault();
                     this.props.onClick(this.props.palette.name);
                  }}>
 
-                <div className="palette" style={{
-                    outline: this.props.palette.isSelected ? "3px solid #F5530C": ''
+                <div className={this.props.palette.isDisabled ? 'palette disabled': 'palette'} style={{
+                     outline: this.props.palette.isSelected ? '3px solid #F5530C': ''
                 }}>
                     <div>
                         <div className="color" style={{
