@@ -31,7 +31,6 @@ const store = createStore(
 // Reset scroll to top on route change.
 const ScrollToTop = () => {
   window.scrollTo(0, 0);
-  return null;
 };
 
 render(
