@@ -329,11 +329,6 @@ body .logomator-base {
     padding-top: 100px; }
 
 body .logomator-btn {
-  transition: 0.25s all linear; }
-  body .logomator-btn:hover {
-    background: #E04A08; }
-
-body .logomator-btn {
   height: 40px;
   width: 106px;
   background: #F5530C;
@@ -345,15 +340,19 @@ body .logomator-btn {
   color: white;
   transition: 0.25s all linear; }
   body .logomator-btn.generate-logos {
-    width: 178px;
-    background: #F5530C url("../images/icons/forward.png") no-repeat;
-    background-position: 148px 14px;
-    background-size: 14px 12px;
-    padding-right: 20px; }
+    width: 178px; }
+  body .logomator-btn.generate-more-logos {
+    width: 195px;
+    float: none !important;
+    padding: 0; }
+  body .logomator-btn.loading {
+    background-image: url("../../images/loading.gif"); }
   body .logomator-btn.btn-disabled {
     opacity: .3;
     pointer-events: none;
     cursor: default; }
+  body .logomator-btn:hover {
+    background: #E04A08; }
 
 body .back-btn {
   height: 40px;
@@ -477,6 +476,24 @@ body .loading-container {
       width: 145px;
       height: 109px; }
 
+::-webkit-input-placeholder {
+  /* Chrome */
+  color: #B0B5B8; }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #B0B5B8; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #B0B5B8;
+  opacity: 1; }
+
+:-moz-placeholder {
+  /* Firefox 4 - 18 */
+  color: #B0B5B8;
+  opacity: 1; }
+
 div.logomator-base {
   padding-bottom: 80px; }
   div.logomator-base div.selection {
@@ -548,22 +565,35 @@ div.selection-progress {
   padding-top: 30px;
   max-width: 920px;
   margin: auto; }
-  .color-palette-container .color-palette.col {
-    padding-top: 30px; }
-    .color-palette-container .color-palette.col .palette {
+  .color-palette-container .color-palette.col-5 {
+    padding-top: 30px;
+    width: 20%;
+    float: left; }
+    .color-palette-container .color-palette.col-5.disabled {
+      pointer-events: none; }
+    .color-palette-container .color-palette.col-5 .palette {
       height: 180px;
       width: 160px;
       box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
       border-radius: 2px;
       transition: transform .25s ease-in-out;
+      margin: auto;
       cursor: pointer; }
-      .color-palette-container .color-palette.col .palette:hover {
+      .color-palette-container .color-palette.col-5 .palette:hover {
         transform: translateY(-15px); }
-      .color-palette-container .color-palette.col .palette .color {
+      .color-palette-container .color-palette.col-5 .palette.selected {
+        outline: 3px solid #F5530C; }
+      .color-palette-container .color-palette.col-5 .palette.disabled {
+        opacity: .5;
+        cursor: default;
+        pointer-events: none; }
+        .color-palette-container .color-palette.col-5 .palette.disabled:hover {
+          transform: translateY(0); }
+      .color-palette-container .color-palette.col-5 .palette .color {
         height: 140px;
         width: 40px;
         display: inline-block; }
-      .color-palette-container .color-palette.col .palette p.color-label {
+      .color-palette-container .color-palette.col-5 .palette p.color-label {
         margin: 3px 10px 10px;
         font-size: 16px;
         font-family: 'Proxima Nova Semi Bold'; }
@@ -791,12 +821,21 @@ div.selection-progress {
       .logomator-base.inspiration .logo-inspiration-container .logo:hover .get-logo-files {
         display: block; }
       .logomator-base.inspiration .logo-inspiration-container .logo.selected {
-        border-radius: 4px;
-        border: 3px solid #F5530C; }
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15); }
+        .logomator-base.inspiration .logo-inspiration-container .logo.selected:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          border-radius: 3px;
+          border: 3px solid #F5530C; }
         .logomator-base.inspiration .logo-inspiration-container .logo.selected:hover {
           transform: translateY(0); }
         .logomator-base.inspiration .logo-inspiration-container .logo.selected img {
-          width: 100%; }
+          width: 100%;
+          border-radius: 3px; }
       .logomator-base.inspiration .logo-inspiration-container .logo img {
         max-height: 100%;
         position: absolute;
@@ -812,22 +851,35 @@ div.selection-progress {
   padding-top: 30px;
   max-width: 920px;
   margin: auto; }
-  .color-palette-container .color-palette.col {
-    padding-top: 30px; }
-    .color-palette-container .color-palette.col .palette {
+  .color-palette-container .color-palette.col-5 {
+    padding-top: 30px;
+    width: 20%;
+    float: left; }
+    .color-palette-container .color-palette.col-5.disabled {
+      pointer-events: none; }
+    .color-palette-container .color-palette.col-5 .palette {
       height: 180px;
       width: 160px;
       box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
       border-radius: 2px;
       transition: transform .25s ease-in-out;
+      margin: auto;
       cursor: pointer; }
-      .color-palette-container .color-palette.col .palette:hover {
+      .color-palette-container .color-palette.col-5 .palette:hover {
         transform: translateY(-15px); }
-      .color-palette-container .color-palette.col .palette .color {
+      .color-palette-container .color-palette.col-5 .palette.selected {
+        outline: 3px solid #F5530C; }
+      .color-palette-container .color-palette.col-5 .palette.disabled {
+        opacity: .5;
+        cursor: default;
+        pointer-events: none; }
+        .color-palette-container .color-palette.col-5 .palette.disabled:hover {
+          transform: translateY(0); }
+      .color-palette-container .color-palette.col-5 .palette .color {
         height: 140px;
         width: 40px;
         display: inline-block; }
-      .color-palette-container .color-palette.col .palette p.color-label {
+      .color-palette-container .color-palette.col-5 .palette p.color-label {
         margin: 3px 10px 10px;
         font-size: 16px;
         font-family: 'Proxima Nova Semi Bold'; }
