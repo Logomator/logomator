@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, isConceptSelection, isColorSelection, onGenerate, state, palettes, generateMoreConcepts, isGeneratingConcepts }) => {
+const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, isConceptSelection, isColorSelection, onGenerate, state, palettes, generateMoreConcepts, isGeneratingConcepts, isFetching }) => {
 
   let logosSelected = () => {
     let count = 0;
@@ -57,13 +57,7 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, isConc
           textAlign: 'center'
         }}>
           <button
-            className="logomator-btn generate-logos"
-            style={{
-              width: '195px',
-              background: '#F5530C',
-              float: 'none',
-              padding: '0'
-            }}
+            className={isFetching ? 'logomator-btn generate-more-logos loading' : 'logomator-btn generate-more-logos'}
             onClick={ e => {
                 e.preventDefault();
                 generateMoreConcepts(state);

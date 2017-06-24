@@ -23,14 +23,6 @@ body {
     }
   }
 
-  .logomator-btn {
-    transition: $transition;
-
-    &:hover {
-      background: $darkOrange;
-    }
-  }
-
   // Buttons
   .logomator-btn {
     height: 40px;
@@ -46,17 +38,40 @@ body {
 
     &.generate-logos {
       width: 178px;
-      background: $logomatorOrange url('../images/icons/forward.png') no-repeat;
-      background-position: 148px 14px;
-      background-size: 14px 12px;
-      padding-right: 20px;
+    }
 
+    &.generate-more-logos {
+      width: 195px;
+      float: none !important;
+      padding: 0;
+      transition: none;
+    }
+
+    &.loading {
+      width: 215px;
+      background-image: url('../../images/generating.gif');
+      background-repeat: no-repeat;
+      background-size: 22px;
+      background-position: 180px 8px;
+      padding-right: 30px;
+
+      &:hover {
+        // Prevent logomator-btn hover from applying background
+        background-image: url('../../images/generating.gif');
+        background-repeat: no-repeat;
+        background-size: 22px;
+        background-position: 180px 8px;
+      }
     }
 
     &.btn-disabled {
       opacity: .3;
       pointer-events: none;
       cursor: default;
+    }
+
+    &:hover {
+      background: $darkOrange;
     }
   }
 

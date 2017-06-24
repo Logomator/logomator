@@ -23,7 +23,6 @@ const LogoList =  withRouter(({ concepts, generateMoreConcepts, isFetching, stat
 
   return (
     <div>
-      <LoadingComponent isFetching={isFetching} />
       <Navbar />
       <div className="logomator-base inspiration">
         <div className="container" style={{ paddingBottom: '70px' }}>
@@ -40,7 +39,7 @@ const LogoList =  withRouter(({ concepts, generateMoreConcepts, isFetching, stat
 
         </div>
       </div>
-      <ProgressBar isGeneratingLogos={true} isGeneratingConcepts={true} generateMoreConcepts={generateMoreConcepts} state={state}/>
+      <ProgressBar isGeneratingLogos={true} isGeneratingConcepts={true} generateMoreConcepts={generateMoreConcepts} state={state} isFetching={isFetching} />
     </div>
   )
 });
