@@ -4,11 +4,11 @@ import Navbar from '../../components/common/Navbar';
 import ChatComponent from '../../components/common/ChatComponent';
 import { connect } from 'react-redux';
 import ProgressBar from '../../components/common/ProgressBarComponent';
-import LoadingComponent from '../../components/common/LoadingComponent';
 import { fetchMoreLogos, selectLogo } from '../actions';
 import { withRouter } from 'react-router-dom'
+import LoadingComponent from '../../components/common/LoadingComponent';
 
-const LogoList =  withRouter(({ concepts, generateMoreConcepts, isFetching, state, selectLogo, history }) => {
+const LogoList =  withRouter(({ concepts, generateMoreConcepts, isFetching, isGeneratingMoreLogos, state, selectLogo, history }) => {
   const logos = [];
 
   concepts = concepts || [];
@@ -23,6 +23,7 @@ const LogoList =  withRouter(({ concepts, generateMoreConcepts, isFetching, stat
 
   return (
     <div>
+      <LoadingComponent isFetching={isFetching} isGeneratingMoreLogos={isGeneratingMoreLogos} />
       <Navbar />
       <div className="logomator-base inspiration">
         <div className="container" style={{ paddingBottom: '70px' }}>
@@ -46,6 +47,7 @@ const LogoList =  withRouter(({ concepts, generateMoreConcepts, isFetching, stat
 
 const mapStateToProps = (state) => ({
   isFetching: state.isFetching,
+  isGeneratingMoreLogos: state.isGeneratingMoreLogos,
   concepts: state.concepts,
   state: state
 });

@@ -45,6 +45,7 @@ const defaultState = {
   industry: '',
   companyDescription: '',
   isFetching: false,
+  isGeneratingMoreLogos: false,
   icons: [],
   inspirations: [
       {
@@ -364,12 +365,14 @@ export function logoReducer (state, action) {
 
     case actionTypes.REQUEST_MORE_LOGOS:
       return Object.assign({}, state, {
-        isFetching: true
+        isFetching: true,
+        isGeneratingMoreLogos: true
       });
 
     case actionTypes.RECEIVED_MORE_LOGOS:
       return Object.assign({}, state, {
         isFetching: false,
+        isGeneratingMoreLogos: false,
         concepts: state.concepts.concat(action.concepts)
       });
 
