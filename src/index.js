@@ -37,7 +37,7 @@ const ScrollToTop = () => {
 
 render(
   <Provider store={store}>
-    <Router history={history}>
+    <Router history={history} basename="/app">
       <div>
         <Route path="*" component={ScrollToTop} />
         <Route exact path="/" component={HomeComponent} />
