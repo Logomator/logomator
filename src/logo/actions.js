@@ -82,7 +82,7 @@ export function postSurveyRequest (survey) {
   return dispatch => {
     dispatch(makeRequest());
 
-    const URL = config.URLS.heroku + '/api/survey';
+    const URL = config.URLS.production + '/api/survey';
 
     const surveyRequest = {
       url: URL,
@@ -120,7 +120,7 @@ export function fetchLogos (chars) {
   return dispatch => {
     dispatch(requestLogos(chars));
 
-    const URL = config.URLS.heroku + '/api/logos/chars';
+    const URL = config.URLS.production + '/api/logos/chars';
 
     const generateLogoRequest = {
       url: URL,
@@ -147,7 +147,7 @@ export function fetchLogos (chars) {
 export function fetchMoreLogos (chars) {
   return dispatch => {
     dispatch(requestMoreLogos(chars));
-    const URL = config.URLS.heroku + '/api/logos/concepts';
+    const URL = config.URLS.production + '/api/logos/concepts';
 
     const generateLogoRequest = {
       url: URL,
@@ -174,7 +174,7 @@ export function fetchMoreLogos (chars) {
 
 export function downloadLogo (logo) {
   return dispatch => {
-    const URL = config.URLS.heroku + '/api/logo/download';
+    const URL = config.URLS.production + '/api/logo/download';
 
     const data = {
       logo: logo
@@ -190,7 +190,7 @@ export function downloadLogo (logo) {
 
     request(downloadRequest, (err, body, res) => {
       if (res.statusCode === 200) {
-        window.open(config.URLS.heroku + '/api/logo/logos.zip');
+        window.open(config.URLS.production + '/api/logo/logos.zip');
       } else {
         // TODO show error here.
       }
