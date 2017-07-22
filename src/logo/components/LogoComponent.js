@@ -21,7 +21,7 @@ const LogoComponent = ({ concept, selectLogo, history }) => {
             onClick={ e => {
               e.preventDefault();
               selectLogo(concept)
-              history.push('/survey');
+              history.push('/app/survey');
             }}>
           Get Logo Files
         </button>

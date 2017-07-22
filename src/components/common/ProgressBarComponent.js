@@ -33,7 +33,7 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, isConc
           <button className={logosSelected() >= 1 ? 'logomator-btn' : 'logomator-btn btn-disabled'}
                   onClick={ e => {
                                 e.preventDefault();
-                                    history.push('/color-palette');
+                                    history.push('/app/color-palette');
                                 }}>
             Continue
           </button>
@@ -46,7 +46,7 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, isConc
               onClick={ e => {
                 e.preventDefault();
                 onGenerate(state);
-                history.push('/logos');
+                history.push('/app/logos');
               }}>
               Generate Logos
             </button>
@@ -69,11 +69,11 @@ const ProgressBarComponent = ({ history, inspirations, isGeneratingLogos, isConc
           <button className={isGeneratingLogos || isConceptSelection ? 'back-btn generate-logos': 'back-btn'} onClick={ e =>{
                     e.preventDefault();
                     if (isColorSelection) {
-                      return history.push('/inspiration');
+                      return history.push('/app/inspiration');
                     } else if(isGeneratingLogos) {
 
                     } else {
-                      return history.push('/industry');
+                      return history.push('/app/industry');
                     }
 
                     }}>

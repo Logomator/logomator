@@ -41,13 +41,13 @@ render(
       <div>
         <Route path="*" component={ScrollToTop} />
         <Route exact path="/app" component={HomeComponent} />
-        <Route path="/tagline" component={SetTaglineComponent} />
-        <Route path="/industry" component={SetIndustryName} />
-        <Route path="/inspiration" component={LogoInspirationContainer} />
-        <Route path="/color-palette" component={ColorPaletteList} />
-        <Route path="/logos" component={LogoList} />
-        <Route path="/survey" component={SurveyContainer} />
-        <Route path="/download" component={DownloadContainer} />
+        <Route path="/app/tagline" component={SetTaglineComponent} />
+        <Route path="/app/industry" component={SetIndustryName} />
+        <Route path="/app/inspiration" component={LogoInspirationContainer} />
+        <Route path="/app/color-palette" component={ColorPaletteList} />
+        <Route path="/app/logos" component={LogoList} />
+        <Route path="/app/survey" component={SurveyContainer} />
+        <Route path="/app/download" component={DownloadContainer} />
       </div>
     </Router>
   </Provider>,

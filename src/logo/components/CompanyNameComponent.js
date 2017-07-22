@@ -30,7 +30,7 @@ class CompanyNameComponent extends React.Component {
                         <button onClick={ e =>{
                               e.preventDefault();
                                this.props.onClick(this.state.companyName.value);
-                               this.props.history.push('/tagline');
+                               this.props.history.push('/app/tagline');
                                }
                              }
                                 className={ this.state.companyName.length > 0 ? 'logomator-btn' : 'logomator-btn btn-disabled' }>

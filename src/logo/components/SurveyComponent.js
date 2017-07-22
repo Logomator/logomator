@@ -74,7 +74,7 @@ const SurveyComponent = ({ history, email, experience, improvements, mostLiked, 
                                 };
 
                                 onSubmit(data);
-                                history.push('/download');
+                                history.push('/app/download');
                                }
                               }
                             }
@@ -87,7 +87,7 @@ const SurveyComponent = ({ history, email, experience, improvements, mostLiked, 
                         onClick={ e =>{
                             e.preventDefault();//
                                 // Route back to generate logos
-                                history.push('/logos')
+                                history.push('/app/logos')
                             }}>
                     Back
                 </button>

@@ -42,7 +42,7 @@ class IndustryNameComponent extends React.Component {
 
                         <button className={this.state.companyDescription.length > 0 ? 'logomator-btn' : 'logomator-btn btn-disabled'} style={{marginTop: '30px'}} onClick={ e =>{
                               e.preventDefault();
-                              this.props.history.push('/inspiration');
+                              this.props.history.push('/app/inspiration');
                               this.props.onClick(this.state.companyDescription);
                               }}>
                             Continue
@@ -50,7 +50,7 @@ class IndustryNameComponent extends React.Component {
 
                         <button className="back-btn" style={{marginTop: '30px'}} onClick={ e =>{
                             e.preventDefault();
-                            this.props.history.push('/tagline');
+                            this.props.history.push('/app/tagline');
                             }}>
                             Back
                         </button>

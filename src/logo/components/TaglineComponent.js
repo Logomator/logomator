@@ -82,7 +82,7 @@ class TaglineComponent extends React.Component {
                             <button onClick={ e =>{
                                e.preventDefault();
                                this.props.onClick(this.state.tagline.value);
-                               this.props.history.push('/industry');
+                               this.props.history.push('/app/industry');
                                 }
                               }
                                     className={ this.state.tagline.length > 0 ? 'logomator-btn' : 'logomator-btn btn-disabled' }
@@ -96,7 +96,7 @@ class TaglineComponent extends React.Component {
                             className={!this.state.hasTagline ? 'logomator-btn' : 'no-show'}
                             style={{marginTop: '30px'}} onClick={e =>{
                                e.preventDefault();
-                               this.props.history.push('/industry');
+                               this.props.history.push('/app/industry');
                                 }//
                               }
                             >Continue
@@ -104,7 +104,7 @@ class TaglineComponent extends React.Component {
 
                         <button className="back-btn" style={{marginTop: '30px'}} onClick={ e =>{
                                e.preventDefault();
-                                this.props.history.push('/');
+                                this.props.history.push('/app');
                                 }
                               }>
                             Back
