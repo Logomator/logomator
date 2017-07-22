@@ -189,11 +189,8 @@ export function downloadLogo (logo) {
 
 
     request(downloadRequest, (err, body, res) => {
-      if (res.statusCode === 200) {
         window.open(config.URLS.production + '/api/logo/logos.zip');
-      } else {
         // TODO show error here.
-      }
     });
   }
 }

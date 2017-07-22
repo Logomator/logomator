@@ -96,24 +96,24 @@ const defaultState = {
         isSelected: false,
         categories: ['oneWordNoTagline', 'FourPlusWordsNoTagline']
       },
-      {
-        id: 9,
-        img: honeyBee,
-        isSelected: false,
-        categories: ['oneWordNoTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'FourPlusWordsNoTagline']
-      },
-      {
-        id: 10,
-        img: charlesPorter,
-        isSelected: false,
-        categories: ['oneWordNoTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'FourPlusWordsNoTagline']
-      },
-      {
-        id: 11,
-        img: smokeHouse,
-        isSelected: false,
-        categories: ['oneWordNoTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'FourPlusWordsNoTagline']
-      },
+      // {
+      //   id: 9,
+      //   img: honeyBee,
+      //   isSelected: false,
+      //   categories: ['oneWordNoTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'FourPlusWordsNoTagline']
+      // },
+      // {
+      //   id: 10,
+      //   img: charlesPorter,
+      //   isSelected: false,
+      //   categories: ['oneWordNoTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'FourPlusWordsNoTagline']
+      // },
+      // {
+      //   id: 11,
+      //   img: smokeHouse,
+      //   isSelected: false,
+      //   categories: ['oneWordNoTagline', 'twoWordsNoTagline', 'threeWordsNoTagline', 'FourPlusWordsNoTagline']
+      // },
       {
         id: 12,
         img: aerialWithTagline,
@@ -132,12 +132,12 @@ const defaultState = {
         isSelected: false,
         categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'twoWordsWithTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
-      {
-        id: 15,
-        img: summerBelleWithTagline,
-        isSelected: false,
-        categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'twoWordsWithTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
-      },
+      // {
+      //   id: 15,
+      //   img: summerBelleWithTagline,
+      //   isSelected: false,
+      //   categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'twoWordsWithTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
+      // },
       {
         id: 16,
         img: centurionWithTagline,
@@ -150,30 +150,30 @@ const defaultState = {
         isSelected: false,
         categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'twoWordsWithTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
-      {
-        id: 18,
-        img: honeyBeeWithTagline,
-        isSelected: false,
-        categories: ['oneWordWithTagline', 'threeWordsWithTagline', 'twoWordsWithTagline', 'FourPlusWordsWithTagline']
-      },
-      {
-        id: 19,
-        img: smokeHouseWithTagline,
-        isSelected: false,
-        categories: ['oneWordWithTagline', 'twoWordsWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
-      },
+      // {
+      //   id: 18,
+      //   img: honeyBeeWithTagline,
+      //   isSelected: false,
+      //   categories: ['oneWordWithTagline', 'threeWordsWithTagline', 'twoWordsWithTagline', 'FourPlusWordsWithTagline']
+      // },
+      // {
+      //   id: 19,
+      //   img: smokeHouseWithTagline,
+      //   isSelected: false,
+      //   categories: ['oneWordWithTagline', 'twoWordsWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
+      // },
       {
         id: 20,
         img: vantagePointWithTagline,
         isSelected: false,
         categories: ['oneWordWithTagline', 'twoWordsNoTagline', 'twoWordsWithTagline', 'threeWordsNoTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
       },
-      {
-        id: 21,
-        img: charlesPorterWithTagline,
-        isSelected: false,
-        categories: ['oneWordWithTagline', 'twoWordsWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
-      },
+      // {
+      //   id: 21,
+      //   img: charlesPorterWithTagline,
+      //   isSelected: false,
+      //   categories: ['oneWordWithTagline', 'twoWordsWithTagline', 'threeWordsWithTagline', 'FourPlusWordsWithTagline']
+      // },
       {
         id: 22,
         img: claireBiddensWithTagline,

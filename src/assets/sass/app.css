@@ -348,13 +348,13 @@ body .logomator-btn {
     transition: none; }
   body .logomator-btn.loading {
     width: 215px;
-    background-image: url("../../images/generating.gif");
+    background-image: url("../../app/images/generating.gif");
     background-repeat: no-repeat;
     background-size: 22px;
     background-position: 180px 8px;
     padding-right: 30px; }
     body .logomator-btn.loading:hover {
-      background-image: url("../../images/generating.gif");
+      background-image: url("../../app/images/generating.gif");
       background-repeat: no-repeat;
       background-size: 22px;
       background-position: 180px 8px; }

@@ -49,7 +49,7 @@ body {
 
     &.loading {
       width: 215px;
-      background-image: url('../../images/generating.gif');
+      background-image: url('../../app/images/generating.gif');
       background-repeat: no-repeat;
       background-size: 22px;
       background-position: 180px 8px;
@@ -57,7 +57,7 @@ body {
 
       &:hover {
         // Prevent logomator-btn hover from applying background
-        background-image: url('../../images/generating.gif');
+        background-image: url('../../app/images/generating.gif');
         background-repeat: no-repeat;
         background-size: 22px;
         background-position: 180px 8px;
