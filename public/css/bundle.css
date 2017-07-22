@@ -416,8 +416,8 @@ body nav {
   box-shadow: 0 4px 0 rgba(244, 244, 245, 0.5);
   z-index: 99999; }
   body nav img.logo {
-    height: auto;
-    width: 40px; }
+    width: 150px;
+    padding-top: 7px; }
   body nav .right {
     display: inline-block;
     float: right; }

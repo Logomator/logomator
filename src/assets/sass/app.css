@@ -344,9 +344,20 @@ body .logomator-btn {
   body .logomator-btn.generate-more-logos {
     width: 195px;
     float: none !important;
-    padding: 0; }
+    padding: 0;
+    transition: none; }
   body .logomator-btn.loading {
-    background-image: url("../../images/loading.gif"); }
+    width: 215px;
+    background-image: url("../../images/generating.gif");
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: 180px 8px;
+    padding-right: 30px; }
+    body .logomator-btn.loading:hover {
+      background-image: url("../../images/generating.gif");
+      background-repeat: no-repeat;
+      background-size: 22px;
+      background-position: 180px 8px; }
   body .logomator-btn.btn-disabled {
     opacity: .3;
     pointer-events: none;
@@ -405,8 +416,8 @@ body nav {
   box-shadow: 0 4px 0 rgba(244, 244, 245, 0.5);
   z-index: 99999; }
   body nav img.logo {
-    height: auto;
-    width: 40px; }
+    width: 150px;
+    padding-top: 7px; }
   body nav .right {
     display: inline-block;
     float: right; }
